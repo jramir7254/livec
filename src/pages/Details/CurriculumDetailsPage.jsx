@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Accordion from '@components/Accordion'
 import KnowledgeAreas from './KnowledgeAreas';
 import KnowledgeUnits from './KnowledgeUnits';
-
+import { IoIosArrowBack } from "react-icons/io";
 import './CurriculumDetailsPage.css'
 
 export default function CurriculumDetailsPage({ selectedCurriculum }) {
@@ -67,8 +67,16 @@ export default function CurriculumDetailsPage({ selectedCurriculum }) {
 
 
     return (
-        <div>
-            <h1 className='curricula-page__heading'>{selectedCurriculum} {knowledgeArea.name && '| ' + knowledgeArea.name}</h1>
+        <div className='details_page'>
+            <h1 className='curricula-page__heading'>
+
+                <button className='back-bttn' onClick={() => window.history.back()}>
+                    <IoIosArrowBack size={'auto'} color='#056da1' />
+                </button>
+
+                {selectedCurriculum || sessionStorage.getItem('curriculum')}
+                <span className='ka'>{knowledgeArea.name && ' | ' + knowledgeArea.name}</span>
+            </h1>
             <Accordion items={DETAILS} />
         </div>
     )

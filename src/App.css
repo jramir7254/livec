@@ -3,9 +3,13 @@
 *::before,
 *:hover,
 *:focus {
+
+	box-sizing: border-box;
+}
+
+* {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
 }
 
 html,
@@ -25,20 +29,61 @@ body,
 }
 
 header {
-	height: 64px;
+	display: flex;
+	align-items: center;
+	height: 72px;
 	background-color: var(--color-acm-blue);
+	padding: 0 50px;
 }
 
+.site-name {
+	letter-spacing: 0.075rem;
+}
 
-main {
+.logo {
+	overflow: hidden;
+cursor: pointer;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	height: 50px;
+	width: 50px;
+}
+
+.logo__img {
+	height: 100%;
+	width: auto;
+	object-fit: contain;
+}
+
+.back-bttn {
+	top: 5px;
+	left: -25px;
+	height: 25px;
+	position: absolute;
+	background-color: transparent;
+
+}
+
+.back-bttn:hover {
+
+	background-color: #04344d;
+
+}
+
+main {
+	padding-top: 5%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
 	flex: 1;
+
+
 
 }
 
 button {
 	cursor: pointer;
-	transition: background-color 0.3s ease;
+	border-style: none;
+	transition: all 0.3s ease;
 }

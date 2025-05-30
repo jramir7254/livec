@@ -15,6 +15,7 @@ export const CURRICULA = [
 
 export const COMPUTER_SCIENCE = {
     name: 'Computer Science',
+    slug: 'computer-science',
     description: 'The study of computers and computational systems, focusing on algorithms, data structures, and software design.',
-    knowledgeAreas: knowledgeAreas
+    knowledgeAreas: knowledgeAreas || []
 }

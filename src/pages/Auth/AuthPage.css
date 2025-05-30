@@ -1,22 +1,37 @@
 .auth-container {
-
+    width: 30vw;
+    height: 75vh;
     padding: 20px;
 }
 
 .auth-heading {
+    margin-bottom: 2rem;
+    font-weight: 500;
     color: #000;
     font-family: "Montserrat", sans-serif;
+}
+
+.field {
+
+    height: auto;
+    width: 100%;
+}
+
+.type {
+    text-decoration: underline;
+    color: var(--color-acm-blue);
+    cursor: pointer;
 }
 
 .auth-form {
     background-color: #ffffff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-
+    color: #000;
     gap: 20px;
-    width: 100%;
     height: 100%;
-    padding: 20px;
+    width: 100%;
+    padding: 75px 50px;
 }
 
 .auth-input,
@@ -37,11 +52,12 @@
 }
 
 .auth-label {
-
+    display: block;
+    margin-bottom: 0.5rem;
     font-size: 1.25rem;
     font-family: "Montserrat", sans-serif;
     color: #666;
-    align-self: flex-start;
+
 }
 
 .auth-input:focus {
