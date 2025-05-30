@@ -1,0 +1,44 @@
+*,
+*::after,
+*::before,
+*:hover,
+*:focus {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+body,
+#root {
+	background: linear-gradient(to bottom, #f9f9f9, #f7fafc);
+	background-color: #f7fafc;
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	height: 64px;
+	background-color: var(--color-acm-blue);
+}
+
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+
+}
+
+button {
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}

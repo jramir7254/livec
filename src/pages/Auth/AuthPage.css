@@ -1,0 +1,63 @@
+.auth-container {
+
+    padding: 20px;
+}
+
+.auth-heading {
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+}
+
+.auth-form {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.auth-input,
+.auth-bttn {
+    border-radius: 8px;
+    height: 50px;
+    font-size: 1.25rem;
+    width: 100%;
+}
+
+.auth-input {
+
+    font-family: "Montserrat", sans-serif;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    color: #333;
+}
+
+.auth-label {
+
+    font-size: 1.25rem;
+    font-family: "Montserrat", sans-serif;
+    color: #666;
+    align-self: flex-start;
+}
+
+.auth-input:focus {
+    outline: none;
+    border: 2px solid var(--color-accent);
+}
+
+.auth-bttn {
+    background-color: var(--color-accent);
+    border: 1px solid #ccc;
+
+    color: white;
+    cursor: pointer;
+}
+
+.auth-bttn:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: #006fa8;
+}
