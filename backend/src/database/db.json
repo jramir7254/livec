@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "name": "john"
+    },
+    {
+      "user": {
+        "name": "jogn doe",
+        "age": 4
+      }
+    },
+    {
+      "name": "fasf doe",
+      "age": 42
+    }
+  ],
+  "suggestions": [],
+  "roles": []
+}
