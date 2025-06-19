@@ -5,7 +5,7 @@
 }
 
 .auth-heading {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     font-weight: 500;
     color: #000;
     font-family: "Montserrat", sans-serif;
@@ -28,17 +28,17 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     color: #000;
-    gap: 20px;
+    gap: 15px;
     height: 100%;
     width: 100%;
-    padding: 75px 50px;
+    padding: 60px 50px;
 }
 
 .auth-input,
 .auth-bttn {
     border-radius: 8px;
-    height: 50px;
-    font-size: 1.25rem;
+    height: 40px;
+    font-size: 1.15rem;
     width: 100%;
 }
 
@@ -54,7 +54,7 @@
 .auth-label {
     display: block;
     margin-bottom: 0.5rem;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-family: "Montserrat", sans-serif;
     color: #666;
 
@@ -70,7 +70,7 @@
     border: 1px solid #ccc;
 
     color: white;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .auth-bttn:hover {

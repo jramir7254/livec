@@ -1,19 +1,53 @@
 {
   "users": [
     {
-      "name": "john"
+      "id": "CM-0001",
+      "name": "John Doe",
+      "email": "johndoe@email.com",
+      "password": "password",
+      "role": "Community Member"
     },
     {
-      "user": {
-        "name": "jogn doe",
-        "age": 4
-      }
+      "id": "R-0001",
+      "name": "Jane Doe",
+      "email": "janedoe@email.com",
+      "password": "password",
+      "role": "Reviewer"
     },
     {
-      "name": "fasf doe",
-      "age": 42
+      "id": "AE-0001",
+      "name": "John Smith",
+      "email": "johnsmith@email.com",
+      "password": "password",
+      "role": "Associate Editor"
+    },
+    {
+      "id": "EIC-0001",
+      "name": "John Smith",
+      "email": "johnsmith@email.com",
+      "password": "password",
+      "role": "Editor in Chief"
+    },
+    {
+      "name": "Jesus Ramirez",
+      "email": "jramirez7254@gmail.com",
+      "password": "q",
+      "role": "CM-6482"
+    },
+    {
+      "name": "John Doe",
+      "email": "johndoe@emial.com",
+      "password": "p",
+      "role": "CM-3480"
     }
   ],
   "suggestions": [],
-  "roles": []
+  "roles": [
+    "ACM ED Board",
+    "Editor in Chief",
+    "Associate Editor",
+    "Reviewer",
+    "Community Member",
+    "ACM Support Staff"
+  ]
 }

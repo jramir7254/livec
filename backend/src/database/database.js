@@ -8,13 +8,15 @@ const adapter = new JSONFile(file);
 const defaultData = { users: [] };
 const db = new Low(adapter, defaultData);
 
-async function init() {
+// Immediately read and set defaults
+(async () => {
     const existed = fs.existsSync(file);
-
-    await db.read();                
+    await db.read();
+    db.data;
     if (!existed) {
         await db.write();
     }
-}
+})();
 
-module.exports = { db, init };
+module.exports = db;
+
