@@ -14,6 +14,10 @@ import AuthPage from '@pages/Auth/AuthPage'
 import CurriculumPage from '@pages/Curriculum/CurriculumPage'
 import CurriculumDetailsPage from '@pages/Details/CurriculumDetailsPage'
 
+import SelectCurriculum from './pages/SelectCurriculum';
+import CurriculumReview from './pages/CurriculumReview';
+import ProposeChange from './pages/ProposeChange';
+
 function App() {
 	const [selectedCurriculum, setSelectedCurriculum] = useState('');
 	const navigate = useNavigate()
@@ -35,6 +39,9 @@ function App() {
 					<Route path='/' element={<AuthPage />} />
 					<Route path='/curriculum' element={<CurriculumPage setSelectedCurriculum={setSelectedCurriculum} />} />
 					<Route path='/curriculum/:slug' element={<CurriculumDetailsPage selectedCurriculum={selectedCurriculum} />} />
+					<Route path="/select-curriculum" element={<SelectCurriculum />} />
+					<Route path="/review/:curriculumId" element={<CurriculumReview />} />
+					<Route path="/propose-change" element={<ProposeChange />} />
 				</Routes>
 
 			</main>
