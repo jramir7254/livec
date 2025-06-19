@@ -28,33 +28,7 @@ body,
 	flex-direction: column;
 }
 
-header {
-	display: flex;
-	align-items: center;
-	height: 72px;
-	background-color: var(--color-acm-blue);
-	padding: 0 50px;
-}
 
-.site-name {
-	letter-spacing: 0.075rem;
-}
-
-.logo {
-	overflow: hidden;
-cursor: pointer;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 50px;
-	width: 50px;
-}
-
-.logo__img {
-	height: 100%;
-	width: auto;
-	object-fit: contain;
-}
 
 .back-bttn {
 	top: 5px;
@@ -83,7 +57,7 @@ main {
 }
 
 button {
-	cursor: pointer;
+	/* cursor: pointer; */
 	border-style: none;
 	transition: all 0.3s ease;
 }
