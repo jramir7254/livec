@@ -19,19 +19,25 @@ const ProposeChange = () => {
     const response = await fetch('/api/propose-change', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ level: selectedLevel, action: actionType, elementId, details }),
+      body: JSON.stringify({
+        level: selectedLevel,
+        action: actionType,
+        elementId,
+        details,
+      }),
     });
 
     if (response.ok) {
-      alert('Feedback submitted successfully');
+      alert('Your change was submitted. A public notification has been initiated.');
       setSelectedLevel('');
       setActionType('');
       setElementId('');
       setDetails('');
     } else {
-      alert('Error submitting feedback');
+      alert('Error submitting your change.');
     }
-  };
+  };  
+
 
   const hierarchyLevels = ['Knowledge Area', 'Knowledge Unit', 'Topic', 'Learning Outcome', 'Competency Realm', 'Competency Area', 'Competency'];
 

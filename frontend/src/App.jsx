@@ -17,6 +17,7 @@ import CurriculumDetailsPage from '@pages/Details/CurriculumDetailsPage'
 import SelectCurriculum from './pages/SelectCurriculum';
 import CurriculumReview from './pages/CurriculumReview';
 import ProposeChange from './pages/ProposeChange';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
 	const [selectedCurriculum, setSelectedCurriculum] = useState('');

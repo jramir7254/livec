@@ -1,0 +1,2 @@
+from routes.propose_change import propose_change_bp
+app.register_blueprint(propose_change_bp)
