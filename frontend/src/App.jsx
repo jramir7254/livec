@@ -18,6 +18,7 @@ import SelectCurriculum from './pages/SelectCurriculum';
 import CurriculumReview from './pages/CurriculumReview';
 import ProposeChange from './pages/ProposeChange';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import TriageProposals from './pages/TriageProposals';
 
 function App() {
 	const [selectedCurriculum, setSelectedCurriculum] = useState('');
@@ -43,6 +44,7 @@ function App() {
 					<Route path="/select-curriculum" element={<SelectCurriculum />} />
 					<Route path="/review/:curriculumId" element={<CurriculumReview />} />
 					<Route path="/propose-change" element={<ProposeChange />} />
+					<Route path="/triage-proposals" element={<TriageProposals />} />
 				</Routes>
 
 			</main>
