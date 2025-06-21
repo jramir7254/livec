@@ -14,6 +14,9 @@ import AuthPage from '@pages/Auth/AuthPage'
 import CurriculumPage from '@pages/Curriculum/CurriculumPage'
 import CurriculumDetailsPage from '@pages/Details/CurriculumDetailsPage'
 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import RecommendationPage from './pages/RecommendationPage';
+
 function App() {
 	const [selectedCurriculum, setSelectedCurriculum] = useState('');
 	const navigate = useNavigate()
@@ -35,6 +38,8 @@ function App() {
 					<Route path='/' element={<AuthPage />} />
 					<Route path='/curriculum' element={<CurriculumPage setSelectedCurriculum={setSelectedCurriculum} />} />
 					<Route path='/curriculum/:slug' element={<CurriculumDetailsPage selectedCurriculum={selectedCurriculum} />} />
+					<Route path="/proposal/:proposalId/recommend" element={<AERecommendationPage />} />
+					<Route path="/proposal/:proposalId/recommendation" element={<RecommendationPage />} />
 				</Routes>
 
 			</main>

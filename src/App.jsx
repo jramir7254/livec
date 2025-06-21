@@ -35,6 +35,7 @@ function App() {
 					<Route path='/' element={<AuthPage />} />
 					<Route path='/curriculum' element={<CurriculumPage setSelectedCurriculum={setSelectedCurriculum} />} />
 					<Route path='/curriculum/:slug' element={<CurriculumDetailsPage selectedCurriculum={selectedCurriculum} />} />
+					<Route path="/proposal/:proposalId/recommendation" element={<ProposalRecommendationPage />} />
 				</Routes>
 
 			</main>
