@@ -6,6 +6,7 @@ import RecommendationPage from './pages/RecommendationPage';
 import AERecommendationPage from './pages/AERecommendationPage';
 
 import { useState } from 'react';
+import NotifyPage from './pages/NotifyPage';
 
 function App() {
   const [selectedCurriculum, setSelectedCurriculum] = useState(null);
@@ -19,6 +20,7 @@ function App() {
         {/* <Route path='/curriculum' element={<CurriculumPage setSelectedCurriculum={setSelectedCurriculum} />} /> */}
         {/* <Route path='/curriculum/:slug' element={<CurriculumDetailsPage selectedCurriculum={selectedCurriculum} />} /> */}
         <Route path="/proposal/:proposalId/recommend" element={<AERecommendationPage />} />
+        <Route path="/notify" element={<NotifyPage />} />
       </Routes>
     </Router>
   );
