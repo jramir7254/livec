@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+const [contributorEmail, setContributorEmail] = useState('');
+
 const SubmitRecommendation = ({ proposalId, aeId }) => {
   const [decision, setDecision] = useState('');
   const [justification, setJustification] = useState('');
@@ -8,18 +10,27 @@ const SubmitRecommendation = ({ proposalId, aeId }) => {
 
   const handleSubmit = async () => {
     try {
-      await axios.post('/api/recommendations/submit', {
+      await axios.post('http://localhost:3001/api/recommendation/submit', {
         proposalId,
-        aeId,
+        associateEditorId,
         decision,
         justification,
+        contributorEmail, 
       });
-      setMessage('Recommendation submitted successfully');
+      setMessage('Recommendation submitted and notifications sent');
     } catch (err) {
       console.error(err);
       setMessage('Error submitting recommendation');
     }
-  };
+  }; 
+
+  <input
+    type="email"
+    className="w-full p-2 border rounded mb-3"
+    placeholder="Contributor Email"
+    value={contributorEmail}
+    onChange={(e) => setContributorEmail(e.target.value)}
+  />
 
   return (
     <div className="p-6 max-w-xl bg-white rounded shadow">

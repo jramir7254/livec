@@ -7,7 +7,7 @@ const RecommendationPage = () => {
   const associateEditorId = searchParams.get('aeId');
 
   if (!proposalId || !associateEditorId) {
-    return <p className="p-6 text-red-600">Missing proposal ID or AE ID</p>;
+    return <p className="p-6 text-red-600">Missing proposal ID or AE ID.</p>;
   }
 
   return (

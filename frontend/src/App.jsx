@@ -1,51 +1,27 @@
-import { Route, Routes, useNavigate } from 'react-router-dom'
-import { useState, useEffect } from 'react'
-import { IoIosArrowBack } from "react-icons/io";
-
-import acmLogo from '@assets/acm.png'
-
-import './App.css'
-import '@styles/flex.css'
-import '@styles/borders.css'
-import '@styles/colors.css'
-import '@styles/typography.css'
-
-import AuthPage from '@pages/Auth/AuthPage'
-import CurriculumPage from '@pages/Curriculum/CurriculumPage'
-import CurriculumDetailsPage from '@pages/Details/CurriculumDetailsPage'
-
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import RecommendationPage from './pages/RecommendationPage';
+// import CurriculumDetailsPage from './pages/Details/CurriculumDetailsPage';
+// import AuthPage from './pages/AuthPage';
+// import CurriculumPage from './pages/CurriculumPage';
+import AERecommendationPage from './pages/AERecommendationPage';
+
+import { useState } from 'react';
 
 function App() {
-	const [selectedCurriculum, setSelectedCurriculum] = useState('');
-	const navigate = useNavigate()
+  const [selectedCurriculum, setSelectedCurriculum] = useState(null);
 
-	return (
-		<>
-			<header>
-				<div className='centered gap-1r' onClick={() => navigate('/curriculum')}>
-					<div className='logo'>
-						<img className='logo__img ' src={acmLogo}></img>
-					</div>
-					<h1 className='site-name monts'>LiveC</h1>
-				</div>
-
-			</header>
-
-			<main>
-				<Routes>
-					<Route path='/' element={<AuthPage />} />
-					<Route path='/curriculum' element={<CurriculumPage setSelectedCurriculum={setSelectedCurriculum} />} />
-					<Route path='/curriculum/:slug' element={<CurriculumDetailsPage selectedCurriculum={selectedCurriculum} />} />
-					<Route path="/proposal/:proposalId/recommend" element={<AERecommendationPage />} />
-					<Route path="/proposal/:proposalId/recommendation" element={<RecommendationPage />} />
-				</Routes>
-
-			</main>
-
-		</>
-	)
+  return (
+    <Router>
+      <Routes>
+        <Route path="/proposal/:proposalId/recommendation" element={<RecommendationPage />} />
+        <Route path="/" element={<h1>LiveC is Running</h1>} />
+        {/* <Route path='/auth' element={<AuthPage />} /> */}
+        {/* <Route path='/curriculum' element={<CurriculumPage setSelectedCurriculum={setSelectedCurriculum} />} /> */}
+        {/* <Route path='/curriculum/:slug' element={<CurriculumDetailsPage selectedCurriculum={selectedCurriculum} />} /> */}
+        <Route path="/proposal/:proposalId/recommend" element={<AERecommendationPage />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
