@@ -1,0 +1,21 @@
+[
+  {
+    "id": "prop101",
+    "title": "Add Quantum Computing Module",
+    "summary": "Proposal to add a new segment on quantum computing",
+    "targetSegment": "CS Electives",
+    "history": [
+      { "date": "2023-05-01", "change": "Added blockchain topics" },
+      { "date": "2024-01-15", "change": "Proposed AI Ethics module" }
+    ]
+  },
+  {
+    "id": "prop102",
+    "title": "Update Data Structures Segment",
+    "summary": "Refactoring existing module to improve clarity",
+    "targetSegment": "Core Curriculum",
+    "history": [
+      { "date": "2022-09-10", "change": "Improved pseudocode explanations" }
+    ]
+  }
+]
