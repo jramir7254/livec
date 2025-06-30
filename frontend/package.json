@@ -10,8 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-pdf-viewer/core": "^3.12.0",
+    "@react-pdf-viewer/page-navigation": "^3.12.0",
+    "@react-pdf-viewer/zoom": "^3.12.0",
     "axios": "^1.10.0",
-    "livec": "file:",
+    "pdfjs-dist": "^3.11.174",
+    "quill": "^2.0.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",

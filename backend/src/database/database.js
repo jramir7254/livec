@@ -1,22 +1,52 @@
 const fs = require('fs');
+const path = require('path');
 const { Low } = require('lowdb');
 const { JSONFile } = require('lowdb/node');
-const path = require('path');
 
-const file = path.join(__dirname, 'db.json');
-const adapter = new JSONFile(file);
-const defaultData = { users: [] };
-const db = new Low(adapter, defaultData);
+function createDB(filename, defaultData) {
+    const filePath = path.join(__dirname, filename);
+    const adapter = new JSONFile(filePath);
+    const db = new Low(adapter, defaultData);
 
-// Immediately read and set defaults
-(async () => {
-    const existed = fs.existsSync(file);
-    await db.read();
-    db.data;
-    if (!existed) {
-        await db.write();
-    }
-})();
+    (async () => {
+        const existed = fs.existsSync(filePath);
+
+        try {
+            await db.read();
+            if (db.data === null || db.data === undefined) {
+                db.data = defaultData;
+                if (!existed) await db.write();
+            }
+        } catch (err) {
+            console.warn(`⚠️ Failed to read ${filename}, reinitializing with defaults.`);
+            db.data = defaultData;
+            await db.write();
+        }
+
+        // Watch the file for external changes, safely re-read
+        fs.watchFile(filePath, { interval: 1000 }, async (curr, prev) => {
+            if (curr.mtimeMs > prev.mtimeMs) {
+                try {
+                    await db.read();
+                } catch (err) {
+                    console.warn(`⚠️ Failed to hot-reload ${filename}:`, err.message);
+                }
+            }
+        });
+    })();
+
+    return db;
+}
+
+// Initialize your DB structure
+const db = {
+    users: {
+        communityMembers: createDB('data/users/community_member.json', []),
+        reviewers: createDB('data/users/reviewer.json', []),
+        associateEditors: createDB('data/users/associate_editor.json', []),
+        // eic: createDB('data/users/eic.json', []),
+    },
+    suggestions: createDB('data/suggestions/suggestions.json', []),
+};
 
 module.exports = db;
-

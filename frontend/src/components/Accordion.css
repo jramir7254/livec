@@ -1,18 +1,20 @@
 .accordion {
-  width: 50vw;
+  width: inherit;
 }
 
 .accordion-item {
   color: black;
- 
-  border-bottom: 1px solid #ddd;
+     list-style: none;
+
+  /* border-bottom: 1px solid #ddd; */
 }
 
 .accordion-title {
-  padding: 1rem;
+
+  /* padding: 1rem; */
   cursor: pointer;
-  background-color: #f8f1f1;
-  font-weight: bold;
+  /* background-color: #f8f1f1; */
+  /* font-weight: bold; */
 }
 
 .accordion-title:hover {

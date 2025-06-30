@@ -1,8 +1,15 @@
 import { createContext, useState, useEffect } from 'react';
 
+/** 
+ * This context serves to identify wether a user is signed in or not
+ * which restricts certain features. If a user is signed in, the users
+ * data can be accessed with the @user object.
+ * 
+*/
+
 export const UserContext = createContext();
 
-const UserProvider = ({ children }) => {
+export default function UserProvider ({ children }) {
     const [loading, setLoading] = useState(true);
     const [user, setUser] = useState(null);
 
@@ -10,6 +17,7 @@ const UserProvider = ({ children }) => {
         sessionStorage.setItem('user', JSON.stringify(u))
         setUser(u)
     }
+
 
     useEffect(() => {
         try {
@@ -31,5 +39,3 @@ const UserProvider = ({ children }) => {
         </UserContext.Provider>
     );
 };
-
-export default UserProvider;

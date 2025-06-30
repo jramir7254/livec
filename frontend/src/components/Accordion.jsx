@@ -1,8 +1,9 @@
 // Accordion.js
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import './Accordion.css';
+import { FaChevronDown } from "react-icons/fa6";
 
-const AccordionItem = ({ title, content, isOpen, isRestricted, onClick }) => {
+const AccordionItem = ({ title, range, content, isOpen, isRestricted = false, onClick }) => {
     const contentRef = useRef(null);
     const [maxHeight, setMaxHeight] = useState('0px');
 
@@ -14,8 +15,8 @@ const AccordionItem = ({ title, content, isOpen, isRestricted, onClick }) => {
 
     return (
         <div className={`accordion-item ${isRestricted && 'disabled'}`}>
-            <div className="accordion-title" onClick={onClick}>
-                {title}
+            <div className='flex justify-between accordion-title' onClick={onClick}>
+                {title} {range.start} - {range.end} {<FaChevronDown  />}
             </div>
             <div
                 ref={contentRef}
@@ -28,7 +29,9 @@ const AccordionItem = ({ title, content, isOpen, isRestricted, onClick }) => {
     );
 };
 
-const Accordion = ({ items }) => {
+
+
+const Accordion = ({ item, content }) => {
     const [openIndex, setOpenIndex] = useState(null);
 
     const handleToggle = (index) => {
@@ -37,17 +40,17 @@ const Accordion = ({ items }) => {
 
     return (
         <div className="accordion">
-            {items.map((item, index) => (
+
                 <AccordionItem
-         
-                    key={index}
+                    key={item.title}
+                    range={item.range}
                     title={item.title}
-                    content={item.content}
-                    isOpen={openIndex === index}
-                    isRestricted={item.restricted}
-                    onClick={() => handleToggle(index)}
+                    page={item.page}
+                    content={content}
+                    isOpen={openIndex === item.title}
+                    onClick={() => handleToggle(item.title)}
                 />
-            ))}
+
         </div>
     );
 };

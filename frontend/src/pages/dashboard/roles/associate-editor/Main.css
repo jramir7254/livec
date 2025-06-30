@@ -1,0 +1,47 @@
+.main {
+    width: 100%;
+    height: 100%;
+    color: black;
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    grid-template-areas: 
+    'H H'
+    'M S';
+
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 0.5fr 2fr;
+}
+
+.table-container {
+  max-height: 400px;  /* adjust height as needed */
+  overflow-y: auto;   /* enables vertical scrolling */
+}
+
+
+.sugg {
+        padding: 1rem;
+     box-shadow: 0 10px 15px -5px rgb(0 0 0 / 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+    grid-area: M;
+    
+}
+
+.head {
+     box-shadow: 0 10px 15px -5px rgb(0 0 0 / 0.1);
+    border-radius: 8px;
+
+    background-color: #fff;
+    grid-area: H;
+}
+
+.side {
+     box-shadow: 0 10px 15px -5px rgb(0 0 0 / 0.1);
+    border-radius: 8px;
+
+    grid-area: S;
+    background-color: #fff;
+
+
+}

@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import useForm from '@hooks/useForm'
 import useAuth from '@hooks/useAuth'
 
+
+// Defualt form data for both Register and Login
 const defaultData = {
     name: '',
     email: '',
@@ -9,16 +11,17 @@ const defaultData = {
     passwordConfirmed: ''
 };
 
+
 export default function AuthForm() {
     const { login, register, message, setMessage } = useAuth();
-    const [canSubmit, setCanSubmit] = useState(false)
+    const { formData, onFormChange, resetForm } = useForm({ defaultData })
+
     const [passwordsMatch, setPasswordsMatch] = useState(true)
-
-
-
-    const [formData, onFormChange, resetForm] = useForm({ defaultData })
+    const [canSubmit, setCanSubmit] = useState(false)
     const [newUser, setNewUser] = useState(false)
 
+
+    // Determines if the Register form can be submitted if password and confirmPassword match
     useEffect(() => {
         if (newUser) {
             const bothFilled = formData.password !== '' && formData.passwordConfirmed !== '';
@@ -31,7 +34,7 @@ export default function AuthForm() {
     }, [formData.password, formData.passwordConfirmed, newUser]);
 
 
-    
+    // Determines if the form can be submitted if ALL form fields are completed. 
     useEffect(() => {
         if (!newUser) {
             setCanSubmit(formData.email !== '' && formData.password !== '');
@@ -44,6 +47,7 @@ export default function AuthForm() {
     }, [formData, newUser, passwordsMatch]);
 
 
+    // Handles between a user Registering or Logging in
     const handleToggle = () => {
         resetForm();
         setNewUser(!newUser)
@@ -53,9 +57,10 @@ export default function AuthForm() {
 
 
     return (
-        <form className='flx algn-left  clmn  auth-form' onSubmit={(e) => { e.preventDefault(); newUser? register(formData) : login(formData) }}>
+        <form className='flex col auth-form' onSubmit={(e) => { e.preventDefault(); newUser ? register(formData) : login(formData) }}>
             <h1 className='auth-heading'>{newUser ? 'Get Started' : 'Welcome Back'}</h1>
 
+            {/* Displays Name input field is user is registering */}
             {newUser &&
                 <div className='field'>
                     <label className='auth-label' htmlFor='name'>Full Name</label>
@@ -97,6 +102,7 @@ export default function AuthForm() {
             </div>
 
 
+            {/* Displays Confirm Password field is user is registering */}
             {newUser &&
                 <div className='field'>
 
@@ -124,6 +130,8 @@ export default function AuthForm() {
             )}
 
             <button type='submit' disabled={!canSubmit} className={`monts auth-bttn ${!canSubmit ? 'disabled' : ''}`}>{newUser ? 'Sign Up' : 'Sign In'}</button>
+
+            {/* Message is returned from backend API and displaayed in case of an error i.e. wrong password, user already exists. */}
             {message && <p>{message}</p>}
         </form>
     )

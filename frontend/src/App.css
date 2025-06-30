@@ -3,9 +3,9 @@
 *::before,
 *:hover,
 *:focus {
-
 	box-sizing: border-box;
 }
+
 
 * {
 	margin: 0;
@@ -22,7 +22,6 @@ body,
 
 body,
 #root {
-	background: linear-gradient(to bottom, #f9f9f9, #f7fafc);
 	background-color: #f7fafc;
 	display: flex;
 	flex-direction: column;
@@ -36,28 +35,22 @@ body,
 	height: 25px;
 	position: absolute;
 	background-color: transparent;
-
 }
 
 .back-bttn:hover {
-
 	background-color: #04344d;
-
 }
 
 main {
-	padding-top: 5%;
+	overflow: hidden;
 	display: flex;
 	justify-content: center;
-	align-items: flex-start;
+	align-items: center;
 	flex: 1;
-
-
-
 }
 
 button {
-	/* cursor: pointer; */
+	cursor: pointer;
 	border-style: none;
 	transition: all 0.3s ease;
 }

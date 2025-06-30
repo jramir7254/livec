@@ -1,0 +1,100 @@
+[
+  {
+    "id": "SCOSC-iEHiVaVR",
+    "title": "Ethics Module: AI Privacy",
+    "suggestion": "\"Lorem ipsum dolor sit amet. Et labore quaerat ut impedit molestiae et cupiditate voluptatem eos culpa voluptatem. Aut unde expedita et laborum quod hic blanditiis facilis. Ab neque voluptatem non sapiente quod et aspernatur rerum hic nemo distinctio aut modi necessitatibus.\\n\\nQuo quaerat voluptatem ut libero doloremque 33 animi delectus eum eaque enim vel voluptatem maxime. Aut amet nihil qui doloribus accusamus est debitis galisum non dolorem neque aut labore soluta et accusantium recusandae! Et illo consequuntur in quos quia quo neque galisum.\",\n",
+    "submitterId": "CM-6482",
+    "timeCreated": "2025-06-28T01:55:19.577Z",
+    "status": {
+      "public": "rejected",
+      "private": "rejected"
+    },
+    "discipline": "computer-science",
+    "assignedAssociateEditor": "AE-0001",
+    "assignedEditorInChief": "EIC-0001",
+    "assignedReviewers": [],
+    "meta": {
+      "rejectedBy": "AE-0001",
+      "rejectionReason": "This shi ts was so ahh",
+      "publicMessage": "To whom it may concern, kys lol.",
+      "timeRejected": "2025-06-29T14:48:59.258Z",
+      "rejectId": "SREJ-0b_hQnOS"
+    }
+  },
+  {
+    "id": "SIS-dQA_5aWo",
+    "title": "Title Remove Something There",
+    "suggestion": "Vel harum explicabo rem asperiores possimus ut quae dolore ex exercitationem itaque et corrupti vero hic nostrum quod. Ut neque officia id iure fugit non deleniti mollitia in laborum ullam est blanditiis obcaecati et beatae Quis. Ad omnis voluptas ab possimus similique non error molestias qui cumque officia et ullam quam. Sit necessitatibus libero aut cupiditate praesentium et accusamus dolores et explicabo amet non dolor natus sed alias ducimus.\n\n",
+    "submitterId": "CM-6482",
+    "timeCreated": "2025-06-28T01:55:48.542Z",
+    "status": {
+      "public": "submitted",
+      "private": "awaiting-initial-response"
+    },
+    "discipline": "information-systems",
+    "assignedAssociateEditor": "",
+    "assignedEditorInChief": "",
+    "assignedReviewers": [],
+    "meta": {}
+  },
+  {
+    "id": "SCOSC-hWTOW1b1",
+    "title": "Streamline Course Approval Workflow",
+    "suggestion": "Implementing a dark mode option would allow users to customize their interface according to their visual comfort, especially during extended periods of screen time. This feature has been widely requested by the community.",
+    "submitterId": "CM-6482",
+    "timeCreated": "2025-06-29T00:37:44.465Z",
+    "status": {
+      "public": "under-review",
+      "private": "reviewing"
+    },
+    "discipline": "computer-science",
+    "assignedAssociateEditor": "AE-0001",
+    "assignedEditorInChief": "EIC-0001",
+    "assignedReviewers": [],
+    "meta": {
+      "startedBy": "AE-0001",
+      "initialNotes": "sad",
+      "publicMessage": "asdasd",
+      "timeStarted": "2025-06-30T00:24:36.859Z",
+      "startId": "SREJ-7wiN4lXp"
+    }
+  },
+  {
+    "id": "SCOSC-gn1sykiu",
+    "title": "Upgrade Dashboard UI Design",
+    "suggestion": "Implementing a dark mode option would allow users to customize their interface according to their visual comfort, especially during extended periods of screen time. This feature has been widely requested by the community.",
+    "submitterId": "CM-6482",
+    "timeCreated": "2025-06-29T00:51:26.097Z",
+    "status": {
+      "public": "under-review",
+      "private": "reviewing"
+    },
+    "discipline": "computer-science",
+    "assignedAssociateEditor": "AE-0001",
+    "assignedEditorInChief": "EIC-0001",
+    "assignedReviewers": [
+      "R-0001",
+      "R-7562"
+    ],
+    "meta": {
+      "publicMessage": "tset",
+      "timeStarted": "2025-06-30T03:12:37.353Z"
+    }
+  },
+  {
+    "id": "SCOSC-kDa7CyBC",
+    "title": "Automate Weekly Progress Reports",
+    "suggestion": "An AI-powered chatbot could answer common student questions in real-time, reducing the burden on support staff.",
+    "submitterId": "CM-6482",
+    "timeCreated": "2025-06-30T03:13:46.093Z",
+    "status": {
+      "public": "assigned",
+      "private": "awaiting-initial-response"
+    },
+    "discipline": "computer-science",
+    "assignedAssociateEditor": "AE-0001",
+    "assignedEditorInChief": "EIC-0001",
+    "assignedReviewers": [],
+    "meta": {}
+  }
+]

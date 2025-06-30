@@ -12,7 +12,6 @@
 }
 
 .field {
-
     height: auto;
     width: 100%;
 }
@@ -43,7 +42,6 @@
 }
 
 .auth-input {
-
     font-family: "Montserrat", sans-serif;
     background-color: #f9f9f9;
     border: 1px solid #ccc;
@@ -57,7 +55,6 @@
     font-size: 1.15rem;
     font-family: "Montserrat", sans-serif;
     color: #666;
-
 }
 
 .auth-input:focus {
@@ -68,9 +65,7 @@
 .auth-bttn {
     background-color: var(--color-accent);
     border: 1px solid #ccc;
-
     color: white;
-    /* cursor: pointer; */
 }
 
 .auth-bttn:hover {

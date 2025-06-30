@@ -1,0 +1,2080 @@
+[
+    {
+        "title": "Executive Summary",
+        "page": 21,
+        "units": []
+    },
+    {
+        "title": "Overview",
+        "page": 23,
+        "units": []
+    },
+    {
+        "title": "Introduction to CS2023",
+        "page": 25,
+        "units": [
+            {
+                "title": "History",
+                "page": 25,
+                "units": []
+            },
+            {
+                "title": "Vision Statement",
+                "page": 26,
+                "units": []
+            },
+            {
+                "title": "References",
+                "page": 26,
+                "units": []
+            }
+        ]
+    },
+    {
+        "title": "Introduction to Knowledge Model",
+        "page": 29,
+        "units": [
+            {
+                "title": "Definitions and Terminology",
+                "page": 29,
+                "units": []
+            },
+            {
+                "title": "CS2023 Knowledge Model",
+                "page": 29,
+                "units": []
+            },
+            {
+                "title": "Structure of CS2023 Knowledge Area Explained",
+                "page": 32,
+                "units": []
+            },
+            {
+                "title": "Changes since CS2013",
+                "page": 34,
+                "units": []
+            },
+            {
+                "title": "Designing/Revising a Curriculum Based on the Knowledge Model",
+                "page": 38,
+                "units": []
+            },
+            {
+                "title": "References",
+                "page": 39,
+                "units": []
+            }
+        ]
+    },
+    {
+        "title": "Introduction to Competency Framework",
+        "page": 41,
+        "units": [
+            {
+                "title": "Competence Model - Definitions and Terminology",
+                "page": 41,
+                "units": []
+            },
+            {
+                "title": "CS2023 Competency Model",
+                "page": 42,
+                "units": []
+            },
+            {
+                "title": "CS2023 Framework for Systematically Identifying Tasks",
+                "page": 43,
+                "units": []
+            },
+            {
+                "title": "Designing/Revising a Curriculum Using the Competency Framework",
+                "page": 44,
+                "units": []
+            },
+            {
+                "title": "References",
+                "page": 45,
+                "units": []
+            }
+        ]
+    },
+    {
+        "title": "The Design",
+        "page": 47,
+        "units": []
+    },
+    {
+        "title": "Principles and Processes",
+        "page": 49,
+        "units": [
+            {
+                "title": "The Task Force",
+                "page": 49,
+                "units": []
+            },
+            {
+                "title": "Guiding Principles for the Process",
+                "page": 49,
+                "units": [
+                    {
+                        "title": "The Steering Committee",
+                        "page": 49
+                    },
+                    {
+                        "title": "Knowledge Area Committees",
+                        "page": 49
+                    }
+                ]
+            },
+            {
+                "title": "The Process",
+                "page": 50,
+                "units": []
+            },
+            {
+                "title": "Guiding Concerns for the Curricular Recommendations",
+                "page": 51,
+                "units": []
+            },
+            {
+                "title": "The Knowledge Model Revision Process",
+                "page": 52,
+                "units": []
+            }
+        ]
+    },
+    {
+        "title": "Characteristics of Computer Science Graduates",
+        "page": 55,
+        "units": [
+            {
+                "title": "Professional knowledge and skills—for a technical solution",
+                "page": 55,
+                "units": []
+            },
+            {
+                "title": "Professional Responsibilities – for the whole solution",
+                "page": 55,
+                "units": []
+            },
+            {
+                "title": "References",
+                "page": 56,
+                "units": []
+            }
+        ]
+    },
+    {
+        "title": "Challenges and Opportunities for Computer Science",
+        "page": 57,
+        "units": []
+    },
+    {
+        "title": "The Details",
+        "page": 61,
+        "units": []
+    },
+    {
+        "title": "Body of Knowledge",
+        "page": 63,
+        "units": []
+    },
+    {
+        "title": "Artificial Intelligence (AI)",
+        "page": 65,
+        "units": [
+            {
+                "title": "Preamble",
+                "page": 65,
+                "units": []
+            },
+            {
+                "title": "Core Hours",
+                "page": 66,
+                "units": [
+                    {
+                        "title": "Changes since CS2013",
+                        "page": 66
+                    },
+                    {
+                        "title": "Consider recent AI advances when using this curriculum",
+                        "page": 66
+                    }
+                ]
+            },
+            {
+                "title": "Knowledge Units",
+                "page": 67,
+                "units": [
+                    {
+                        "title": "AI-Introduction: Fundamental Issues",
+                        "page": 67
+                    },
+                    {
+                        "title": "AI-Search: Search",
+                        "page": 68
+                    },
+                    {
+                        "title": "AI-KRR: Fundamental Knowledge Representation and Reasoning",
+                        "page": 70
+                    },
+                    {
+                        "title": "AI-ML: Machine Learning",
+                        "page": 71
+                    },
+                    {
+                        "title": "AI-SEP: Applications and Societal Impact",
+                        "page": 75
+                    },
+                    {
+                        "title": "AI-LRR: Logical Representation and Reasoning",
+                        "page": 76
+                    },
+                    {
+                        "title": "AI-Probability: Probabilistic Representation and Reasoning",
+                        "page": 77
+                    },
+                    {
+                        "title": "AI-Planning: Planning",
+                        "page": 78
+                    },
+                    {
+                        "title": "AI-Agents: Agents and Cognitive Systems",
+                        "page": 79
+                    },
+                    {
+                        "title": "AI-NLP: Natural Language Processing",
+                        "page": 79
+                    },
+                    {
+                        "title": "AI-Robotics: Robotics",
+                        "page": 80
+                    },
+                    {
+                        "title": "AI-Vision: Perception and Computer Vision",
+                        "page": 82
+                    }
+                ]
+            },
+            {
+                "title": "Professional Dispositions",
+                "page": 83,
+                "units": []
+            },
+            {
+                "title": "Mathematics Requirements",
+                "page": 83,
+                "units": []
+            },
+            {
+                "title": "Course Packaging Suggestions",
+                "page": 84,
+                "units": []
+            },
+            {
+                "title": "Committee",
+                "page": 85,
+                "units": []
+            }
+        ]
+    },
+    {
+        "title": "Algorithmic Foundations (AL)",
+        "page": 87,
+        "units": [
+            {
+                "title": "Preamble",
+                "page": 87,
+                "units": [
+                    {
+                        "title": "Changes since CS2013",
+                        "page": 87
+                    }
+                ]
+            },
+            {
+                "title": "Core Hours",
+                "page": 88,
+                "units": []
+            },
+            {
+                "title": "Knowledge Units",
+                "page": 88,
+                "units": [
+                    {
+                        "title": "AL-Foundational: Foundational Data Structures and Algorithms",
+                        "page": 88
+                    },
+                    {
+                        "title": "AL-Complexity: Complexity",
+                        "page": 91
+                    },
+                    {
+                        "title": "AL-Models: Computational Models and Formal Languages",
+                        "page": 93
+                    },
+                    {
+                        "title": "AL-SEP: Society, Ethics, and the Profession",
+                        "page": 95
+                    }
+                ]
+            },
+            {
+                "title": "Professional Dispositions",
+                "page": 96,
+                "units": []
+            },
+            {
+                "title": "Mathematics Requirements",
+                "page": 96,
+                "units": []
+            },
+            {
+                "title": "Course Packaging Suggestions",
+                "page": 96,
+                "units": []
+            },
+            {
+                "title": "Committee",
+                "page": 99,
+                "units": []
+            }
+        ]
+    },
+    {
+        "title": "Architecture and Organization (AR)",
+        "page": 101,
+        "units": [
+            {
+                "title": "Preamble",
+                "page": 101,
+                "units": []
+            },
+            {
+                "title": "Core Hours",
+                "page": 101,
+                "units": [
+                    {
+                        "title": "Changes since CS2013",
+                        "page": 101
+                    }
+                ]
+            },
+            {
+                "title": "Knowledge Units",
+                "page": 102,
+                "units": [
+                    {
+                        "title": "AR-Logic: Digital Logic and Digital Systems",
+                        "page": 102
+                    },
+                    {
+                        "title": "AR-Representation: Machine-Level Data Representation",
+                        "page": 103
+                    },
+                    {
+                        "title": "AR-Assembly: Assembly Level Machine Organization",
+                        "page": 103
+                    },
+                    {
+                        "title": "AR-Memory: Memory Hierarchy",
+                        "page": 104
+                    },
+                    {
+                        "title": "AR-IO: Interfacing and Communication",
+                        "page": 105
+                    },
+                    {
+                        "title": "AR-Organization: Functional Organization",
+                        "page": 106
+                    },
+                    {
+                        "title": "AR-Performance-Energy: Performance and Energy Efficiency",
+                        "page": 106
+                    },
+                    {
+                        "title": "AR-Heterogeneity: Heterogeneous Architectures",
+                        "page": 107
+                    },
+                    {
+                        "title": "AR-Security: Secure Processor Architectures",
+                        "page": 107
+                    },
+                    {
+                        "title": "AR-Quantum: Quantum Architectures",
+                        "page": 108
+                    }
+                ]
+            },
+            {
+                "title": "Professional Dispositions",
+                "page": 109,
+                "units": [
+                    {
+                        "title": "AR-SEP: Sustainability Issues",
+                        "page": 109
+                    }
+                ]
+            },
+            {
+                "title": "Mathematics Requirements",
+                "page": 110,
+                "units": []
+            },
+            {
+                "title": "Course Packaging Suggestions",
+                "page": 110,
+                "units": []
+            },
+            {
+                "title": "Committee",
+                "page": 111,
+                "units": []
+            }
+        ]
+    },
+    {
+        "title": "Data Management (DM)",
+        "page": 113,
+        "units": [
+            {
+                "title": "Preamble",
+                "page": 113,
+                "units": []
+            },
+            {
+                "title": "Core Hours",
+                "page": 114,
+                "units": [
+                    {
+                        "title": "Changes since CS2013",
+                        "page": 114
+                    }
+                ]
+            },
+            {
+                "title": "Knowledge Units",
+                "page": 115,
+                "units": [
+                    {
+                        "title": "DM-Core: Core Database System Concepts",
+                        "page": 115
+                    },
+                    {
+                        "title": "DM-Modeling: Data Modeling",
+                        "page": 116
+                    },
+                    {
+                        "title": "DM-Relational: Relational Databases",
+                        "page": 117
+                    },
+                    {
+                        "title": "DM-Querying: Query Construction",
+                        "page": 118
+                    },
+                    {
+                        "title": "DM-Processing: Query Processing",
+                        "page": 118
+                    },
+                    {
+                        "title": "DM-Internals: DBMS Internals",
+                        "page": 119
+                    },
+                    {
+                        "title": "DM-NoSQL: NoSQL Systems",
+                        "page": 120
+                    },
+                    {
+                        "title": "DM-Security: Data Security and Privacy",
+                        "page": 121
+                    },
+                    {
+                        "title": "DM-Analytics: Data Analytics",
+                        "page": 121
+                    },
+                    {
+                        "title": "DM-Distributed: Distributed Databases/Cloud Computing",
+                        "page": 122
+                    },
+                    {
+                        "title": "DM-Unstructured: Semi-structured and Unstructured Databases",
+                        "page": 122
+                    }
+                ]
+            },
+            {
+                "title": "Professional Dispositions",
+                "page": 123,
+                "units": [
+                    {
+                        "title": "DM-SEP: Society, Ethics, and the Profession",
+                        "page": 123
+                    }
+                ]
+            },
+            {
+                "title": "Mathematics Requirements",
+                "page": 124,
+                "units": []
+            },
+            {
+                "title": "Course Packaging Suggestions",
+                "page": 124,
+                "units": []
+            },
+            {
+                "title": "Committee",
+                "page": 125,
+                "units": []
+            },
+            {
+                "title": "References",
+                "page": 125,
+                "units": []
+            }
+        ]
+    },
+    {
+        "title": "Foundations of Programming Languages (FPL)",
+        "page": 127,
+        "units": [
+            {
+                "title": "Preamble",
+                "page": 127,
+                "units": [
+                    {
+                        "title": "Changes since CS2013",
+                        "page": 127
+                    }
+                ]
+            },
+            {
+                "title": "Core Hours",
+                "page": 129,
+                "units": []
+            },
+            {
+                "title": "Knowledge Units",
+                "page": 130,
+                "units": [
+                    {
+                        "title": "FPL-OOP: Object-Oriented Programming",
+                        "page": 130
+                    },
+                    {
+                        "title": "FPL-Functional: Functional Programming",
+                        "page": 131
+                    },
+                    {
+                        "title": "FPL-Logic: Logic Programming",
+                        "page": 133
+                    },
+                    {
+                        "title": "FPL-Scripting: Shell Scripting",
+                        "page": 133
+                    },
+                    {
+                        "title": "FPL-Event-Driven: Event-Driven and Reactive Programming",
+                        "page": 134
+                    },
+                    {
+                        "title": "FPL-Parallel: Parallel and Distributed Computing",
+                        "page": 135
+                    },
+                    {
+                        "title": "FPL-Aspect: Aspect-Oriented Programming",
+                        "page": 136
+                    },
+                    {
+                        "title": "FPL-Types: Type Systems",
+                        "page": 136
+                    },
+                    {
+                        "title": "FPL-Systems: Systems Execution and Memory Model",
+                        "page": 138
+                    },
+                    {
+                        "title": "FPL-Translation: Language Translation and Execution",
+                        "page": 139
+                    },
+                    {
+                        "title": "FPL-Syntax: Syntax Analysis",
+                        "page": 141
+                    },
+                    {
+                        "title": "FPL-Semantics: Compiler Semantic Analysis",
+                        "page": 141
+                    },
+                    {
+                        "title": "FPL-Analysis: Program Analysis and Analyzers",
+                        "page": 142
+                    },
+                    {
+                        "title": "FPL-Code: Code Generation",
+                        "page": 142
+                    },
+                    {
+                        "title": "FPL-Run-Time: Run-time Behavior and Systems",
+                        "page": 143
+                    },
+                    {
+                        "title": "FPL-Constructs: Advanced Programming Constructs",
+                        "page": 144
+                    },
+                    {
+                        "title": "FPL-Pragmatics: Language Pragmatics",
+                        "page": 144
+                    },
+                    {
+                        "title": "FPL-Formalism: Formal Semantics",
+                        "page": 145
+                    },
+                    {
+                        "title": "FPL-Methodologies: Formal Development Methodologies",
+                        "page": 146
+                    },
+                    {
+                        "title": "FPL-Design: Design Principles of Programming Languages",
+                        "page": 146
+                    }
+                ]
+            },
+            {
+                "title": "Professional Dispositions",
+                "page": 147,
+                "units": []
+            },
+            {
+                "title": "Mathematics Requirements",
+                "page": 147,
+                "units": [
+                    {
+                        "title": "FPL-SEP: Society, Ethics, and the Profession",
+                        "page": 147
+                    }
+                ]
+            },
+            {
+                "title": "Course Packaging Suggestions",
+                "page": 148,
+                "units": []
+            },
+            {
+                "title": "Committee",
+                "page": 149,
+                "units": []
+            }
+        ]
+    },
+    {
+        "title": "Graphics and Interactive Techniques (GIT)",
+        "page": 151,
+        "units": [
+            {
+                "title": "Preamble",
+                "page": 151,
+                "units": []
+            },
+            {
+                "title": "Core Hours",
+                "page": 154,
+                "units": [
+                    {
+                        "title": "Changes since CS2013",
+                        "page": 154
+                    }
+                ]
+            },
+            {
+                "title": "Knowledge Units",
+                "page": 155,
+                "units": [
+                    {
+                        "title": "GIT-Fundamentals: Fundamental Concepts",
+                        "page": 155
+                    },
+                    {
+                        "title": "GIT-Visualization: Visualization",
+                        "page": 156
+                    },
+                    {
+                        "title": "GIT-Rendering: Applied Rendering and Techniques",
+                        "page": 157
+                    },
+                    {
+                        "title": "GIT-Modeling: Geometric Modeling",
+                        "page": 158
+                    },
+                    {
+                        "title": "GIT-Shading: Shading and Advanced Rendering",
+                        "page": 159
+                    },
+                    {
+                        "title": "GIT-Animation: Computer Animation",
+                        "page": 160
+                    },
+                    {
+                        "title": "GIT-Simulation: Simulation",
+                        "page": 161
+                    },
+                    {
+                        "title": "GIT-Immersion: Immersion",
+                        "page": 161
+                    },
+                    {
+                        "title": "GIT-Interaction: Interaction",
+                        "page": 162
+                    },
+                    {
+                        "title": "GIT-Image: Image Processing",
+                        "page": 163
+                    },
+                    {
+                        "title": "GIT-Physical: Tangible/Physical Computing",
+                        "page": 164
+                    },
+                    {
+                        "title": "GIT-SEP: Society, Ethics, and the Profession",
+                        "page": 165
+                    }
+                ]
+            },
+            {
+                "title": "Mathematics Requirements",
+                "page": 166,
+                "units": []
+            },
+            {
+                "title": "Course Packaging Suggestions",
+                "page": 167,
+                "units": []
+            },
+            {
+                "title": "Committee",
+                "page": 170,
+                "units": []
+            },
+            {
+                "title": "References",
+                "page": 171,
+                "units": []
+            }
+        ]
+    },
+    {
+        "title": "Human-Computer Interaction (HCI)",
+        "page": 173,
+        "units": [
+            {
+                "title": "Preamble",
+                "page": 173,
+                "units": [
+                    {
+                        "title": "Changes since CS2013",
+                        "page": 173
+                    }
+                ]
+            },
+            {
+                "title": "Core Hours",
+                "page": 174,
+                "units": []
+            },
+            {
+                "title": "Knowledge Units",
+                "page": 174,
+                "units": [
+                    {
+                        "title": "HCI-User: Understanding the User: Individual goals and interactions with others",
+                        "page": 174
+                    },
+                    {
+                        "title": "HCI-Accountability: Accountability and Responsibility in Design",
+                        "page": 176
+                    },
+                    {
+                        "title": "HCI-Accessibility: Accessibility and Inclusive Design",
+                        "page": 177
+                    },
+                    {
+                        "title": "HCI-Evaluation: Evaluating the Design",
+                        "page": 178
+                    },
+                    {
+                        "title": "HCI-Design: System Design",
+                        "page": 179
+                    },
+                    {
+                        "title": "HCI-SEP: Society, Ethics, and the Profession",
+                        "page": 181
+                    }
+                ]
+            },
+            {
+                "title": "Professional Dispositions",
+                "page": 182,
+                "units": []
+            },
+            {
+                "title": "Mathematics Requirements",
+                "page": 182,
+                "units": []
+            },
+            {
+                "title": "Course Packaging Suggestions",
+                "page": 182,
+                "units": []
+            },
+            {
+                "title": "Committee",
+                "page": 183,
+                "units": []
+            }
+        ]
+    },
+    {
+        "title": "Mathematical and Statistical Foundations (MSF)",
+        "page": 185,
+        "units": [
+            {
+                "title": "Preamble",
+                "page": 185,
+                "units": []
+            },
+            {
+                "title": "Core Hours",
+                "page": 185,
+                "units": [
+                    {
+                        "title": "Changes since CS2013",
+                        "page": 185
+                    },
+                    {
+                        "title": "Acknowledging some tensions",
+                        "page": 185
+                    },
+                    {
+                        "title": "Rationale for recommended hours",
+                        "page": 186
+                    }
+                ]
+            },
+            {
+                "title": "Knowledge Units",
+                "page": 187,
+                "units": [
+                    {
+                        "title": "MSF-Discrete: Discrete Mathematics",
+                        "page": 187
+                    },
+                    {
+                        "title": "MSF-Probability: Probability",
+                        "page": 188
+                    },
+                    {
+                        "title": "MSF-Statistics: Statistics",
+                        "page": 190
+                    },
+                    {
+                        "title": "MSF-Linear: Linear Algebra",
+                        "page": 191
+                    },
+                    {
+                        "title": "MSF-Calculus",
+                        "page": 192
+                    }
+                ]
+            },
+            {
+                "title": "Professional Dispositions",
+                "page": 194,
+                "units": []
+            },
+            {
+                "title": "Course Packaging Suggestions",
+                "page": 195,
+                "units": []
+            },
+            {
+                "title": "Committee",
+                "page": 195,
+                "units": []
+            },
+            {
+                "title": "References",
+                "page": 196,
+                "units": []
+            }
+        ]
+    },
+    {
+        "title": "Networking and Communication (NC)",
+        "page": 197,
+        "units": [
+            {
+                "title": "Preamble",
+                "page": 197,
+                "units": [
+                    {
+                        "title": "Changes since CS2013",
+                        "page": 197
+                    }
+                ]
+            },
+            {
+                "title": "Core Hours",
+                "page": 198,
+                "units": []
+            },
+            {
+                "title": "Knowledge Units",
+                "page": 198,
+                "units": [
+                    {
+                        "title": "NC-Fundamentals: Fundamentals",
+                        "page": 198
+                    },
+                    {
+                        "title": "NC-Applications: Networked Applications",
+                        "page": 199
+                    },
+                    {
+                        "title": "NC-Reliability: Reliability Support",
+                        "page": 199
+                    },
+                    {
+                        "title": "NC-Routing: Routing and Forwarding",
+                        "page": 199
+                    },
+                    {
+                        "title": "NC-SingleHop: Single Hop Communication",
+                        "page": 200
+                    },
+                    {
+                        "title": "NC-Security: Network Security",
+                        "page": 200
+                    }
+                ]
+            },
+            {
+                "title": "Professional Dispositions",
+                "page": 201,
+                "units": [
+                    {
+                        "title": "NC-Mobility: Mobility",
+                        "page": 201
+                    },
+                    {
+                        "title": "NC-Emerging: Emerging Topics",
+                        "page": 201
+                    }
+                ]
+            },
+            {
+                "title": "Mathematics Requirements",
+                "page": 202,
+                "units": []
+            },
+            {
+                "title": "Course Packaging Suggestions",
+                "page": 202,
+                "units": []
+            },
+            {
+                "title": "Committee",
+                "page": 203,
+                "units": []
+            }
+        ]
+    },
+    {
+        "title": "Operating Systems (OS)",
+        "page": 205,
+        "units": [
+            {
+                "title": "Preamble",
+                "page": 205,
+                "units": []
+            },
+            {
+                "title": "Core Hours",
+                "page": 205,
+                "units": [
+                    {
+                        "title": "Changes since CS2013",
+                        "page": 205
+                    }
+                ]
+            },
+            {
+                "title": "Knowledge Units",
+                "page": 206,
+                "units": [
+                    {
+                        "title": "OS-Purpose: Role and Purpose of Operating Systems",
+                        "page": 206
+                    },
+                    {
+                        "title": "OS-Principles: Principles of Operating System",
+                        "page": 207
+                    },
+                    {
+                        "title": "OS-Concurrency: Concurrency",
+                        "page": 208
+                    },
+                    {
+                        "title": "OS-Protection: Protection and Safety",
+                        "page": 209
+                    },
+                    {
+                        "title": "OS-Scheduling: Scheduling",
+                        "page": 209
+                    },
+                    {
+                        "title": "OS-Process: Process Model",
+                        "page": 210
+                    },
+                    {
+                        "title": "OS-Memory: Memory Management",
+                        "page": 210
+                    },
+                    {
+                        "title": "OS-Files: File Systems API and Implementation",
+                        "page": 212
+                    },
+                    {
+                        "title": "OS-Advanced-Files: Advanced File systems",
+                        "page": 212
+                    },
+                    {
+                        "title": "OS-Virtualization: Virtualization",
+                        "page": 213
+                    },
+                    {
+                        "title": "OS-Real-time: Real-time and Embedded Systems",
+                        "page": 214
+                    },
+                    {
+                        "title": "OS-Faults: Fault tolerance",
+                        "page": 214
+                    }
+                ]
+            },
+            {
+                "title": "Professional Dispositions",
+                "page": 215,
+                "units": []
+            },
+            {
+                "title": "Mathematics Requirements",
+                "page": 215,
+                "units": []
+            },
+            {
+                "title": "Course Packaging Suggestions",
+                "page": 215,
+                "units": [
+                    {
+                        "title": "OS-SEP: Society, Ethics, and the Profession",
+                        "page": 215
+                    }
+                ]
+            },
+            {
+                "title": "Committee",
+                "page": 216,
+                "units": []
+            }
+        ]
+    },
+    {
+        "title": "Parallel and Distributed Computing (PDC)",
+        "page": 217,
+        "units": [
+            {
+                "title": "Preamble",
+                "page": 217,
+                "units": [
+                    {
+                        "title": "Changes since CS2013",
+                        "page": 217
+                    },
+                    {
+                        "title": "Overview",
+                        "page": 217
+                    }
+                ]
+            },
+            {
+                "title": "Core Hours",
+                "page": 218,
+                "units": []
+            },
+            {
+                "title": "Knowledge Units",
+                "page": 219,
+                "units": [
+                    {
+                        "title": "PDC-Programs: Programs",
+                        "page": 219
+                    },
+                    {
+                        "title": "PDC-Communication: Communication",
+                        "page": 220
+                    },
+                    {
+                        "title": "PDC-Coordination: Coordination",
+                        "page": 222
+                    },
+                    {
+                        "title": "PDC-Evaluation: Evaluation",
+                        "page": 224
+                    },
+                    {
+                        "title": "PDC-Algorithms: Algorithms",
+                        "page": 225
+                    }
+                ]
+            },
+            {
+                "title": "Professional Dispositions",
+                "page": 227,
+                "units": []
+            },
+            {
+                "title": "Mathematics Requirements",
+                "page": 227,
+                "units": []
+            },
+            {
+                "title": "Course Packaging Suggestions",
+                "page": 227,
+                "units": []
+            },
+            {
+                "title": "Committee",
+                "page": 228,
+                "units": []
+            },
+            {
+                "title": "References",
+                "page": 228,
+                "units": []
+            }
+        ]
+    },
+    {
+        "title": "Software Development Fundamentals (SDF)",
+        "page": 229,
+        "units": [
+            {
+                "title": "Preamble",
+                "page": 229,
+                "units": [
+                    {
+                        "title": "Changes since CS",
+                        "page": 229
+                    },
+                    {
+                        "title": "Overview",
+                        "page": 229
+                    }
+                ]
+            },
+            {
+                "title": "Core Hours",
+                "page": 230,
+                "units": []
+            },
+            {
+                "title": "Knowledge Units",
+                "page": 230,
+                "units": [
+                    {
+                        "title": "SDF-Data-Structures: Fundamental Data Structures",
+                        "page": 231
+                    },
+                    {
+                        "title": "SDF-Algorithms: Algorithms",
+                        "page": 232
+                    },
+                    {
+                        "title": "SDF-Practices: Software Development Practices",
+                        "page": 232
+                    }
+                ]
+            },
+            {
+                "title": "Professional Dispositions",
+                "page": 233,
+                "units": [
+                    {
+                        "title": "SDF-SEP: Society, Ethics, and the Profession",
+                        "page": 233
+                    }
+                ]
+            },
+            {
+                "title": "Mathematics Requirements",
+                "page": 234,
+                "units": []
+            },
+            {
+                "title": "Course Packaging Suggestions",
+                "page": 234,
+                "units": []
+            },
+            {
+                "title": "Committee",
+                "page": 235,
+                "units": []
+            }
+        ]
+    },
+    {
+        "title": "Software Engineering (SE)",
+        "page": 237,
+        "units": [
+            {
+                "title": "Preamble",
+                "page": 237,
+                "units": [
+                    {
+                        "title": "Changes since CS",
+                        "page": 238
+                    },
+                    {
+                        "title": "Overview",
+                        "page": 238
+                    }
+                ]
+            },
+            {
+                "title": "Core Hours",
+                "page": 239,
+                "units": []
+            },
+            {
+                "title": "Knowledge Units",
+                "page": 240,
+                "units": [
+                    {
+                        "title": "SE-Teamwork: Teamwork",
+                        "page": 240
+                    },
+                    {
+                        "title": "SE-Tools: Tools and Environments",
+                        "page": 241
+                    },
+                    {
+                        "title": "SE-Requirements: Product Requirements",
+                        "page": 242
+                    },
+                    {
+                        "title": "SE-Design: Software Design",
+                        "page": 243
+                    },
+                    {
+                        "title": "SE-Construction: Software Construction",
+                        "page": 245
+                    },
+                    {
+                        "title": "SE-Validation: Software Verification and Validation",
+                        "page": 246
+                    },
+                    {
+                        "title": "SE-Refactoring: Refactoring and Code Evolution",
+                        "page": 249
+                    },
+                    {
+                        "title": "SE-Reliability: Software Reliability",
+                        "page": 250
+                    }
+                ]
+            },
+            {
+                "title": "Professional Dispositions",
+                "page": 251,
+                "units": [
+                    {
+                        "title": "SE-Formal: Formal Methods",
+                        "page": 251
+                    }
+                ]
+            },
+            {
+                "title": "Mathematics Requirements",
+                "page": 252,
+                "units": []
+            },
+            {
+                "title": "Course Packaging Suggestions",
+                "page": 252,
+                "units": []
+            },
+            {
+                "title": "Committee",
+                "page": 252,
+                "units": []
+            }
+        ]
+    },
+    {
+        "title": "Security (SEC)",
+        "page": 255,
+        "units": [
+            {
+                "title": "Preamble",
+                "page": 255,
+                "units": [
+                    {
+                        "title": "Changes since CS2013",
+                        "page": 255
+                    },
+                    {
+                        "title": "Differences between CS2023 Security knowledge area and Cybersecurity",
+                        "page": 256
+                    }
+                ]
+            },
+            {
+                "title": "Core Hours",
+                "page": 257,
+                "units": [
+                    {
+                        "title": "SEC-Foundations: Foundational Security",
+                        "page": 257
+                    },
+                    {
+                        "title": "SEC-SEP: Society, Ethics, and the Profession",
+                        "page": 258
+                    },
+                    {
+                        "title": "SEC-Coding: Secure Coding",
+                        "page": 259
+                    },
+                    {
+                        "title": "SEC-Crypto: Cryptography",
+                        "page": 260
+                    },
+                    {
+                        "title": "SEC-Engineering: Security Analysis, Design, and Engineering",
+                        "page": 261
+                    },
+                    {
+                        "title": "SEC-Forensics: Digital Forensics",
+                        "page": 262
+                    }
+                ]
+            },
+            {
+                "title": "Professional Dispositions",
+                "page": 263,
+                "units": [
+                    {
+                        "title": "SEC-Governance: Security Governance",
+                        "page": 263
+                    }
+                ]
+            },
+            {
+                "title": "Mathematics Requirements",
+                "page": 264,
+                "units": []
+            },
+            {
+                "title": "Course Packaging Suggestions",
+                "page": 264,
+                "units": []
+            },
+            {
+                "title": "Committee",
+                "page": 267,
+                "units": []
+            },
+            {
+                "title": "References",
+                "page": 267,
+                "units": []
+            },
+            {
+                "title": "Preamble",
+                "page": 269,
+                "units": []
+            },
+            {
+                "title": "Core Hours",
+                "page": 272,
+                "units": [
+                    {
+                        "title": "Changes Since CS2013",
+                        "page": 272
+                    }
+                ]
+            },
+            {
+                "title": "Knowledge Units",
+                "page": 273,
+                "units": [
+                    {
+                        "title": "SEP-Context: Social Context",
+                        "page": 273
+                    },
+                    {
+                        "title": "SEP-Ethical-Analysis: Methods for Ethical Analysis",
+                        "page": 274
+                    },
+                    {
+                        "title": "SEP-Professional-Ethics: Professional Ethics",
+                        "page": 276
+                    },
+                    {
+                        "title": "SEP-IP: Intellectual Property",
+                        "page": 277
+                    },
+                    {
+                        "title": "SEP-Privacy: Privacy and Civil Liberties",
+                        "page": 278
+                    },
+                    {
+                        "title": "SEP-Communication: Communication",
+                        "page": 279
+                    },
+                    {
+                        "title": "SEP-Sustainability: Sustainability",
+                        "page": 281
+                    },
+                    {
+                        "title": "SEP-History: Computing History",
+                        "page": 282
+                    },
+                    {
+                        "title": "SEP-Economies: Economies of Computing",
+                        "page": 283
+                    },
+                    {
+                        "title": "SEP-Security: Security Policies, Laws and Computer Crimes",
+                        "page": 284
+                    },
+                    {
+                        "title": "SEP-DEIA: Diversity, Equity, Inclusion, and Accessibility",
+                        "page": 285
+                    }
+                ]
+            },
+            {
+                "title": "Professional Dispositions",
+                "page": 286,
+                "units": []
+            },
+            {
+                "title": "Course Packaging Suggestions",
+                "page": 287,
+                "units": []
+            },
+            {
+                "title": "Committee",
+                "page": 289,
+                "units": []
+            },
+            {
+                "title": "References",
+                "page": 290,
+                "units": []
+            },
+            {
+                "title": "Preamble",
+                "page": 291,
+                "units": [
+                    {
+                        "title": "Changes since CS2013",
+                        "page": 291
+                    }
+                ]
+            },
+            {
+                "title": "Core Hours",
+                "page": 292,
+                "units": []
+            },
+            {
+                "title": "Knowledge Units",
+                "page": 292,
+                "units": [
+                    {
+                        "title": "SF-Overview: Overview of Computer Systems",
+                        "page": 292
+                    },
+                    {
+                        "title": "SF-Foundations: Basic Concepts",
+                        "page": 293
+                    },
+                    {
+                        "title": "SF-Resource: Resource Management",
+                        "page": 294
+                    },
+                    {
+                        "title": "SF-Performance: System Performance",
+                        "page": 294
+                    },
+                    {
+                        "title": "SF-Evaluation: Performance Evaluation",
+                        "page": 295
+                    },
+                    {
+                        "title": "SF-Reliability: System Reliability",
+                        "page": 296
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Society, Ethics, and the Profession (SEP) SF-SEP: Society, Ethics, and the Profession",
+        "page": 297,
+        "units": [
+            {
+                "title": "Professional Dispositions",
+                "page": 298,
+                "units": []
+            },
+            {
+                "title": "Mathematics Requirements",
+                "page": 298,
+                "units": []
+            },
+            {
+                "title": "Course Packaging Suggestions",
+                "page": 298,
+                "units": []
+            },
+            {
+                "title": "Committee",
+                "page": 299,
+                "units": []
+            }
+        ]
+    },
+    {
+        "title": "Specialized Platform Development (SPD)",
+        "page": 301,
+        "units": [
+            {
+                "title": "Preamble",
+                "page": 301,
+                "units": []
+            },
+            {
+                "title": "Core Hours",
+                "page": 301,
+                "units": [
+                    {
+                        "title": "Changes since CS2013",
+                        "page": 301
+                    }
+                ]
+            },
+            {
+                "title": "Knowledge Units",
+                "page": 302,
+                "units": [
+                    {
+                        "title": "SPD-Common: Common Aspects/Shared Concerns",
+                        "page": 302
+                    },
+                    {
+                        "title": "SPD-Web: Web Platforms",
+                        "page": 303
+                    },
+                    {
+                        "title": "SPD-Mobile: Mobile Platforms",
+                        "page": 303
+                    },
+                    {
+                        "title": "SPD-Robot: Robot Platforms",
+                        "page": 304
+                    },
+                    {
+                        "title": "SPD-Embedded: Embedded Platforms",
+                        "page": 305
+                    },
+                    {
+                        "title": "SPD-Game: Game Platforms",
+                        "page": 306
+                    },
+                    {
+                        "title": "SPD-Interactive: Interactive Computing Platforms",
+                        "page": 308
+                    },
+                    {
+                        "title": "SPD-SEP/Mobile",
+                        "page": 309
+                    },
+                    {
+                        "title": "SPD-SEP/Web",
+                        "page": 310
+                    },
+                    {
+                        "title": "SPD-SEP/Game",
+                        "page": 310
+                    }
+                ]
+            },
+            {
+                "title": "Professional Dispositions",
+                "page": 312,
+                "units": []
+            },
+            {
+                "title": "Mathematics Requirements",
+                "page": 312,
+                "units": [
+                    {
+                        "title": "SPD-SEP/Interactive",
+                        "page": 312
+                    }
+                ]
+            },
+            {
+                "title": "Course Packaging Suggestions",
+                "page": 313,
+                "units": []
+            },
+            {
+                "title": "Committee",
+                "page": 315,
+                "units": []
+            }
+        ]
+    },
+    {
+        "title": "Core Topics Table",
+        "page": 317,
+        "units": [
+            {
+                "title": "Software Competency Area",
+                "page": 317,
+                "units": [
+                    {
+                        "title": "SDF: Software Development Fundamentals",
+                        "page": 317
+                    },
+                    {
+                        "title": "FPL: Foundations of Programming Languages",
+                        "page": 322
+                    },
+                    {
+                        "title": "SE: Software Engineering",
+                        "page": 328
+                    }
+                ]
+            },
+            {
+                "title": "Systems Competency Area",
+                "page": 330,
+                "units": [
+                    {
+                        "title": "AR: Architecture and Organization",
+                        "page": 331
+                    },
+                    {
+                        "title": "OS: Operating Systems",
+                        "page": 335
+                    },
+                    {
+                        "title": "NC: Networking and Communication",
+                        "page": 339
+                    },
+                    {
+                        "title": "PDC: Parallel and Distributed Computing",
+                        "page": 342
+                    },
+                    {
+                        "title": "SF: Systems Fundamentals",
+                        "page": 350
+                    },
+                    {
+                        "title": "DM: Data Management",
+                        "page": 352
+                    },
+                    {
+                        "title": "SEC: Security",
+                        "page": 356
+                    }
+                ]
+            },
+            {
+                "title": "Applications Competency Area",
+                "page": 360,
+                "units": [
+                    {
+                        "title": "AI: Artificial Intelligence",
+                        "page": 361
+                    },
+                    {
+                        "title": "GIT: Graphics and Interactive Techniques",
+                        "page": 367
+                    },
+                    {
+                        "title": "HCI: Human-Computer Interaction",
+                        "page": 370
+                    },
+                    {
+                        "title": "SPD: Specialized Platform Development",
+                        "page": 375
+                    }
+                ]
+            },
+            {
+                "title": "Crosscutting Core Topics",
+                "page": 380,
+                "units": [
+                    {
+                        "title": "SEP: Society, Ethics, and the Profession",
+                        "page": 380
+                    },
+                    {
+                        "title": "MSF: Mathematical and Statistical Foundations",
+                        "page": 387
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Curricular Packaging",
+        "page": 391,
+        "units": [
+            {
+                "title": "8 Course Model",
+                "page": 391,
+                "units": []
+            },
+            {
+                "title": "10 Course Model",
+                "page": 391,
+                "units": []
+            },
+            {
+                "title": "12 Course Model",
+                "page": 392,
+                "units": []
+            },
+            {
+                "title": "16 Course Model",
+                "page": 392,
+                "units": [
+                    {
+                        "title": "Model 1:",
+                        "page": 392
+                    },
+                    {
+                        "title": "Model 3:",
+                        "page": 394
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Competency Framework Examples",
+        "page": 395,
+        "units": [
+            {
+                "title": "Sample Tasks",
+                "page": 395,
+                "units": [
+                    {
+                        "title": "Software Competency Area",
+                        "page": 395
+                    },
+                    {
+                        "title": "Systems Competency Area",
+                        "page": 396
+                    },
+                    {
+                        "title": "Applications Competency Area",
+                        "page": 397
+                    }
+                ]
+            },
+            {
+                "title": "Sample Competency Specifications",
+                "page": 398,
+                "units": [
+                    {
+                        "title": "Software Competency Area",
+                        "page": 398
+                    },
+                    {
+                        "title": "Systems Competency Area",
+                        "page": 400
+                    },
+                    {
+                        "title": "Applications Competency Area",
+                        "page": 403
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Pedagogy and Practices",
+        "page": 407,
+        "units": []
+    },
+    {
+        "title": "Pedagogical Considerations",
+        "page": 409,
+        "units": [
+            {
+                "title": "Introduction",
+                "page": 409,
+                "units": []
+            },
+            {
+                "title": "Curriculum-Wide Considerations",
+                "page": 409,
+                "units": []
+            },
+            {
+                "title": "Considerations by Knowledge Area",
+                "page": 410,
+                "units": [
+                    {
+                        "title": "Artificial Intelligence (AI)",
+                        "page": 410
+                    },
+                    {
+                        "title": "Algorithmic Foundations (AL)",
+                        "page": 410
+                    },
+                    {
+                        "title": "Architecture and Organization (AR)",
+                        "page": 410
+                    },
+                    {
+                        "title": "Data Management (DM)",
+                        "page": 410
+                    },
+                    {
+                        "title": "Foundations of Programming Languages (FPL)",
+                        "page": 411
+                    },
+                    {
+                        "title": "Mathematical and Statistical Foundations (MSF)",
+                        "page": 411
+                    },
+                    {
+                        "title": "Networking and Communication (NC)",
+                        "page": 412
+                    },
+                    {
+                        "title": "Operating Systems (OS)",
+                        "page": 412
+                    },
+                    {
+                        "title": "Parallel and Distributed Computing (PDC)",
+                        "page": 412
+                    },
+                    {
+                        "title": "Software Development Fundamentals (SDF)",
+                        "page": 412
+                    },
+                    {
+                        "title": "Software Engineering (SE)",
+                        "page": 413
+                    },
+                    {
+                        "title": "Security (SEC)",
+                        "page": 413
+                    },
+                    {
+                        "title": "Society, Ethics, and the Profession (SEP)",
+                        "page": 413
+                    },
+                    {
+                        "title": "Specialized Platform Development (SPD)",
+                        "page": 414
+                    },
+                    {
+                        "title": "Systems Fundamentals (SF)",
+                        "page": 414
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Curricular Practices in Computer Science",
+        "page": 417,
+        "units": [
+            {
+                "title": "Teaching about Accessibility in Computer Science Education",
+                "page": 420,
+                "units": []
+            },
+            {
+                "title": "Computing for Social Good in Education",
+                "page": 422,
+                "units": []
+            },
+            {
+                "title": "Multiple Approaches for Teaching Responsible Computing",
+                "page": 424,
+                "units": []
+            },
+            {
+                "title": "Making ethics at home in Global CS Education: Provoking stories from the Souths",
+                "page": 429,
+                "units": []
+            },
+            {
+                "title": "Curricula",
+                "page": 431,
+                "units": []
+            },
+            {
+                "title": "The Role of Formal Methods in Computer Science Education",
+                "page": 433,
+                "units": []
+            },
+            {
+                "title": "Quantum Computing Education: A Curricular Perspective",
+                "page": 435,
+                "units": []
+            },
+            {
+                "title": "Generative AI in Introductory Programming",
+                "page": 438,
+                "units": []
+            },
+            {
+                "title": "The Undergraduate Database Course in Computer Science: What to",
+                "page": 441,
+                "units": []
+            },
+            {
+                "title": "Computer Science Curriculum Guidelines: A New Liberal Arts Perspective",
+                "page": 443,
+                "units": []
+            },
+            {
+                "title": "Computer Science Education in Community Colleges",
+                "page": 446,
+                "units": []
+            }
+        ]
+    },
+    {
+        "title": "Generative AI and the Curriculum",
+        "page": 449,
+        "units": [
+            {
+                "title": "Introduction",
+                "page": 449,
+                "units": []
+            },
+            {
+                "title": "Implications by Competency Area - Software",
+                "page": 449,
+                "units": [
+                    {
+                        "title": "Algorithmic Foundations (AL)",
+                        "page": 449
+                    },
+                    {
+                        "title": "Foundations of Programming Languages (FPL)",
+                        "page": 449
+                    }
+                ]
+            },
+            {
+                "title": "Implications by Competency Area - Systems",
+                "page": 450,
+                "units": [
+                    {
+                        "title": "Software Engineering (SE)",
+                        "page": 450
+                    },
+                    {
+                        "title": "Architecture and Organization (AR)",
+                        "page": 450
+                    },
+                    {
+                        "title": "Data Management (DM)",
+                        "page": 450
+                    },
+                    {
+                        "title": "Networking and Communication (NC)",
+                        "page": 450
+                    }
+                ]
+            },
+            {
+                "title": "Implications by Competency Area - Applications",
+                "page": 451,
+                "units": [
+                    {
+                        "title": "Operating Systems (OS)",
+                        "page": 451
+                    },
+                    {
+                        "title": "Systems Fundamentals (SF)",
+                        "page": 451
+                    },
+                    {
+                        "title": "Security (SEC)",
+                        "page": 451
+                    },
+                    {
+                        "title": "Artificial Intelligence (AI)",
+                        "page": 451
+                    },
+                    {
+                        "title": "Graphics and Interactive Techniques (GIT)",
+                        "page": 451
+                    },
+                    {
+                        "title": "Human-Computer Interaction (HCI)",
+                        "page": 452
+                    },
+                    {
+                        "title": "Specialized Platform Development (SPD)",
+                        "page": 452
+                    }
+                ]
+            },
+            {
+                "title": "Implications for the Curriculum",
+                "page": 453,
+                "units": [
+                    {
+                        "title": "Society, Ethics, and the Profession (SEP)",
+                        "page": 453
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Acknowledgments",
+        "page": 455,
+        "units": [
+            {
+                "title": "Organization",
+                "page": 455,
+                "units": []
+            },
+            {
+                "title": "Reviewers",
+                "page": 455,
+                "units": []
+            },
+            {
+                "title": "Contributors",
+                "page": 457,
+                "units": []
+            }
+        ]
+    }
+]

@@ -1,0 +1,59 @@
+
+.button {
+        display: flex;
+    align-items: center;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    width: fit-content;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+}
+
+
+.button--back {
+        align-items: center;
+gap: 5px;
+color: oklch(54.6% 0.245 262.881);
+    width: fit-content;
+display: flex;
+background-color: inherit;
+}
+
+
+.button--logout {
+    gap: 1rem;
+    display: inline-flex;
+    align-items: center;    border-radius: 8px;
+    margin-top: auto;
+    padding: 1rem 2rem;
+    width: 100%;
+    background: rgba(239, 68, 68, 0.45);
+    color: #350606;
+}
+
+.button--reject {
+    background: rgba(239, 68, 68, 0.45);
+    color: #350606;
+}
+
+.button--reject:hover {
+    background: rgba(239, 68, 68, 0.80);
+    color: #350606;
+}
+
+
+
+.button--start-review {
+    background: rgba(59, 130, 246, 0.15);
+    color: #3B82F6;
+}
+
+.button--start-review:hover {
+     background: rgba(59, 130, 246, 0.80);
+    color: #3B82F6;
+}
