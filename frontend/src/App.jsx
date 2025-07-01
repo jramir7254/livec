@@ -10,6 +10,7 @@ import NotifyPage from './pages/NotifyPage';
 import ReviewerQueuePage from './pages/ReviewerQueuePage';
 import ReviewerDashboard from './pages/ReviewerDashboard';
 import ProposalHistory from './pages/ProposalHistory';
+import SubmitReviewPage from './pages/SubmitReviewPage';
 
 function App() {
   const [selectedCurriculum, setSelectedCurriculum] = useState(null);
@@ -27,6 +28,7 @@ function App() {
         <Route path="/reviewer/queue" element={<ReviewerQueuePage />} />
         <Route path="/reviewer/dashboard" element={<ReviewerDashboard />} />
         <Route path="/proposal/:proposalId/history" element={<ProposalHistory />} />
+        <Route path="/review/:proposalId/:reviewerId/submit" element={<SubmitReviewPage />} />
       </Routes>
     </Router>
   );
