@@ -7,6 +7,7 @@ import recommendationRoutes from './routes/recommendation.js';
 import notifyRoutes from './routes/notify.js';
 import reviewerRoutes from './routes/reviewer.js';
 import reviewRoutes from './routes/review.js';
+import aeRoutes from './routes/ae.js';
 
 const app = express();
 app.use(cors());
@@ -22,8 +23,10 @@ app.use('/api/notify', notifyRoutes);
 
 app.use('/api/reviewer', reviewerRoutes);
 
+app.use('/api/ae', aeRoutes);
+
 app.listen(3001, () => {
-  console.log('Backend running on port 3001');
+  console.log('Backend running on http://localhost:3001');
 });
 
 const PORT = 3001;

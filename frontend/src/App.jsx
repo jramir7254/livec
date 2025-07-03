@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import RecommendationPage from './pages/RecommendationPage';
 // import CurriculumDetailsPage from './pages/Details/CurriculumDetailsPage';
@@ -11,6 +13,7 @@ import ReviewerQueuePage from './pages/ReviewerQueuePage';
 import ReviewerDashboard from './pages/ReviewerDashboard';
 import ProposalHistory from './pages/ProposalHistory';
 import SubmitReviewPage from './pages/SubmitReviewPage';
+import AEQueuePage from './pages/AEQueuePage';
 
 function App() {
   const [selectedCurriculum, setSelectedCurriculum] = useState(null);
@@ -29,6 +32,8 @@ function App() {
         <Route path="/reviewer/dashboard" element={<ReviewerDashboard />} />
         <Route path="/proposal/:proposalId/history" element={<ProposalHistory />} />
         <Route path="/review/:proposalId/:reviewerId/submit" element={<SubmitReviewPage />} />
+        <Route path="/ae/queue" element={<AEQueuePage />} />
+        
       </Routes>
     </Router>
   );
