@@ -14,6 +14,7 @@ import ReviewerDashboard from './pages/ReviewerDashboard';
 import ProposalHistory from './pages/ProposalHistory';
 import SubmitReviewPage from './pages/SubmitReviewPage';
 import AEQueuePage from './pages/AEQueuePage';
+import AEFinalRecommendationPage from './pages/AEFinalRecommendationPage';
 
 function App() {
   const [selectedCurriculum, setSelectedCurriculum] = useState(null);
@@ -33,7 +34,7 @@ function App() {
         <Route path="/proposal/:proposalId/history" element={<ProposalHistory />} />
         <Route path="/review/:proposalId/:reviewerId/submit" element={<SubmitReviewPage />} />
         <Route path="/ae/queue" element={<AEQueuePage />} />
-        
+        <Route path="/proposal/:proposalId/final-recommendation/:aeId" element={<AEFinalRecommendationPage />} />
       </Routes>
     </Router>
   );

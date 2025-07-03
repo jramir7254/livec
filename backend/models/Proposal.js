@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 const proposalSchema = new mongoose.Schema({
   title: String,
   description: String,
+  segment: String,
   segmentId: String,
   assignedReviewers: [{ type: String }],
   reviews: [
@@ -18,8 +19,13 @@ const proposalSchema = new mongoose.Schema({
     justification: String,
     aeId: String,
     submittedAt: { type: Date, default: Date.now }
-  }
+  },
+  aeFinalRecommendation: {
+    aeId: String,
+    recommendation: String,
+    justification: String,
+    submittedAt: Date,
+  },
 });
 
-const Proposal = mongoose.model('Proposal', proposalSchema);
-export default Proposal;
+export default mongoose.model('Proposal', proposalSchema);
