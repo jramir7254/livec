@@ -35,6 +35,7 @@ function App() {
         <Route path="/review/:proposalId/:reviewerId/submit" element={<SubmitReviewPage />} />
         <Route path="/ae/queue" element={<AEQueuePage />} />
         <Route path="/proposal/:proposalId/final-recommendation/:aeId" element={<AEFinalRecommendationPage />} />
+        <Route path="/ae/finalize/:proposalId" element={<AEFinalRecommendationPage />} />
       </Routes>
     </Router>
   );

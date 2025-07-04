@@ -2,6 +2,8 @@ import mongoose from 'mongoose';
 
 const proposalSchema = new mongoose.Schema({
   title: String,
+  content: String,
+  aeFeedback: String,
   description: String,
   segment: String,
   segmentId: String,
@@ -11,9 +13,13 @@ const proposalSchema = new mongoose.Schema({
       reviewerId: String,
       merits: String,
       recommendation: String,
+      justification: String,
       submittedAt: { type: Date, default: Date.now }
     }
   ],
+  finalRecommendation: String,
+  publicFeedback: String,
+  aeFinalized: Boolean,
   aeFeedback: {
     merits: String,
     justification: String,
