@@ -1,7 +1,7 @@
 import React from 'react'
 import { IoIosArrowBack } from "react-icons/io"
 import { useNavigate } from 'react-router';
-import styles from './Buttons.module.css'
+import styles from './Buttons.module.scss'
 import * as Icons from '@components/Icons'
 
 

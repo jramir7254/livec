@@ -29,6 +29,13 @@ export default function CurriculumDetailsPage({ selectedCurriculum }) {
         defaultScale: 0.85,
     });
 
+    const { ZoomInButton, ZoomOutButton, ZoomPopover } = zoomPluginInstance;
+
+
+    const onDocumentLoad = () => {
+        zoomTo(0.85)
+    }
+
     const { zoomTo } = zoomPluginInstance;
 
 
@@ -55,14 +62,18 @@ export default function CurriculumDetailsPage({ selectedCurriculum }) {
                     </a>
                     {user && <button onClick={() => setOpen(!open)}>Suggest</button>}
                     <SuggestionBox open={open} />
+                  
                 </div>
 
                 <Worker workerUrl={`https://unpkg.com/pdfjs-dist@${pdfjsVersion}/build/pdf.worker.min.js`} >
+                  <ZoomInButton/>
                     <Viewer
                         fileUrl="/CS2023.pdf"
                         plugins={[pageNavigationPluginInstance, zoomPluginInstance]}
-                    // onDocumentLoad={handleDocumentLoad}
+                    onDocumentLoad={onDocumentLoad}
                     />
+                                        <ZoomInButton/>
+
                 </Worker>
             </div>
         </div>

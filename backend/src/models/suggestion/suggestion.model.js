@@ -1,5 +1,5 @@
-const { generateSuggestionId } = require('@utils/generate-id'); // your ID util
-const { Status, Step } = require('@constants'); // or wherever your role enum lives
+const { generateSuggestionId } = require('@utils/generate-id'); 
+const { Status, Step } = require('@utils/constants'); 
 
 
 class Suggestion {

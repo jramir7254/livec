@@ -6,7 +6,8 @@ export default function useForm({ defaultData }) {
 
     useEffect(() => {
         console.log(formData)
-    }, [formData])
+        setFormData(defaultData)
+    }, [defaultData])
 
     const onFormChange = (field, value) => {
         setFormData(prev => ({ ...prev, [field]: value }));

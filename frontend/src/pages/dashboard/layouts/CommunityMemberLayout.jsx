@@ -1,17 +1,9 @@
-import  { useContext } from 'react';
 import { Outlet } from 'react-router-dom';
 
-import { UserContext } from '@context/UserProvider';
-import LogoutButton from '@components/LogoutButton';
 import * as Icons from '@components/Icons';
 import { Layout, SideBar, MainPanel } from '@components/Layout';
 
 export default function CommunityMemberLayout() {
-	const { loading } = useContext(UserContext);
-
-
-	if (loading) return <div>Loading...</div>;
-
 	return (
 		<Layout>
 			<SideBar>

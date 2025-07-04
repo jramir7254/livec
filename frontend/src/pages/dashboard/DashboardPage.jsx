@@ -7,8 +7,11 @@ import CommunityMemberLayout from './layouts/CommunityMemberLayout';
 import ReviewerLayout from './layouts/ReviewerLayout';
 
 export default function DashboardPage() {
-	const { user } = useContext(UserContext);
+	const { user, loading } = useContext(UserContext);
 	const navigate = useNavigate();
+
+		if (loading) return <div>Loading...</div>
+
 
 	if (!user) {
 		navigate('/auth');

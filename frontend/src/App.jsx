@@ -1,5 +1,5 @@
-import './App.css'
-import '@styles/index.css'
+import './App.scss'
+import '@styles/index.scss'
 
 import UserProvider from '@context/UserProvider';
 import AppRoutes from './routes/AppRoutes';

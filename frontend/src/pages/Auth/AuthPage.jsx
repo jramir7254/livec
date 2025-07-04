@@ -1,5 +1,5 @@
 import AuthForm from './AuthForm'
-import './AuthPage.css'
+import styles from './AuthPage.module.scss'
 
 /**
  * Page containing the form where users can either
@@ -8,8 +8,13 @@ import './AuthPage.css'
 
 export default function AuthPage() {
     return (
-        <div className='centered clmn auth-container'>
-            <AuthForm/>
-        </div>
+        <section className={styles.container}>
+            <div className={styles.sidebar}>
+
+            </div>
+            <div className={styles['form-area']}>
+                <AuthForm/>
+            </div>
+        </section>
     )
 }

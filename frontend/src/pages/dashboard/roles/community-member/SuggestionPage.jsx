@@ -45,6 +45,11 @@ export default function SuggestionPage() {
     return (
         <section className={styles.container}>
 
+            <div className={styles.progress}>
+                <ProgressBar progress={66} />
+
+            </div>
+
             <div className={styles.content}>
                 <BackButton to={`/dashboard/${user.id}`} />
                 <div className={styles.header}>
@@ -68,13 +73,86 @@ export default function SuggestionPage() {
             </div>
 
             <div className={styles.feedback}>
-                <h2>Feedback</h2>
+                {/* <h2>Feedback</h2>
                 <p>
                     {suggestion.meta.publicMessage}
-                </p>
+                </p> */}
+                <Tab content={suggestion.meta.publicMessage} />
             </div>
-            
+
         </section>
     );
 }
 
+import React from 'react'
+
+const Tab = ({ content }) => {
+    const [activeTab, setActiveTab] = useState('tab1');
+
+    return (
+        <>
+            {/* Tab Buttons */}
+            <div className="tab-buttons">
+                <button
+                    className={activeTab === 'tab1' ? 'active' : ''}
+                    onClick={() => setActiveTab('tab1')}
+                >
+                    Feedback
+                </button>
+                <button
+                    className={activeTab === 'tab2' ? 'active' : ''}
+                    onClick={() => setActiveTab('tab2')}
+                >
+                    Progress
+                </button>
+                <button
+                    className={activeTab === 'tab3' ? 'active' : ''}
+                    onClick={() => setActiveTab('tab3')}
+                >
+                    Tab 3
+                </button>
+            </div>
+
+            {/* Tab Content */}
+            <div className="tab-content">
+                {activeTab === 'tab1' && <div>{content}</div>}
+                {activeTab === 'tab2' &&
+                    <div>
+                        <ul class="tree">
+                            <li>
+                                <div class="node complete">Root Node</div>
+                                <ul>
+                                    <li>
+                                        <div class="node in-progress">Child Node 1</div>
+                                    </li>
+                                    <li>
+                                        <div class="node pending">Child Node 2</div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>}
+                {activeTab === 'tab3' && <div>
+                </div>}
+            </div>
+        </>
+    );
+}
+
+
+function ProgressBar({ progress }) {
+    return (
+        <div className='progress-container'>
+            <div className='progress-actual' style={{ width: `${progress}%` }} />
+            <div className="progress-labels">
+                <span className="progress-label">Submitted</span>
+                <span className="progress-label">Assigned</span>
+                <span className="progress-label">Under Review</span>
+                <span className="progress-label">Under Consideration</span>
+            </div>
+
+        </div>
+    );
+}
+
+// Usage:

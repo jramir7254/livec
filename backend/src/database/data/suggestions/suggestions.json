@@ -16,7 +16,7 @@
     "meta": {
       "rejectedBy": "AE-0001",
       "rejectionReason": "This shi ts was so ahh",
-      "publicMessage": "To whom it may concern, kys lol.",
+      "publicMessage": "This sucks",
       "timeRejected": "2025-06-29T14:48:59.258Z",
       "rejectId": "SREJ-0b_hQnOS"
     }
@@ -87,6 +87,44 @@
     "suggestion": "An AI-powered chatbot could answer common student questions in real-time, reducing the burden on support staff.",
     "submitterId": "CM-6482",
     "timeCreated": "2025-06-30T03:13:46.093Z",
+    "status": {
+      "public": "assigned",
+      "private": "awaiting-initial-response"
+    },
+    "discipline": "computer-science",
+    "assignedAssociateEditor": "AE-0001",
+    "assignedEditorInChief": "EIC-0001",
+    "assignedReviewers": [],
+    "meta": {}
+  },
+  {
+    "id": "SCOSC-Hrn_K8xt",
+    "title": "title or sum",
+    "suggestion": "adsfadfadsf",
+    "submitterId": "CM-6482",
+    "timeCreated": "2025-06-30T19:53:03.153Z",
+    "status": {
+      "public": "under-review",
+      "private": "reviewing"
+    },
+    "discipline": "computer-science",
+    "assignedAssociateEditor": "AE-0001",
+    "assignedEditorInChief": "EIC-0001",
+    "assignedReviewers": [],
+    "meta": {
+      "startedBy": "AE-0001",
+      "initialNotes": "notes",
+      "publicMessage": "message to submitter",
+      "timeStarted": "2025-06-30T19:58:40.380Z",
+      "startId": "SREJ-tWvZ-UVQ"
+    }
+  },
+  {
+    "id": "SCOSC-icLdbDMy",
+    "title": "Title ",
+    "suggestion": "suggestion",
+    "submitterId": "CM-6482",
+    "timeCreated": "2025-06-30T21:38:36.716Z",
     "status": {
       "public": "assigned",
       "private": "awaiting-initial-response"

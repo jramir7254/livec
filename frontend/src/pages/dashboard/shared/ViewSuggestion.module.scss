@@ -1,0 +1,105 @@
+@use '@styles' as *;
+
+/**
+*
+* container($padding)
+* grid-container($rows, $cols, $gap, $padding)
+* flex-container($direction, $align, $justify, $gap)
+* typography($family, $size, $weight $color)
+*
+*/
+
+
+.layout {
+    @include grid-container(1fr 10fr, 1.5fr 1fr, 1rem, 2%);
+
+    flex: 1;
+    height: 100%;
+    grid-template-areas: var(--grid-format);
+
+    .header {
+        @include container(0 2.5%);
+        @include flex-container($align: center);
+
+        position: relative;
+        grid-area: H;
+    }
+
+    .main-content {
+        @include container(2.5%);
+        @include flex-container(column, $gap: 0rem);
+
+        grid-area: M;
+    }
+
+    .side-content {
+        @include container(5%);
+        @include flex-container(column);
+
+        grid-area: S;
+    }
+}
+
+.layout--member {
+    @extend .layout;
+    @include grid-container(1fr 10fr, 2fr 1fr, 1rem, 2%);
+
+}
+
+.layout--ae {
+    @extend .layout;
+    @include grid-container(1fr 10fr, 2fr 1fr, 1rem, 2%);
+}
+
+
+
+
+
+.main-content__header {
+    @include typography('Montserrat');
+
+
+    .header__title {
+        font-weight: 500;
+    }
+
+    .header__date {
+        @include typography($color: $gray-500);
+        margin: 10px 0 15px 0;
+    }
+
+    .header__divider {
+        border: 1px solid $gray-200;
+        margin: 20px 0 30px 0;
+    }
+
+    .header__meta {
+        @include grid-container(1fr 1fr, 1fr 1fr, 0.5rem);
+        width: 100%;
+
+        .meta-item {
+            font-size: 0.95rem;
+            font-weight: normal;
+
+            strong {
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+.text {
+    margin-top: 2rem;
+    padding: 1.5%;
+    flex: 1;
+    background-color: oklch(98.5% 0.002 247.839);
+    border: 1px solid rgba(78, 68, 68, 0.2);
+
+}

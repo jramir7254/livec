@@ -1,9 +1,7 @@
-import React from 'react'
 import useSuggestion from '@hooks/useSuggestion'
 import StatusIcon from '../../../../components/Table/StatusIcon';
 import { Table, TableHeader, TableBody } from '@components/Table';
 import ActionSelect from '@components/Table/ActionSelect';
-import { Outlet } from 'react-router';
 
 const headers = [
     { text: 'No.', key: 'num', width: '5%' },

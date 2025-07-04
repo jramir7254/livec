@@ -1,5 +1,5 @@
 const { nanoid } = require('nanoid');
-const { Status } = require('@constants'); // or wherever your role enum lives
+const { Status } = require('@utils/constants'); // or wherever your role enum lives
 
 
 /*------------------------------------------------------------------------------*/

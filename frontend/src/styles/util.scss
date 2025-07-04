@@ -1,0 +1,80 @@
+@use 'sass:map';
+@use 'sass:list';
+
+
+@mixin flex-center($direction) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+}
+
+$flex-modifiers: (
+    'column': column,
+    'start': flex-start,
+    'center': center,
+    'end': flex-end,
+    'around': space-around,
+    'evenly': space-evenly,
+    'between': space-between
+);
+
+@mixin flex-container($direction: row, $align: flex-start, $justify: flex-start, $gap: 0) {
+    display: flex;
+    flex-direction: map.get($flex-modifiers, $direction);
+    align-items: map.get($flex-modifiers, $align);
+    justify-content: map.get($flex-modifiers, $justify);
+    gap: $gap
+}
+
+
+
+@mixin grid-container($rows, $cols, $gap: 0, $padding: 0) {
+    display: grid;
+    grid-template-rows: $rows;
+    grid-template-columns: $cols;
+    gap: $gap;
+    padding: $padding;
+}
+
+/*
+🧸 Soft / Friendly / Rounded
+- Montserrat
+- Rubik
+- Funnel Sans
+- Quicksand
+- Nunito
+- Open Sans
+
+🗂️ Standard / Neutral / Blocky
+- Roboto
+
+🧑‍💻 Techy / Monospaced
+- Share Tech Mono
+- Source Code Pro
+
+🕹️ Blocky / Futuristic
+- Tektur
+- Aldrich
+- Tomorrow
+
+🔠 All Caps / Sharp / Display
+- Julius Sans One
+- Bebas Neue
+*/
+
+
+@mixin typography($font: system-ui, $size: 1rem, $weight: normal, $color: black) {
+    font-family: $font, sans-serif, Arial, Helvetica;
+    font-optical-sizing: auto;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color
+}
+
+@mixin container($padding) {
+    background-color: #ffffff;
+    box-shadow: 0 10px 15px -5px rgb(0 0 0 / 0.1);
+    border-radius: 8px;
+    padding: $padding;
+}

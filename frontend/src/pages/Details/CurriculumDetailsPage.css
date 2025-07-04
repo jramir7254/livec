@@ -47,7 +47,7 @@
 }
 
 .toc-item:hover {
-    background-color: #e2e2e2;
+    /* background-color: #e2e2e2; */
 }
 
 
@@ -68,6 +68,7 @@
     flex: 1;
     position: relative;
     overflow: hidden;
+    padding: 2%;
 }
 
 .download-button {

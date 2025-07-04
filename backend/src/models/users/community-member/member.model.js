@@ -1,6 +1,6 @@
 // models/CommunityMember.js
 const User = require('../user.model');
-const { Roles } = require('@constants'); // or wherever your role enum lives
+const { Roles } = require('@utils/constants');
 
 
 class CommunityMember extends User {

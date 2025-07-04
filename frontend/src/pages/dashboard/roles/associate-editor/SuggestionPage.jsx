@@ -96,7 +96,7 @@ import useForm from '@hooks/useForm'
 
 
 
-import OverlayModule from '../../../../components/Overlays';
+import Modal from '../../../../components/Overlays/Modal';
 import useSuggestion from '@hooks/useSuggestion'
 
 
@@ -123,7 +123,7 @@ function RejectOverlay({ showing, suggestion }) {
                 <button type='button' className={`${styles.button} ${styles['button--reject']}`} onClick={() => setShowingBox(true)}
 
                 >Confirm Reject</button>
-                <OverlayModule
+                <Modal
                     message={"Are you sure you want to confire your rejection?"}
                     showing={showingBox}
                     onConfirm={async () => { await reject(suggestion.id, formData.privateReason, formData.publicMessage); setShowingBox(false); navigate(0) }}
@@ -160,7 +160,7 @@ function StartReviewOverlay({ showing, suggestion }) {
                 <button type='button' className={`${styles.button} ${styles['button--start-review']}`} onClick={() => setShowingBox(true)}
 
                 >Start Review Process</button>
-                <OverlayModule
+                <Modal
                     message={"Are you sure you want to start the review process?"}
                     showing={showingBox}
                     onConfirm={async () => { await startReview(suggestion.id, formData.initialNotes, formData.publicMessage); setShowingBox(false); navigate(0) }}
@@ -243,7 +243,7 @@ function DeferOverlay({ showing, suggestion }) {
                 <button type='button' className={`${styles.button} ${styles['button--defer']}`} onClick={() => setShowingBox(true)}>
                     Assign Reviewers
                 </button>
-                <OverlayModule
+                <Modal
                     message={"Are you sure you want to defer this suggestion to reviewer?"}
                     showing={showingBox}
                     onConfirm={async () => { await assignReviewers(suggestion.id, formData.initialNotes, formData.publicMessage, formData.reviewers); setShowingBox(false); navigate(0) }}

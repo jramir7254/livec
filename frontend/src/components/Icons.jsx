@@ -63,3 +63,18 @@ export { VscOpenPreview as Reviewer} from "react-icons/vsc";
 export { TbChartHistogram as History} from "react-icons/tb";
 
 export { CgProfile as Profile} from "react-icons/cg";
+
+
+
+//Editor Icons
+
+export { MdFormatBold as Bold} from "react-icons/md";
+export { MdFormatItalic as Italic} from "react-icons/md";
+export { MdFormatUnderlined as Underline} from "react-icons/md";
+export { MdOutlineStrikethroughS as Strike } from "react-icons/md";
+
+export { MdFormatAlignLeft as Left} from "react-icons/md";
+export { MdFormatAlignJustify as Justify} from "react-icons/md";
+export { MdFormatAlignRight as Right} from "react-icons/md";
+export { MdFormatAlignCenter as Center} from "react-icons/md";
+export { TbMath as Equations} from "react-icons/tb";

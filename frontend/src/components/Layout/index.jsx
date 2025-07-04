@@ -2,7 +2,7 @@ import styles from './Layout.module.css'
 import { NavLink } from 'react-router-dom';
 import { UserContext } from '@context/UserProvider';
 import React, { useContext, useState } from 'react';
-import { LogoutButton } from '@components/buttons'
+import {toTitleCase} from '@utils/format' 
 import * as Icons from '@components/Icons'
 
 export function Layout({ children }) {
@@ -25,6 +25,8 @@ import useAuth from '@hooks/useAuth'
 
 
 export function SideBar({ collapse, setCollapse, children }) {
+        const { user } = useContext(UserContext);
+
     const { logout } = useAuth()
 
     return (
@@ -34,7 +36,7 @@ export function SideBar({ collapse, setCollapse, children }) {
             {/* <button onClick={() => setCollapse(!collapse)}>Toggle</button> */}
 
             <nav>
-            <SideBar.Item style={{marginBottom: 'auto'}} text='LiveC' icon={<Icons.Burger />} collapse={collapse} action={() => setCollapse(!collapse)} />
+            <SideBar.Item style={{marginBottom: 'auto'}} text={toTitleCase(user.role)} icon={<Icons.Burger />} collapse={collapse} action={() => setCollapse(!collapse)} />
 
                 {React.Children.map(children, child =>
                     React.cloneElement(child, { collapse })

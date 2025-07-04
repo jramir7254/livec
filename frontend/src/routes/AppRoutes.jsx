@@ -10,6 +10,8 @@ import OverviewWrapper from '@pages/dashboard/wrappers/OverviewWrapper';
 import ProfileWrapper from '@pages/dashboard/wrappers/ProfileWrapper';
 import SuggestionWrapper from '@pages/dashboard/wrappers/SuggestionWrapper';
 
+import ViewSuggestion from '../pages/dashboard/shared/ViewSuggestion';
+
 import Reviewers from '../pages/dashboard/roles/associate-editor/Reviewers';
 
 export default function AppRoutes() {
@@ -20,13 +22,14 @@ export default function AppRoutes() {
 			<Route path="/curriculums" element={<CurriculumPage />} />
 			<Route path="/curriculums/:slug/details" element={<CurriculumDetailsPage />} />
 
+
 			{/* Dashboard entry */}
 			<Route path="/dashboard/:userId" element={<DashboardPage />}>
 				<Route index element={<Navigate to="overview" replace />} />
 				<Route path="overview" element={<OverviewWrapper />} />
 				<Route path="profile" element={<ProfileWrapper />} />
 				<Route path="reviewers" element={<Reviewers />} />
-				<Route path="suggestion/:suggestionId" element={<SuggestionWrapper />} />
+				<Route path="suggestion/:suggestionId" element={<ViewSuggestion />} />
 			</Route>
 		</Routes>
 	);
