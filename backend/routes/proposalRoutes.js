@@ -22,6 +22,20 @@ router.post('/proposals/:proposalId/final-recommendation', async (req, res) => {
   } catch (err) {
     res.status(500).json({ error: 'Server error' });
   }
+
+  router.get('/history/ae/:aeId', async (req, res) => {
+  try {
+    const proposals = await Proposal.find({ assignedAE: req.params.aeId })
+      .populate('reviews')
+      .populate('recommendation')
+      .sort({ createdAt: -1 });
+
+    res.json(proposals);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to fetch AE history' });
+  }
+  });
+
 });
 
 export default router;

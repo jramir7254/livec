@@ -2,10 +2,17 @@ import mongoose from 'mongoose';
 
 const proposalSchema = new mongoose.Schema({
   title: String,
-  content: String,
-  aeFeedback: String,
   description: String,
   segment: String,
+  assignedAE: String,
+  reviews: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Review' }],
+  recommendation: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Recommendation'
+  },
+  createdAt: { type: Date, default: Date.now },
+  content: String,
+  aeFeedback: String,
   segmentId: String,
   assignedReviewers: [{ type: String }],
   reviews: [
@@ -34,4 +41,5 @@ const proposalSchema = new mongoose.Schema({
   },
 });
 
-export default mongoose.model('Proposal', proposalSchema);
+const Proposal = mongoose.model('Proposal', proposalSchema);
+export default Proposal;

@@ -15,6 +15,7 @@ import ProposalHistory from './pages/ProposalHistory';
 import SubmitReviewPage from './pages/SubmitReviewPage';
 import AEQueuePage from './pages/AEQueuePage';
 import AEFinalRecommendationPage from './pages/AEFinalRecommendationPage';
+import AEHistoryPage from './pages/AEHistoryPage';
 
 function App() {
   const [selectedCurriculum, setSelectedCurriculum] = useState(null);
@@ -36,6 +37,7 @@ function App() {
         <Route path="/ae/queue" element={<AEQueuePage />} />
         <Route path="/proposal/:proposalId/final-recommendation/:aeId" element={<AEFinalRecommendationPage />} />
         <Route path="/ae/finalize/:proposalId" element={<AEFinalRecommendationPage />} />
+        <Route path="/ae/:aeId/history" element={<AEHistoryPage aeId="ae123" />} />
       </Routes>
     </Router>
   );
