@@ -9,6 +9,7 @@ import reviewRoutes from './routes/review.js';
 import aeRoutes from './routes/ae.js';
 import proposalRoutes from './routes/proposalRoutes.js';
 import aeFinalRecommendationRoutes from './routes/aeFinalRecommendation.js';
+import curriculumRoutes from './routes/curriculum.js';
 
 const app = express();
 app.use(cors());
@@ -23,5 +24,6 @@ app.use('/api/reviewer', reviewerRoutes);
 app.use('/api/ae', aeRoutes);
 app.use('/api', proposalRoutes);
 app.use('/api/ae-final-recommendation', aeFinalRecommendationRoutes);
+app.use('/api/curriculum', curriculumRoutes);
 
 app.listen(3001, () => console.log('Backend running on http://localhost:3001'));
