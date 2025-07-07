@@ -2,23 +2,35 @@ import { UserContext } from '@context/UserProvider';
 import { useContext, useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import StatusIcon from '@components/Table/StatusIcon';
-import styles from './ViewSuggestion.module.scss';
+import styles from './SuggestionView.module.scss';
 import { BackButton } from '@components/Buttons';
 import { toTitleCase, formatDate, Status, Roles } from '@utils/constants.js';
 import { getSuggestion } from '@utils/suggestionHandler';
-import { RejectButton } from '../roles/associate-editor/triage-options/TriageReject';
 
 
-const EmptyComponent = () => (<>Empty Component</>)
+import { RejectOverlay2 } from '../roles/associate-editor/triage-options/TriageReject';
+import { DeferOverlay } from '../roles/associate-editor/triage-options/TriageDefer';
+import { StartOverlay } from '../roles/associate-editor/triage-options/TriageStart';
 
 
-export default function ViewSuggestion() {
+
+
+import { Button } from '../../../components/Buttons';
+
+
+
+
+
+import useTabs from '@hooks/useTabs';
+
+export default function SugestionView() {
     const { user } = useContext(UserContext);
     const navigate = useNavigate()
     const [suggestion, setSuggestion] = useState({})
     const [loading, setLoading] = useState(true)
-    const [Overlay, setOverlay] = useState(() => EmptyComponent)
     const { suggestionId } = useParams();
+
+
 
     useEffect(() => {
         getSuggestion(suggestionId)
@@ -28,9 +40,14 @@ export default function ViewSuggestion() {
     }, [suggestionId]);
 
 
+
+
     if (loading) {
         return <p style={{ color: 'black' }}>Loading...</p>;
     }
+
+
+
 
     if (!suggestion || !suggestion.id) {
         return (
@@ -43,20 +60,45 @@ export default function ViewSuggestion() {
         );
     }
 
+
+
+
     const status = user.role === Roles.COMMUNITY_MEMBER ? suggestion.status.public : suggestion.status.private;
     const isAdmin = user.role != Roles.COMMUNITY_MEMBER;
 
-    const gridFormat = isAdmin ? "'M H' 'M S'" : "'H H' 'M S'"
-    const cssClass = isAdmin ? 'layout--ae' : 'layout--member'
+
+    const isActive = suggestion.status.public === Status.ASSIGNED
+    const css = !isActive && isAdmin ? 'layout--column' : 'layout--grid'
+    let gridFormat = isAdmin ? "'H S' 'M S'" : "'H H' 'M S'"
+
 
     return (
-        <section style={{ '--grid-format': gridFormat }} className={styles['layout']}>
+        <section style={{ '--grid-format': gridFormat }} className={styles[css]}>
 
-            {/* Header with progress bar */}
+            <ActiveView suggestion={suggestion} isAdmin={isAdmin} user={user} status={status}/>
+        </section>
+    );
+}
+
+
+
+const ActiveView = ({suggestion, isAdmin, user, status}) => {
+    const { setView, CurrentView } = useTabs({
+        reject: <RejectOverlay2 suggestion={suggestion} />,
+        defer: <DeferOverlay suggestion={suggestion} />,
+        start: <StartOverlay suggestion={suggestion} />
+    }, <Info />)
+
+    const isActive = suggestion.status.public === Status.ASSIGNED
+
+
+    return (
+        <>
 
             <div className={styles.header}>
                 {user.role === Roles.COMMUNITY_MEMBER && <ProgressBar progress={45} />}
-                {user.role === Roles.ASSOCIATE_EDITOR && <TriageButtons setOverlay={setOverlay} />}
+                {(user.role === Roles.ASSOCIATE_EDITOR && isActive) && <TriageButtons setView={setView} />}
+                {(user.role === Roles.ASSOCIATE_EDITOR && !isActive) && <div><button>Click</button></div>}
             </div>
 
 
@@ -96,50 +138,30 @@ export default function ViewSuggestion() {
 
             {/* Side content pane to the right */}
 
-            <div className={styles['side-content']}>
+            {(isActive && isAdmin) && <div className={styles['side-content']}>
+                {/* {CurrentView} */}
 
                 {!isAdmin ? (
                     <>
                         <h2>Feedback</h2>
                         <p>
-                            {suggestion.meta.publicMessage}
+                            {suggestion.meta.publicMessages[0].text}
                         </p>
                     </>
                 ) : (
-                    <DifferentComponent />
+                    CurrentView
                 )}
 
-            </div>
-
-        </section>
-    );
-}
-
-import Editor from '@components/Editor'
-import { EditorGroup, SubmitButton } from '@components/Editor/EditorGroup';
-import Modal, { DefaultView, ConfirmationView } from '@components/Overlays/Modal';
-const passedFunc = (data) => {
-    console.log("method call:", data)
-}
-
-
-function DifferentComponent() {
-    return (
-        <EditorGroup>
-            <Editor field={{ key1: '' }} />
-            <Editor field={{ key2: '' }} />
-            <SubmitButton onSubmit={passedFunc}>
-                <Modal>
-                    <DefaultView message={"Are you sure you want to Reject?"}>
-                        <p>This wil turn status from</p>
-                        <div><StatusIcon status={'assigned'}/> → <StatusIcon status={'rejected'}/></div>
-                    </DefaultView>
-                    <ConfirmationView message={"This is a after confirmation"}/>
-                </Modal>
-            </SubmitButton>
-        </EditorGroup>
+            </div>}
+        </>
     )
 }
+
+
+
+
+
+
 
 
 
@@ -160,10 +182,31 @@ function ProgressBar({ progress }) {
 
 
 
-const TriageButtons = ({ setOverlay }) => {
+
+const Info = () => {
     return (
         <div>
-            <RejectButton setOverlay={setOverlay} />
+            <h2>Reject</h2>
+            <p>You reject tghe thing</p>
+            <h2>Start</h2>
+            <p>You reject tghe thing</p>
+            <h2>Defer</h2>
+            <p>You reject tghe thing</p>
         </div>
+    )
+}
+
+
+
+
+
+
+const TriageButtons = ({ setView }) => {
+    return (
+        <>
+            <Button variant={'danger'} text={'Reject'} action={() => setView('reject')} />
+            <Button variant={'blue'} text={'Start Review'} action={() => setView('start')} />
+            <Button variant={'purple'} text={'Defer'} action={() => setView('defer')} />
+        </>
     )
 }

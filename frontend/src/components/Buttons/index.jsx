@@ -1,8 +1,8 @@
-import React from 'react'
-import { IoIosArrowBack } from "react-icons/io"
 import { useNavigate } from 'react-router';
 import styles from './Buttons.module.scss'
 import * as Icons from '@components/Icons'
+import useAuth from '@hooks/useAuth'
+
 
 
 export function BackButton({ to }) {
@@ -15,9 +15,6 @@ export function BackButton({ to }) {
 }
 
 
-import useAuth from '@hooks/useAuth'
-
-
 export function LogoutButton({className = ''}) {
     const { logout } = useAuth()
 
@@ -26,26 +23,21 @@ export function LogoutButton({className = ''}) {
     )
 }
 
-import useSuggestion from '@hooks/useSuggestion'
 
-export function RejectButton({ suggestionId }) {
-    const { reject } = useSuggestion()
 
-    return (
-        <button className={`${styles['button--reject']} ${styles.button}`} onClick={() => reject(suggestionId)}>
-            Submit Rejection
-        </button>
-    )
+
+
+const variants = {
+    danger: 'button--danger',
+    blue: 'button--blue',
+    purple: 'button--purple'
 }
 
 
-
-export function StartReviewButton({ suggestionId }) {
-    const { reject } = useSuggestion()
+export const Button = ({variant, text, action, icon}) => {
+    const type = variants[variant]
 
     return (
-        <button className={`${styles['button--start-review']} ${styles.button}`} onClick={() => reject(suggestionId)}>
-            Start Review Process
-        </button>
+        <button className={styles[type]} onClick={action}>{icon && <span>{icon}</span>}{text}</button>
     )
 }

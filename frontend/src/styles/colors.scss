@@ -23,7 +23,20 @@
  */
 
 
- $bg-blue: blue;
+
+@function oklch-alpha($color, $alpha) {
+    // Use regex if you want super safe parsing.
+    // Or just manually write the value:
+    $parts: str-split(#{$color}, ' ');
+    $l: nth($parts, 1);
+    $c: nth($parts, 2);
+    $h: nth($parts, 3);
+
+    @return unquote("oklch(#{$l} #{$c} #{$h} / #{$alpha})");
+}
+
+
+
 
 /// Red color family
 /// @group colors.red

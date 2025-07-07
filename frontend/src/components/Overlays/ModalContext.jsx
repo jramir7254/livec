@@ -1,7 +1,5 @@
 // ModalContext.js
 import { createContext, useCallback, useState } from 'react';
-import { useContext } from 'react';
-import { EditorContext } from '../Editor/EditorContext'; // adjust to your path
 import { useNavigate } from 'react-router';
 export const ModalContext = createContext(undefined);
 

@@ -1,4 +1,3 @@
-import styles from './AssociateEditor.module.css';
 import { getReviewers } from '@utils/api-handlers/users/get-reviewers';
 import { UserContext } from '@context/UserProvider';
 import { useContext, useEffect, useState } from 'react';
@@ -22,20 +21,8 @@ export default function Reviewers() {
 	}
 
 	return (
-		<section className={styles.reviewers}>
-			<div className={styles.block}>
-				<h2>Active Reviewers</h2>
-				<ul style={{ color: 'black' }}>
-					{/* {reviewers.map(item => (
-						<li key={item.id}>{item.name}</li>
-					))} */}
-				</ul>
-			</div>
+		<section className={''}>
 
-			<div className={styles.block}>
-				<h2>Idle Reviewers</h2>
-
-			</div>
 		</section>
 	);
 }

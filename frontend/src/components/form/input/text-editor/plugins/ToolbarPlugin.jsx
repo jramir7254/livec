@@ -2,7 +2,7 @@
 import React from 'react';
 import { useLexicalComposerContext } from '@lexical/react/LexicalComposerContext';
 import { $getSelection, $isRangeSelection, $createParagraphNode, $getRoot, FORMAT_TEXT_COMMAND, FORMAT_ELEMENT_COMMAND } from 'lexical';
-import { Bold, Strike, Italic, Underline, Left, Center, Right, Justify, Equations } from '../../Icons';
+import { Bold, Strike, Italic, Underline, Left, Center, Right, Justify, Equations } from '../../../../Icons';
 import { EquationNode } from '../nodes/EquationNode'
 
 

@@ -44,7 +44,8 @@ const db = {
         communityMembers: createDB('data/users/community_member.json', []),
         reviewers: createDB('data/users/reviewer.json', []),
         associateEditors: createDB('data/users/associate_editor.json', []),
-        // eic: createDB('data/users/eic.json', []),
+        chiefEditors: createDB('data/users/editor_in_chief.json', []),
+        acmEdBoard: createDB('data/users/ed_board', [])
     },
     suggestions: createDB('data/suggestions/suggestions.json', []),
 };

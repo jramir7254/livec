@@ -1,29 +1,33 @@
 import React from 'react'
-// import Editor from '../../components/Editor'
-// import { EditorGroup, SubmitButton } from '@components/Editor/EditorGroup'
-import Test from '../../components/Editor/Test'
-import useForm from '@hooks/useForm'
+
 import "./style.css"
 
-const defaultVals = {
-	var1: '',
-	var2: ''
+import useTabs from '../../hooks/useTabs'
+
+function Component1({name}) {
+	return <div>{name}</div>
+}
+
+function Component2({email, password}) {
+	return <div>{email} {password}</div>
 }
 
 export default function HomePage() {
+	const { setView, CurrentView } = useTabs({
+		cpmnt1: <Component1 name={"john"}/>,
+		cpmnt2: <Component2 email={"john@email.com"} password={"dmslkn"}/>,
+	})
+
+
 	return (
-		<section className='home'>Welcom to LiveC
-
+		<section className='home'>
+			Welcome to LiveC
+			<button onClick={() => setView('cpmnt1')}>Set 1</button>
+			<button onClick={() => setView('cpmnt2')}>Set 2</button>
 			<div className='editor-container2'>
-				{/* <EditorGroup>
-					<Test field={{ val1: '' }} />
-					<Test field={{ val2: '' }} />
-										<Test field={{ val3: '' }} />
-					<SubmitButton />
-				</EditorGroup> */}
-
-				{/* <Editor/> */}
+				{CurrentView}
 			</div>
 		</section>
 	)
 }
+

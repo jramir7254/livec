@@ -1,6 +1,6 @@
 const { generateSuggestionId } = require('@utils/generate-id'); 
 const { Status, Step } = require('@utils/constants'); 
-
+const Documentation = require('../util/documentation.model')
 
 class Suggestion {
     constructor(data) {
@@ -63,7 +63,6 @@ class Suggestion {
             case Status.UNDER_REVIEW:
                 this.status = { 'public': Status.UNDER_REVIEW, 'private': Step.REVIEWING };
                 break;
-
         }
     }
 
@@ -85,15 +84,21 @@ class Suggestion {
     }
 
 
+    insertDocumentation() {
+        this.meta.documentation.push()
+    }
+
+
     startReview(startedBy, notes, message) {
         if (this.status.public === Status.REJECTED) return
 
         this.updateStatus(Status.UNDER_REVIEW)
         const startId = generateSuggestionId()
+
         this.addMeta({
             startedBy: startedBy,
-            initialNotes: notes,
-            publicMessage: message,
+            documentation: [new Documentation(startedBy, notes).toObject()],
+            publicMessages: [new Documentation(startedBy, message).toObject()],
             timeStarted: new Date().toISOString(),
             startId
         });
@@ -108,6 +113,7 @@ class Suggestion {
         this.updateStatus(Status.ASSIGNED)
     }
 
+    
     assignReviewers(notes, message, newReviewers) {
         newReviewers.map(id => (
             !this.assignedReviewers.includes(id) && this.assignedReviewers.push(id)

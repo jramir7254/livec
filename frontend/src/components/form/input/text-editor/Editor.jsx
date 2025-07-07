@@ -23,12 +23,15 @@ import rehypeKatex from 'rehype-katex';
 import remarkMath from 'remark-math';
 import { editorConfig } from './utils/config';
 
-import { EditorContext } from './EditorContext';
+import { FormContext } from '../../FormContext';
 
 
 import './styles.css'; // your styling
 
-export default function Editor({ field = {}, placeholder = 'Enter text here' }) {
+
+
+
+export function Editor({ field = {}, placeholder = 'Enter text here' }) {
     const key = Object.keys(field)[0];
 
     return (
@@ -45,7 +48,7 @@ export default function Editor({ field = {}, placeholder = 'Enter text here' }) 
 function EditorInner({ field, placeholder }) {
     const [editor] = useLexicalComposerContext();
     const [editorContent, setEditorContent] = useState('');
-    const { onFormChange } = useContext(EditorContext)
+    const { onFormChange } = useContext(FormContext)
 
 
     const onChange = (editorState) => {

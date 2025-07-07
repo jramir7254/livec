@@ -6,13 +6,11 @@ import CurriculumPage from '@pages/curriculums/CurriculumPage';
 import CurriculumDetailsPage from '@pages/details/CurriculumDetailsPage';
 import DashboardPage from '@pages/dashboard/DashboardPage';
 
-import OverviewWrapper from '@pages/dashboard/wrappers/OverviewWrapper';
-import ProfileWrapper from '@pages/dashboard/wrappers/ProfileWrapper';
-import SuggestionWrapper from '@pages/dashboard/wrappers/SuggestionWrapper';
-
-import ViewSuggestion from '../pages/dashboard/shared/ViewSuggestion';
-
+import ProfileView from '../pages/dashboard/shared/ProfileView';
+import SuggestionView from '../pages/dashboard/shared/SuggestionView';
 import Reviewers from '../pages/dashboard/roles/associate-editor/Reviewers';
+import MainView from '../pages/dashboard/shared/MainView';
+
 
 export default function AppRoutes() {
 	return (
@@ -26,10 +24,10 @@ export default function AppRoutes() {
 			{/* Dashboard entry */}
 			<Route path="/dashboard/:userId" element={<DashboardPage />}>
 				<Route index element={<Navigate to="overview" replace />} />
-				<Route path="overview" element={<OverviewWrapper />} />
-				<Route path="profile" element={<ProfileWrapper />} />
+				<Route path="overview" element={<MainView />} />
+				<Route path="profile" element={<ProfileView />} />
 				<Route path="reviewers" element={<Reviewers />} />
-				<Route path="suggestion/:suggestionId" element={<ViewSuggestion />} />
+				<Route path="suggestion/:suggestionId" element={<SuggestionView />} />
 			</Route>
 		</Routes>
 	);

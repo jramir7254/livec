@@ -1,46 +1,68 @@
 
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Modal from '@components/Overlays/Modal';
+import Modal, { DefaultView, ConfirmationView } from '@components/Overlays/Modal';
 import useSuggestion from '@hooks/useSuggestion'
+import StatusIcon from '@components/Table/StatusIcon';
 
-import styles from '../SuggestionPage.module.css';
 
-export const RejectButton = ({setOverlay}) => {
-    return (
-        <button onClick={() => setOverlay(() => RejectOverlay)}>Reject</button>
-    )
-}
 
-function RejectOverlay({ showing = true, suggestion = {}}) {
-    const defaultData = {
-        privateReason: '',
-        publicMessage: '',
-    }
-    // const navigate = useNavigate()
-    // const { formData, onFormChange, resetForm } = useForm(defaultData)
 
-    // const [showingBox, setShowingBox] = useState(false)
+// export function RejectOverlay({ suggestion = {} }) {
+//     const { reject } = useSuggestion()
+
+//     // if (!showing) return null;
+
+//     return (
+//         <div className='flex col'>
+//             <h2>Reason for rejection</h2>
+//             <EditorGroup>
+//                 <Editor field={{ rejectionReason: '' }} />
+//                 {/* <Editor field={{ returnMessageToSubmitter: '' }} /> */}
+//                 <SubmitButton onSubmit={reject}>
+//                     <Modal>
+//                         <DefaultView message={"Are you sure you want to Reject?"}>
+//                             <p>This wil turn status from</p>
+//                             <div><StatusIcon status={'assigned'} /> → <StatusIcon status={'rejected'} /></div>
+//                         </DefaultView>
+//                         <ConfirmationView message={"This is a after confirmation"} />
+//                     </Modal>
+//                 </SubmitButton>
+//             </EditorGroup>
+//         </div>
+//     )
+// }
+
+import { Form, SubmitButton } from '@components/form';
+import { TextArea } from '@components/form/input';
+
+
+export function RejectOverlay2({ suggestion = {} }) {
     const { reject } = useSuggestion()
-    if (!showing) return null;
+
+
+
     return (
-        <div className='flex col'>
-            <h2>Reject</h2>
-            {/* <form className='flex col'>
-                <label htmlFor='private'>Reason for rejection</label>
-                <textarea onChange={(e) => onFormChange('privateReason', e.target.value)} name='private' />
-                <label htmlFor='public'>Message for submitter</label>
-                <textarea onChange={(e) => onFormChange('publicMessage', e.target.value)} name='public' />
-
-                <button type='button' className={`${styles.button} ${styles['button--reject']}`} onClick={() => setShowingBox(true)}
-
-                >Confirm Reject</button>
-                <OverlayModule
-                    message={"Are you sure you want to confire your rejection?"}
-                    showing={showingBox}
-                    onConfirm={async () => { await reject(suggestion.id, formData.privateReason, formData.publicMessage); setShowingBox(false); navigate(0) }}
-                    onCancel={() => setShowingBox(false)} />
-            </form> */}
-        </div>
+        <Form>
+            <TextArea field={{ reason: '' }} label='Reason for rejection' />
+            <TextArea field={{ message: '' }} label='Message to submitter' />
+            <SubmitButton onSubmit={(formData) => reject(suggestion.id, formData)} text='Submit Rejection'>
+                <Modal>
+                    <DefaultView message={"Are you sure you want to Reject?"}>
+                        <p>This wil turn status from</p>
+                        <div><StatusIcon status={'assigned'} /> → <StatusIcon status={'rejected'} /></div>
+                    </DefaultView>
+                    <ConfirmationView message={"This is a after confirmation"} />
+                </Modal>
+            </SubmitButton>
+        </Form>
     )
 }
+
+
+
+
+
+
+
+

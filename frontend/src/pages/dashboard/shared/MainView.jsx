@@ -1,7 +1,9 @@
 import useSuggestion from '@hooks/useSuggestion'
-import StatusIcon from '../../../../components/Table/StatusIcon';
+import StatusIcon from '@components/Table/StatusIcon';
 import { Table, TableHeader, TableBody } from '@components/Table';
 import ActionSelect from '@components/Table/ActionSelect';
+
+import styles from './MainView.module.scss'
 
 const headers = [
     { text: 'No.', key: 'num', width: '5%' },
@@ -12,8 +14,10 @@ const headers = [
 ];
 
 
+
+
+
 const formatSuggestions = (suggestions) => {
-    console.table(suggestions)
     return suggestions.map((item, index) => ({
         num: index + 1,
         date: new Date(item.timeCreated).toLocaleDateString(),
@@ -23,21 +27,19 @@ const formatSuggestions = (suggestions) => {
     }));
 };
 
-export default function Main() {
+
+
+
+
+export default function MainView() {
     const { suggestions } = useSuggestion()
     return (
-        <section className='main'>
-            <div className='head'>
+        <section className={styles.main}>
 
-            </div>
-
-            <div className='side'>
-                <h2>Quick Links</h2>
-            </div>
-
-            <div className='sugg'>
+            <div className={styles['suggestion-table']}>
                 <h2>My Suggestions</h2>
-                <div className='table-container'>
+
+                <div className={styles['table-container']}>
                     <Table>
                         <TableHeader headers={headers} />
                         <TableBody headers={headers} data={formatSuggestions(suggestions)} />
@@ -45,7 +47,6 @@ export default function Main() {
                 </div>
 
             </div>
-
 
         </section>
     )

@@ -19,19 +19,39 @@ export const Status = Object.freeze({
 
 export const Disciplines = Object.freeze({
     COMPUTER_SCIENCE: 'computer-science',
-    REJECTED: 'rejected',
-    ASSIGNED: 'assigned',
-    UNDER_REVIEW: 'under-review',
-    UNDER_CONSIDERATION: 'under-consideration',
-    ACCEPTED: 'accepted'
+    CYBERSECURITY: 'cybersecurity',
+    INFORMATION_SYSTEMS: 'information-systems',
+    COMPUTER_ENGINEERING: 'computer-engineering',
+
+    INFORMATION_TECHNOLOGY: 'information-technology',
+    DATA_SCIENCE: 'data-science',
+    COMPUTING_CURRICULA: 'computing-curricula',
+    SOFTWARE_ENGINEERING: 'software-engineering'
 })
 
 
 export const Step = Object.freeze({
     AWAITING_INITIAL_RESPONSE: 'awaiting-initial-response',
-    REVIEWING: 'reviewing'
+    REVIEWING: "reviewing",
+    AWAITING_REVIEWER: 'awaiting-reviewer'
 })
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * @todo remove methods below and adjust reference
+ */
 
 export const toTitleCase = (constant = '') => {
     return constant.split('-')

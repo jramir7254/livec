@@ -7,7 +7,9 @@
         "role": "reviewer",
         "discipline": "computer-science",
         "assignedAssociateEditor": "AE-0001",
-        "assignedSuggestions": []
+        "assignedSuggestions": [
+            "SCOSC-gn1sykiu"
+        ]
     },
     {
         "id": "R-7562",
@@ -17,7 +19,9 @@
         "role": "reviewer",
         "discipline": "computer-science",
         "assignedAssociateEditor": "AE-0001",
-        "assignedSuggestions": []
+        "assignedSuggestions": [
+            "SCOSC-gn1sykiu"
+        ]
     },
     {
         "id": "R-F35G",
@@ -30,13 +34,15 @@
         "assignedSuggestions": []
     },
     {
-        "id": "R-0001",
+        "id": "R-453F",
         "name": "Zoe Ramirez",
         "email": "janedoe@email.com",
         "password": "password",
         "role": "reviewer",
         "discipline": "computer-science",
         "assignedAssociateEditor": "AE-0002",
-        "assignedSuggestions": []
+        "assignedSuggestions": [
+            
+        ]
     }
 ]

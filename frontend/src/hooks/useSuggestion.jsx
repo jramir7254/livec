@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from "react"
 import { UserContext } from '@context/UserProvider';
-import { postSuggestion, postRejection, postStartReview, postReviewers} from "@utils/suggestionHandler";
-import {API} from '@api/client.js'
+import { postSuggestion, postRejection, postStartReview, postReviewers } from "@utils/suggestionHandler";
+import { API } from '@api/client.js'
 
 export default function useSuggestion() {
     const { user } = useContext(UserContext)
@@ -22,7 +22,7 @@ export default function useSuggestion() {
         })();
     }, [])
 
-    
+
 
 
 
@@ -36,28 +36,40 @@ export default function useSuggestion() {
         }
     }
 
-    const reject = async (suggestionId, reason, message) => {
+    const reject = async (suggestionId, formData) => {
         try {
+            console.log("call to reject:", suggestionId, formData)
+            const { reason, message } = formData
+            console.log("des:", reason, message)
+
             await postRejection(suggestionId, user.id, reason, message)
         } catch (error) {
-console.error(error)
+            console.error(error)
         }
     }
 
-    const startReview = async (suggestionId, notes, message) => {
+    const startReview = async (suggestionId, formData) => {
         try {
+            console.log("call to start:", suggestionId, formData)
+            const { notes, message } = formData
+            console.log("des:", notes, message)
+
             await postStartReview(suggestionId, user.id, notes, message)
         } catch (error) {
-console.error(error)
+            console.error(error)
 
         }
     }
 
-    const assignReviewers = async (suggestionId, notes, message, reviewers) => {
+    const assignReviewers = async (suggestionId, formData) => {
         try {
-            await postReviewers(suggestionId, notes, message, reviewers)
-        }catch(error ) {
-console.error(error)
+            console.log("call to start:", suggestionId, formData)
+            const { notes, message, reviewer } = formData
+            console.log("des:", notes, message, reviewer)
+
+            //await postReviewers(suggestionId, notes, message, reviewers)
+        } catch (error) {
+            console.error(error)
 
         }
     }

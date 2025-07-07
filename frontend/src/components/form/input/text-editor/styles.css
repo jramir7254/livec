@@ -4,7 +4,7 @@
 	/* height: 100%; */
 	/* margin: 40px auto; */
 	font-family: Arial, sans-serif;
-	height: auto;
+	/* height: auto; */
 	/* box-shadow: 0px 3px 6px 4px rgba(0, 0, 0, 0.1); */
 	border-radius: 8px;
 	border: 1px solid #ddd;
@@ -26,7 +26,7 @@
 
 .editor-input {
 	/* background-color: red; */
-	min-height: 150px;
+	max-height: 100px;
 	resize: none;
 	font-size: 15px;
 	caret-color: rgb(5, 5, 5);
@@ -34,6 +34,7 @@
 	outline: 0;
 	padding: 10px 10px;
 	caret-color: #444;
+	overflow-y: auto;
 	/* No need for position: relative here anymore */
 }
 
@@ -56,7 +57,6 @@
 	display: flex;
 	margin-bottom: 10px;
 	border-bottom: 1px solid #ddd;
-	padding-bottom: 4px;
 }
 
 .format--style,
@@ -71,7 +71,7 @@
 
 	border-right: 1px solid #ddd;
 	gap: 10px;
-	padding: 5px 5px;
+	padding: 2px 2px;
 	;
 }
 

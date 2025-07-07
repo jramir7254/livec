@@ -20,11 +20,22 @@ const Status = Object.freeze({
 })
 
 
+const AssociateEditorStatus = Object.freeze({
+    AWAITING_INITIAL_RESPONSE: 'awaiting-initial-response',
+    REVIEWING: "reviewing",
+    AWAITING_REVIEWER: 'awaiting-reviewer'
+})
+
+const ReviewerStatus = Object.freeze ({
+
+})
+
 const Step = Object.freeze({
     AWAITING_INITIAL_RESPONSE: 'awaiting-initial-response',
-    REVIEWING: "reviewing"
+    REVIEWING: "reviewing",
+    AWAITING_REVIEWER: 'awaiting-reviewer'
 })
 
 
 
-module.exports = { Roles, HTTP_STATUS, Status, Step }
+module.exports = { Roles, HTTP_STATUS, Status, Step, AssociateEditorStatus }

@@ -10,25 +10,31 @@
 */
 
 
+
+
 .layout {
-    @include grid-container(1fr 10fr, 1.5fr 1fr, 1rem, 2%);
+
+
+    // @include grid-container(1fr 10fr, 1.5fr 1fr, 1rem, 2%);
 
     flex: 1;
     height: 100%;
-    grid-template-areas: var(--grid-format);
+    // grid-template-areas: var(--grid-format);
 
     .header {
-        @include container(0 2.5%);
+        @include container(0.5rem 2.5%);
         @include flex-container($align: center);
 
         position: relative;
+        gap: 1rem;
         grid-area: H;
+        
     }
 
     .main-content {
         @include container(2.5%);
         @include flex-container(column, $gap: 0rem);
-
+        flex: 1;
         grid-area: M;
     }
 
@@ -40,17 +46,21 @@
     }
 }
 
-.layout--member {
-    @extend .layout;
-    @include grid-container(1fr 10fr, 2fr 1fr, 1rem, 2%);
 
+.layout--column {
+    @extend .layout;
+    @include flex-container(column, $gap: 1rem);
+    padding: 2%;
+    flex: 1;
+    height: 100%;
 }
 
-.layout--ae {
+.layout--grid {
     @extend .layout;
-    @include grid-container(1fr 10fr, 2fr 1fr, 1rem, 2%);
-}
+    @include grid-container(1fr 10fr, 1.5fr 1fr, 1rem, 2%);
+    grid-template-areas: var(--grid-format);
 
+}
 
 
 
@@ -99,7 +109,7 @@
     margin-top: 2rem;
     padding: 1.5%;
     flex: 1;
-    background-color: oklch(98.5% 0.002 247.839);
+    background-color: $neutral-50;
     border: 1px solid rgba(78, 68, 68, 0.2);
 
 }

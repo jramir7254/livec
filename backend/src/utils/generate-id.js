@@ -1,5 +1,5 @@
 const { nanoid } = require('nanoid');
-const { Status } = require('@utils/constants'); // or wherever your role enum lives
+const { Status } = require('@utils/constants');
 
 
 /*------------------------------------------------------------------------------*/
@@ -58,5 +58,10 @@ const generateSuggestionId = (key = Status.REJECTED, length = 8) => {
 
 /*------------------------------------------------------------------------------*/
 
-module.exports = {generateUserId, generateSuggestionId}
+const generateRandomId = (length = 8) => {
+    return `DOC-${nanoid(length)}`;
+}
+
+
+module.exports = {generateUserId, generateSuggestionId, generateRandomId}
 

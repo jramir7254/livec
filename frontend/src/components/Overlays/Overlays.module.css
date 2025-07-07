@@ -20,6 +20,7 @@
     align-items: center;
     justify-content: center;
     color: black;
+    gap: 1rem;
     background: white;
     padding: 2rem 2rem;
     border-radius: 8px;
@@ -49,7 +50,7 @@
 
 
 .button--confirm {
-    background: rgba(16, 185, 129, 0.15);
+    background: rgba(16, 185, 129, 0.45);
     color: #10B981;
 }
 

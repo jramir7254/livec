@@ -3,15 +3,14 @@ const User = require('../user.model');
 const { Roles } = require('@utils/constants');
 
 
-class Reviewer extends User {
-    static role = Roles.REVIEWER;
-    static roleKey = 'reviewers';
+class EditorInChief extends User {
+    static role = Roles.EDITOR_IN_CHIEF;
+    static roleKey = 'chiefEditors';
 
     constructor(data) {
-        super({ ...data, role: Reviewer.role });
+        super(data)
         this.discipline = data.discipline || 'none';
-        this.assignedEditorInChief = data.assignedEditorInChief || 'none'
-        this.assignedAssociateEditor = data.assignedAssociateEditor || 'none'
+        this.assignedAssociateEditors = data.assignedAssociateEditors || []
         this.assignedSuggestions = data.assignedSuggestions || [];
     }
 
@@ -27,4 +26,4 @@ class Reviewer extends User {
     }
 }
 
-module.exports = Reviewer;
+module.exports = EditorInChief;

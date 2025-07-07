@@ -1,13 +1,17 @@
-import styles from './Layout.module.css'
+import styles from './Layout.module.scss'
 import { NavLink } from 'react-router-dom';
 import { UserContext } from '@context/UserProvider';
 import React, { useContext, useState } from 'react';
-import {toTitleCase} from '@utils/format' 
+import { toTitleCase } from '@utils/format'
 import * as Icons from '@components/Icons'
+import useAuth from '@hooks/useAuth'
 
-export function Layout({ children }) {
+
+
+
+export const Layout = ({ children }) => {
     const [collapse, setCollapse] = useState(false);
-    const [sidebar, mainPanel] = React.Children.toArray(children);
+    const [Sidebar, MainPanel] = React.Children.toArray(children);
 
     return (
         <div className={styles.dashboard}>
@@ -15,17 +19,21 @@ export function Layout({ children }) {
                 style={{ width: collapse ? '5%' : '15%' }}
                 className={styles.dashboard__sidebar}
             >
-                {React.cloneElement(sidebar, { collapse, setCollapse })}
+                {React.cloneElement(Sidebar, { collapse, setCollapse })}
             </div>
-            <div className={styles.dashboard__main}>{mainPanel}</div>
+            <div className={styles.dashboard__main}>{MainPanel}</div>
         </div>
     );
 }
-import useAuth from '@hooks/useAuth'
 
 
-export function SideBar({ collapse, setCollapse, children }) {
-        const { user } = useContext(UserContext);
+
+
+
+
+
+export function Sidebar({ collapse, setCollapse, children }) {
+    const { user } = useContext(UserContext);
 
     const { logout } = useAuth()
 
@@ -33,28 +41,35 @@ export function SideBar({ collapse, setCollapse, children }) {
         <aside
             className={`${styles.sidebar} ${collapse ? styles['sidebar--collapsed'] : ''}`}
         >
-            {/* <button onClick={() => setCollapse(!collapse)}>Toggle</button> */}
 
             <nav>
-            <SideBar.Item style={{marginBottom: 'auto'}} text={toTitleCase(user.role)} icon={<Icons.Burger />} collapse={collapse} action={() => setCollapse(!collapse)} />
+                <Sidebar.Item style={{ marginBottom: '1rem' }} text={toTitleCase(user.role)} icon={<Icons.Burger />} collapse={collapse} action={() => setCollapse(!collapse)} />
 
-                {React.Children.map(children, child =>
+                {React.Children.toArray(children).map(child =>
                     React.cloneElement(child, { collapse })
                 )}
-            <SideBar.Item style={{marginTop: 'auto'}} text='Logout' icon={<Icons.Logout />} collapse={collapse} action={logout} />
+                <Sidebar.Item style={{ marginTop: 'auto' }} text='Logout' icon={<Icons.Logout />} collapse={collapse} action={logout} />
             </nav>
 
         </aside>
     );
 }
 
-SideBar.Item = function SideBarItem({ text = '', icon, route, collapse, action, style }) {
+
+
+
+
+
+
+
+Sidebar.Item = function SidebarItem({ text = '', icon, route, collapse, action, style }) {
     const { user } = useContext(UserContext);
 
     const baseClass = styles['sidebar-item'];
     const activeClass = styles['sidebar-item--active'];
 
-    if (!route && !action) {s
+    if (!route && !action) {
+        s
         console.warn("SideBar.Item requires either 'route' or 'action' prop.");
     }
 
@@ -81,6 +96,17 @@ SideBar.Item = function SideBarItem({ text = '', icon, route, collapse, action, 
         </div>
     );
 };
+
+
+
+
+
+
+
+
+
+
+
 
 
 export function MainPanel({ children }) {

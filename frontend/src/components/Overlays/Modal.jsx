@@ -2,12 +2,6 @@ import styles from './Overlays.module.css'
 import { createPortal } from 'react-dom';
 import { ModalContext } from './ModalContext';
 import React, { useContext } from 'react';
-/**
- * @todo Change name to Modal
- * @param {*} param0 
- * @returns 
- */
-
 
 
 export default function Modal({ children }) {
