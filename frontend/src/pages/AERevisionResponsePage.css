@@ -1,0 +1,58 @@
+/* Spacing and typography */
+.ae-revision-page {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-family: 'Roboto', sans-serif;
+}
+
+.ae-revision-page h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #1a202c;
+}
+
+.ae-revision-page label {
+  display: block;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #2d3748;
+}
+
+.ae-revision-page textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 0.375rem;
+  resize: vertical;
+  color: #2d3748;
+  background-color: #edf2f7;
+}
+
+.ae-revision-page textarea:focus {
+  border-color: #3182ce;
+  outline: none;
+  background-color: #fff;
+}
+
+.ae-revision-page button.submit-btn {
+  margin-top: 1.5rem;
+  background-color: #3182ce;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.ae-revision-page button.submit-btn:hover {
+  background-color: #2b6cb0;
+}

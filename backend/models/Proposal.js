@@ -39,6 +39,11 @@ const proposalSchema = new mongoose.Schema({
     justification: String,
     submittedAt: Date,
   },
+  aeDeskRejection: {
+  aeId: String,
+  justification: String,
+  date: Date
+  },
 });
 
 const Proposal = mongoose.model('Proposal', proposalSchema);
