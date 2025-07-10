@@ -2,6 +2,9 @@ import mongoose from 'mongoose';
 
 const proposalSchema = new mongoose.Schema({
   title: String,
+  summary: String,
+  aeRecommendation: String,
+  status: String,
   description: String,
   segment: String,
   assignedAE: String,

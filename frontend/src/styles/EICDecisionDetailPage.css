@@ -1,0 +1,16 @@
+.eic-decision-detail {
+  max-width: 600px;
+  margin: auto;
+  padding: 1rem;
+}
+.eic-decision-detail label {
+  display: block;
+  margin-top: 1rem;
+}
+.eic-decision-detail textarea {
+  width: 100%;
+  min-height: 80px;
+}
+.eic-decision-detail button {
+  margin-top: 1rem;
+}
