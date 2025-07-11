@@ -5,37 +5,55 @@ import styles from '../Form.module.scss'
 
 export { Editor } from './text-editor/Editor'
 
-export const Text = () => {
-    const key = Object.keys(field)[0];
 
-    const { formData, onFormChange } = useContext(FormContext)
+
+
+
+
+
+export const TextField = ({ className, field, label }) => {
+    const key = Object.keys(field)[0];
+    const { formData, onFormChange } = useContext(FormContext);
 
     return (
-        <input className='ta' onChange={(e) => onFormChange(key, e.target.value)} />
-    )
-}
+        <>
+            {label && <label htmlFor={key}>{label}</label>}
+            <input
+                value={formData[key] !== undefined ? formData[key] : (field[key] || '')}
+                className={className}
+                onChange={(e) => onFormChange(key, e.target.value)}
+            />
+        </>
+    );
+};
 
-
-export const Dropdown = ({className, field, label, values}) => {
+export const Dropdown = ({ className, field, label, values }) => {
     const key = Object.keys(field)[0];
+    const { formData, onFormChange } = useContext(FormContext);
 
-    const { onFormChange } = useContext(FormContext)
-    console.log("vals:", values)
     return (
-        <select onChange={(e) => onFormChange(key, e.target.value)}>
-            {values.map((item, index) => (
-                <option key={index*57} value={item.value}>{item.label}</option>
-            ))}
-        </select>
-    )
-
-}
-
+        <>
+            {label && <label htmlFor={key}>{label}</label>}
+            <div className={styles.select}>
+            <select
+                value={formData[key] !== undefined ? formData[key] : (field[key] || '')}
+                // className={className}
+                onChange={(e) => onFormChange(key, e.target.value)}
+            >
+                {values.map((item, index) => (
+                    <option key={index} value={item.value}>
+                        {item.label}
+                    </option>
+                ))}
+            </select>
+            </div>
+        </>
+    );
+};
 
 export const TextArea = ({ className = styles['text-area'], field, label }) => {
     const key = Object.keys(field)[0];
-    const { onFormChange } = useContext(FormContext)
-
+    const { formData, onFormChange } = useContext(FormContext);
 
     return (
         <>
@@ -43,7 +61,9 @@ export const TextArea = ({ className = styles['text-area'], field, label }) => {
             <textarea
                 className={className}
                 name={key}
-                onChange={(e) => onFormChange(key, e.target.value)} />
+                value={formData[key] !== undefined ? formData[key] : (field[key] || '')}
+                onChange={(e) => onFormChange(key, e.target.value)}
+            />
         </>
-    )
-}
+    );
+};

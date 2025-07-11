@@ -1,9 +1,9 @@
 // Accordion.js
 import { useState, useRef, useEffect } from 'react';
-import './Accordion.css';
+import './Accordion.scss';
 import { FaChevronDown } from "react-icons/fa6";
 
-const AccordionItem = ({ title, range, content, isOpen, isRestricted = false, onClick }) => {
+const AccordionItem = ({ css, title, range, content, isOpen, isRestricted = false, onClick }) => {
     const contentRef = useRef(null);
     const [maxHeight, setMaxHeight] = useState('0px');
 
@@ -14,13 +14,13 @@ const AccordionItem = ({ title, range, content, isOpen, isRestricted = false, on
     }, [isOpen]);
 
     return (
-        <div className={`accordion-item ${isRestricted && 'disabled'}`}>
+        <div className={`accordion-item`}>
             <div className='flex justify-between accordion-title' onClick={onClick}>
                 {title} {range.start} - {range.end} {<FaChevronDown  />}
             </div>
             <div
                 ref={contentRef}
-                className={`accordion-content ${isOpen ? 'open' : ''}`}
+                className={`accordion-content ${isOpen ? 'open' : ''} ${css}`}
                 style={{ maxHeight }}
             >
                 <div>{content}</div>
@@ -31,7 +31,7 @@ const AccordionItem = ({ title, range, content, isOpen, isRestricted = false, on
 
 
 
-const Accordion = ({ item, content }) => {
+const Accordion = ({ css, item, content }) => {
     const [openIndex, setOpenIndex] = useState(null);
 
     const handleToggle = (index) => {
@@ -42,6 +42,7 @@ const Accordion = ({ item, content }) => {
         <div className="accordion">
 
                 <AccordionItem
+                    css={css}
                     key={item.title}
                     range={item.range}
                     title={item.title}

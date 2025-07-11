@@ -35,7 +35,7 @@ const disciplinePrefixMap = {
     'computer-science': 'COSC',
     'cybersecurity': 'CYBR',
     'information-systems': 'IS',
-    'rejected': 'REJ'
+    'closed': 'CLX'
 }
 
 /**
@@ -46,7 +46,7 @@ const disciplinePrefixMap = {
  * 
 **/
 
-const generateSuggestionId = (key = Status.REJECTED, length = 8) => {
+const generateSuggestionId = (key = Status.System.CLOSED, length = 8) => {
     const prefix = disciplinePrefixMap[key];
 
     if (!prefix) {
@@ -63,5 +63,23 @@ const generateRandomId = (length = 8) => {
 }
 
 
-module.exports = {generateUserId, generateSuggestionId, generateRandomId}
+
+async function hashID(input) {
+    const encoder = new TextEncoder();
+    const data = encoder.encode(input);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    return hashHex;
+}
+
+
+const generateSectionId = async (curriculum, year, pageNumber, sectionTitle, sectionVersion) => {
+    const input = `${curriculum}:${year}:${pageNumber}:${sectionTitle.trim().toLowerCase()}:${sectionVersion}`;
+    return (await hashID(input)).slice(0, 12); // Short stable ID
+}
+
+
+
+module.exports = { generateUserId, generateSuggestionId, generateRandomId, generateSectionId }
 

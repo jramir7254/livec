@@ -1,155 +1,160 @@
 [
   {
-    "id": "SCOSC-iEHiVaVR",
-    "title": "Ethics Module: AI Privacy",
-    "suggestion": "\"Lorem ipsum dolor sit amet. Et labore quaerat ut impedit molestiae et cupiditate voluptatem eos culpa voluptatem. Aut unde expedita et laborum quod hic blanditiis facilis. Ab neque voluptatem non sapiente quod et aspernatur rerum hic nemo distinctio aut modi necessitatibus.\\n\\nQuo quaerat voluptatem ut libero doloremque 33 animi delectus eum eaque enim vel voluptatem maxime. Aut amet nihil qui doloribus accusamus est debitis galisum non dolorem neque aut labore soluta et accusantium recusandae! Et illo consequuntur in quos quia quo neque galisum.\",\n",
-    "submitterId": "CM-6482",
-    "timeCreated": "2025-06-28T01:55:19.577Z",
+    "id": "SCOSC-Q65a2XmZ",
+    "title": " Replace C++ with Rust for Systems Programming",
+    "suggestion": "C++ is dated for teaching systems programming. Rust has modern safety features and is increasingly used in industry. Please consider replacing the C++ component with an introductory Rust course.\n",
+    "submitter_id": "CM-6482",
+    "section_id": "8238a7d96075",
+    "time_created": "2025-07-11T04:18:54.084Z",
     "status": {
       "public": "rejected",
-      "private": "rejected"
+      "private": "rejected",
+      "system": "closed"
     },
     "discipline": "computer-science",
-    "assignedAssociateEditor": "AE-0001",
-    "assignedEditorInChief": "EIC-0001",
-    "assignedReviewers": [],
+    "assigned_associate_editor": "AE-0001",
+    "assigned_editor_in_chief": "EIC-0001",
+    "assigned_reviewers": [],
     "meta": {
-      "rejectedBy": "AE-0001",
-      "rejectionReason": "This shi ts was so ahh",
-      "publicMessage": "This sucks",
-      "timeRejected": "2025-06-29T14:48:59.258Z",
-      "rejectId": "SREJ-0b_hQnOS"
-    }
+      "rejected_by": "AE-0001",
+      "rejection_reason": "Discrete Math is foundational for understanding algorithms, logic, and computer theory — it remains a core requirement for accreditation.",
+      "public_message": "We appreciate your feedback, but Discrete Math will stay as part of the core curriculum.",
+      "time_rejected": "2025-07-11T05:08:31.440Z",
+      "reject_id": "SCLX-Ifce1Geq"
+    },
+    "public_updates": [
+      {
+        "refId": "DOC-myBksW5R",
+        "status": "submitted",
+        "date": "2025-07-11T04:18:54.084Z",
+        "message": "Your suggestion has been submitted and we are finding an associate editor to review",
+        "author": "System"
+      },
+      {
+        "refId": "DOC-3CF0oH_k",
+        "status": "assigned",
+        "author": "System",
+        "date": "2025-07-11T04:18:54.097Z",
+        "message": "Your suggestion has been assigned to an associate editor for preliminary review."
+      },
+      {
+        "refId": "DOC-LV5hXc3x",
+        "status": "rejected",
+        "author": "AE-0001",
+        "date": "2025-07-11T05:08:31.440Z",
+        "message": "We appreciate your feedback, but Discrete Math will stay as part of the core curriculum."
+      }
+    ]
   },
-
   {
-    "id": "SCOSC-hWTOW1b1",
-    "title": "Streamline Course Approval Workflow",
-    "suggestion": "Implementing a dark mode option would allow users to customize their interface according to their visual comfort, especially during extended periods of screen time. This feature has been widely requested by the community.",
-    "submitterId": "CM-6482",
-    "timeCreated": "2025-06-29T00:37:44.465Z",
+    "id": "SCOSC-3x3nP5GE",
+    "title": " Replace C++ with Rust for Systems Programming",
+    "suggestion": "C++ is dated for teaching systems programming. Rust has modern safety features and is increasingly used in industry. Please consider replacing the C++ component with an introductory Rust course.",
+    "submitter_id": "CM-6482",
+    "section_id": "d3b1d0eaf0e4",
+    "time_created": "2025-07-11T05:18:46.278Z",
     "status": {
       "public": "under-review",
-      "private": "reviewing"
+      "private": "reviewing",
+      "system": "active"
     },
     "discipline": "computer-science",
-    "assignedAssociateEditor": "AE-0001",
-    "assignedEditorInChief": "EIC-0001",
-    "assignedReviewers": [],
+    "assigned_associate_editor": "AE-0001",
+    "assigned_editor_in_chief": "EIC-0001",
+    "assigned_reviewers": [],
     "meta": {
-      "startedBy": "AE-0001",
+      "started_by": "AE-0001",
       "documentation": [
         {
-          "refId": "DOC-Ybxe_dcn",
+          "refId": "DOC-9qbmDEyC",
           "author": "AE-0001",
-          "dateAdded": "2025-07-06T06:27:18.882Z",
-          "text": "adfaefa"
+          "dateAdded": "2025-07-11T05:19:16.729Z",
+          "text": "Need to assess the department’s capacity for teaching Rust and its fit with existing course dependencies."
         }
       ],
-      "publicMessages": [
-        {
-          "refId": "DOC-Qnjp_0dz",
-          "author": "AE-0001",
-          "dateAdded": "2025-07-06T06:27:18.882Z",
-          "text": "wefaef"
-        }
-      ],
-      "timeStarted": "2025-07-06T06:27:18.882Z",
-      "startId": "SREJ-8aJ45Y4L"
-    }
+      "time_started": "2025-07-11T05:19:16.729Z"
+    },
+    "public_updates": [
+      {
+        "refId": "DOC-P99M-TGu",
+        "status": "submitted",
+        "date": "2025-07-11T05:18:46.279Z",
+        "message": "Your suggestion has been submitted and we are finding an associate editor to review",
+        "author": "System"
+      },
+      {
+        "refId": "DOC-YzJ0c9bP",
+        "status": "assigned",
+        "author": "System",
+        "date": "2025-07-11T05:18:46.293Z",
+        "message": "Your suggestion has been assigned to an associate editor for preliminary review."
+      },
+      {
+        "refId": "DOC-iYprrR_L",
+        "status": "under-review",
+        "author": "AE-0001",
+        "date": "2025-07-11T05:19:16.729Z",
+        "message": "Your suggestion is under review by the curriculum committee. We appreciate your forward-thinking perspective."
+      }
+    ]
   },
   {
-    "id": "SCOSC-gn1sykiu",
-    "title": "Upgrade Dashboard UI Design",
-    "suggestion": "Implementing a dark mode option would allow users to customize their interface according to their visual comfort, especially during extended periods of screen time. This feature has been widely requested by the community.",
-    "submitterId": "CM-6482",
-    "timeCreated": "2025-06-29T00:51:26.097Z",
+    "id": "SCOSC-U81O8wah",
+    "title": "Add Python Data Structures Module",
+    "suggestion": " I believe the curriculum should include a dedicated module on data structures in Python, since many students are already familiar with Python syntax. This could make learning more accessible before moving to more complex languages.",
+    "submitter_id": "AE-0001",
+    "section_id": "c2824056be4f",
+    "time_created": "2025-07-11T05:22:06.022Z",
     "status": {
-      "public": "under-review",
-      "private": "reviewing"
+      "public": "submitted",
+      "private": "",
+      "system": "unassigned"
     },
     "discipline": "computer-science",
-    "assignedAssociateEditor": "AE-0001",
-    "assignedEditorInChief": "EIC-0001",
-    "assignedReviewers": [
-      "R-0001",
-      "R-7562"
-    ],
-    "meta": {
-      "publicMessage": "tset",
-      "timeStarted": "2025-06-30T03:12:37.353Z"
-    }
+    "assigned_reviewers": [],
+    "meta": {},
+    "public_updates": [
+      {
+        "refId": "DOC-izG1v53g",
+        "status": "submitted",
+        "date": "2025-07-11T05:22:06.022Z",
+        "message": "Your suggestion has been submitted and we are finding an associate editor to review",
+        "author": "System"
+      }
+    ]
   },
   {
-    "id": "SCOSC-kDa7CyBC",
-    "title": "Automate Weekly Progress Reports",
-    "suggestion": "An AI-powered chatbot could answer common student questions in real-time, reducing the burden on support staff.",
-    "submitterId": "CM-6482",
-    "timeCreated": "2025-06-30T03:13:46.093Z",
-    "status": {
-      "public": "under-review",
-      "private": "reviewing"
-    },
-    "discipline": "computer-science",
-    "assignedAssociateEditor": "AE-0001",
-    "assignedEditorInChief": "EIC-0001",
-    "assignedReviewers": [],
-    "meta": {
-      "startedBy": "AE-0001",
-      "documentation": [
-        {
-          "author": "AE-0001",
-          "dateAdded": "2025-07-06T06:09:00.870Z",
-          "text": "notes here"
-        }
-      ],
-      "publicMessages": [
-        {
-          "author": "AE-0001",
-          "dateAdded": "2025-07-06T06:09:00.870Z",
-          "text": "message here"
-        }
-      ],
-      "timeStarted": "2025-07-06T06:09:00.870Z",
-      "startId": "SREJ-hLxZKCbv"
-    }
-  },
-  {
-    "id": "SCOSC-Hrn_K8xt",
-    "title": "title or sum",
-    "suggestion": "adsfadfadsf",
-    "submitterId": "CM-6482",
-    "timeCreated": "2025-06-30T19:53:03.153Z",
-    "status": {
-      "public": "under-review",
-      "private": "reviewing"
-    },
-    "discipline": "computer-science",
-    "assignedAssociateEditor": "AE-0001",
-    "assignedEditorInChief": "EIC-0001",
-    "assignedReviewers": [],
-    "meta": {
-      "startedBy": "AE-0001",
-      "initialNotes": "notes",
-      "publicMessage": "message to submitter",
-      "timeStarted": "2025-06-30T19:58:40.380Z",
-      "startId": "SREJ-tWvZ-UVQ"
-    }
-  },
-  {
-    "id": "SCOSC-icLdbDMy",
-    "title": "Title ",
-    "suggestion": "suggestion",
-    "submitterId": "CM-6482",
-    "timeCreated": "2025-06-30T21:38:36.716Z",
+    "id": "SCOSC-pm7RdFa3",
+    "title": "Add Python Data Structures Module",
+    "suggestion": "Given the rise in cybersecurity threats, every CS graduate should have a basic understanding of cybersecurity principles. I recommend adding an introductory cybersecurity fundamentals course for all students.",
+    "submitter_id": "CM-6482",
+    "section_id": "d3b1d0eaf0e4",
+    "time_created": "2025-07-11T05:23:17.628Z",
     "status": {
       "public": "assigned",
-      "private": "awaiting-initial-response"
+      "private": "awaiting-initial-response",
+      "system": "new"
     },
     "discipline": "computer-science",
-    "assignedAssociateEditor": "AE-0001",
-    "assignedEditorInChief": "EIC-0001",
-    "assignedReviewers": [],
-    "meta": {}
+    "assigned_associate_editor": "AE-0001",
+    "assigned_editor_in_chief": "EIC-0001",
+    "assigned_reviewers": [],
+    "meta": {},
+    "public_updates": [
+      {
+        "refId": "DOC-j_RzDaeg",
+        "status": "submitted",
+        "date": "2025-07-11T05:23:17.629Z",
+        "message": "Your suggestion has been submitted and we are finding an associate editor to review",
+        "author": "System"
+      },
+      {
+        "refId": "DOC-jtxMqcDf",
+        "status": "assigned",
+        "author": "System",
+        "date": "2025-07-11T05:23:17.641Z",
+        "message": "Your suggestion has been assigned to an associate editor for preliminary review."
+      }
+    ]
   }
 ]

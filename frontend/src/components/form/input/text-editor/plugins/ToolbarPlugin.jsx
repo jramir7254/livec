@@ -4,7 +4,8 @@ import { useLexicalComposerContext } from '@lexical/react/LexicalComposerContext
 import { $getSelection, $isRangeSelection, $createParagraphNode, $getRoot, FORMAT_TEXT_COMMAND, FORMAT_ELEMENT_COMMAND } from 'lexical';
 import { Bold, Strike, Italic, Underline, Left, Center, Right, Justify, Equations } from '../../../../Icons';
 import { EquationNode } from '../nodes/EquationNode'
-
+import { $createListNode, INSERT_ORDERED_LIST_COMMAND } from '@lexical/list';
+import { INSERT_TABLE_COMMAND } from '@lexical/table';
 
 export default function ToolbarPlugin() {
 	const [editor] = useLexicalComposerContext();
@@ -17,9 +18,22 @@ export default function ToolbarPlugin() {
 		editor.dispatchCommand(FORMAT_ELEMENT_COMMAND, format)
 	}
 
+	const insertList = () => {
+		editor.dispatchCommand(INSERT_ORDERED_LIST_COMMAND, 'bullet');
+
+	}
+
+
+	const insertTable = () => {
+		editor.dispatchCommand(INSERT_TABLE_COMMAND, {
+			columns: 3,
+			rows: 2
+		});
+	}
 	const insertEquation = () => {
 		const latex = prompt('Enter LaTeX:', 'E = mc^2');
 		if (latex) {
+			
 			editor.update(() => {
 				const selection = $getSelection();
 
@@ -57,6 +71,8 @@ export default function ToolbarPlugin() {
 			<div className='format--special'>
 
 				<button onClick={insertEquation}>{<Equations />}</button>
+				<button onClick={insertList}>{<Equations />}</button>
+				<button onClick={insertTable}>{<Equations />}</button>
 			</div>
 
 		</div>

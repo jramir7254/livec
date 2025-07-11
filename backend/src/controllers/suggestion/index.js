@@ -1,7 +1,15 @@
-const {postSuggestion} = require('./post-suggestion')
-const {postRejection} = require('./post-reject')
-const {postStartReview} = require('./post-start')
-const {postReviewers} = require('./post-reviewers')
-const {getSuggestion} = require('./get-suggestion')
+// src/controllers/suggestion/index.js
 
-module.exports = { postSuggestion, postRejection, getSuggestion, postStartReview, postReviewers }
+import { postSuggestion } from './post-suggestion.js';
+import { postRejection } from './post-reject.js';
+import { postStartReview } from './post-start.js';
+import { postReviewers } from './post-reviewers.js';
+import { getSuggestion } from './get-suggestion.js';
+
+export {
+    postSuggestion,
+    postRejection,
+    getSuggestion,
+    postStartReview,
+    postReviewers
+};

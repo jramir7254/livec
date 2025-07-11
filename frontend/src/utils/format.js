@@ -12,3 +12,27 @@ export const formatDate = (date) => {
         day: 'numeric',
     }).format(new Date(date));
 }
+
+
+export const flattenSections = (sections, parentPath = []) => {
+	let result = [];
+
+	for (const section of sections) {
+		const path = [...parentPath, section.title];
+
+		result.push({
+			id: section.id || "none",
+			title: section.title,
+			page: section.page,
+			path: path
+		});
+
+		if (section.units && section.units.length > 0) {
+			const children = flattenSections(section.units, path);
+			result = result.concat(children);
+		}
+	}
+
+	return result;
+}
+

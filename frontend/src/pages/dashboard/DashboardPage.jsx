@@ -29,7 +29,6 @@ export default function DashboardPage() {
 				{user.role === Roles.REVIEWER && <ReviewerSidebarItems />}
 				{user.role === Roles.COMMUNITY_MEMBER && <CommunityMemberSidebarItems />}
 				{user.role === Roles.EDITOR_IN_CHIEF && <EditorInChiefSidebarItems />}
-
 			</Sidebar>
 
 			<MainPanel>
@@ -75,6 +74,8 @@ const ReviewerSidebarItems = () => {
 		</>
 	)
 }
+
+
 
 const EditorInChiefSidebarItems = () => {
 		return (

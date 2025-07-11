@@ -1,3 +1,4 @@
+const { AppError } = require('@errors');
 const Reviewers = require('@models/users/reviewer/reviewers.model.js')
 const logger = require('@logger').addSource({
     file: 'associate-editor.service',

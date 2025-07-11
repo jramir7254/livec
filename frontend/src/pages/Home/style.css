@@ -3,6 +3,8 @@
     height: 100%;
 
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .editor-container2 {
@@ -105,7 +107,7 @@
 }
 
 .progress-actual::after {
-    content: "45%";
+    content: var(--progress-num);
     /* Or dynamic content with React if you use an inline span instead */
     position: absolute;
     right: 0;

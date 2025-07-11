@@ -1,81 +1,176 @@
 @use '@styles' as *;
+@use 'sass:color';
 
 
 .button {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.3rem 0.75rem;
+    padding: 0.5rem 0.75rem;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
 
-    border-radius: 8px;
+    border-radius: 5px;
     font-weight: 500;
-    font-size: 0.85rem;
+    font-size: 1rem;
 
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
 
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    // border: 1px solid rgba(24, 20, 20, 0.2);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 
-.button--back {
-    display: flex;
-    align-items: flex-start;
-    gap: 5px;
-    color: oklch(54.6% 0.245 262.881);
-    width: fit-content;
-    background-color: inherit;
-    margin: 0;
-    justify-content: center;
-    font-size: 0.95rem;
+
+
+.button--round {
+    font-size: 0.85rem;
+    font-family: "Montserrat", sans-serif;
+    background-color: none;
+    $bg-color: $stone-400;
+    padding: 0.35rem;
+    flex: 1;
+    text-align: center;
+    height: fit-content;
+    box-shadow: none;
+
+    &:hover {
+        color: white;
+     background: oklch(76.075% 0.09198 247.246);
+    }
+
+
+    &--active {
+        background: oklch(76.075% 0.09198 247.246);
+        color: white;
+        transform: scale(0.98);
+
+        &:hover {
+            background: color.adjust($bg-color, $lightness: -1%);
+        }
+    }
 }
 
 
+.button--back {
+    align-items: flex-start;
+    font-size: 1rem;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+    color: oklch(54.6% 0.245 262.881);
+    width: fit-content;
+    background-color: inherit;
+    border: none;
+    box-shadow: none;
+}
 
-.button--logout {
-    gap: 1rem;
-    display: inline-flex;
-    align-items: center;
-    border-radius: 8px;
-    margin-top: auto;
-    padding: 1rem 2rem;
-    width: 100%;
-    background: rgba(239, 68, 68, 0.45);
-    color: #350606;
+.button--normal {
+    @extend .button;
+    background-color: var(--color-accent);
+    border: 1px solid #ccc;
+    color: white;
+    // width: fit-content;
+
+    &:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        background-color: #006fa8;
+    }
+
 }
 
 
 .button--danger {
     @extend .button;
-    background: $red-600;
-    color: #fff;
+    $bg-color: $red-500;
+    background-color: $red-500;
 
     &:hover {
-        background: $rose-700;
-        // color: #350606;
+        background: $red-600;
+    }
+
+    &--active {
+        background-color: color.adjust($bg-color, $lightness: -15%);
+        box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.25);
+
+        transform: scale(0.98);
+
+        &:hover {
+            background: color.adjust($bg-color, $lightness: -25%);
+        }
     }
 }
 
 
+.button--confirm {
+    @extend .button;
+    $bg-color: $lime-500;
+    background-color: $lime-500;
+    color: #fff;
+
+    &:hover {
+        background: $lime-600;
+    }
+
+    &--active {
+        background-color: color.adjust($bg-color, $lightness: -15%);
+        box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.25);
+
+        transform: scale(0.98);
+
+        &:hover {
+            background: color.adjust($bg-color, $lightness: -25%);
+        }
+    }
+}
+
+
+.button--info {
+    @extend .button;
+    $bg-color: $cyan-500;
+    background: $cyan-500;
+
+    color: #fff;
+
+    &:hover {
+        background: $cyan-600;
+    }
+
+    &--active {
+        background-color: color.adjust($bg-color, $lightness: -15%);
+        box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.25);
+
+        transform: scale(0.98);
+
+        &:hover {
+            background: color.adjust($bg-color, $lightness: -25%);
+        }
+    }
+
+}
+
+
+
 .button--blue {
     @extend .button;
-    background: $sky-600;
+    background: $sky-400;
+
     color: #fff;
 
     &:hover {
         background: $blue-700;
-        // color: #3B82F6;
     }
 }
 
 
 .button--purple {
-    background: $violet-600;
+    @extend .button;
+    background: $purple-500;
+    background-color: oklch(0.8 0.15 220);
     color: #fff;
 
     &:hover {
         background: $purple-700;
-        // color: #8B5CF6;
     }
 }

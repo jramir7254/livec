@@ -1,21 +1,6 @@
-const path = require('path');
-const moduleAlias = require('module-alias');
+require('module-alias/register');
 const morgan = require('morgan');
-
-
-moduleAlias.addAliases({
-    '@root': __dirname,
-    '@utils': path.join(__dirname, 'src/utils'),
-    '@models': path.join(__dirname, 'src/models'),
-    '@controllers': path.join(__dirname, 'src/controllers'),
-    '@routes': path.join(__dirname, 'src/routes'),
-    '@database': path.join(__dirname, 'src/database'),
-    '@logger': path.join(__dirname, 'logger/logger.js'),
-    '@constants': path.join(__dirname, 'src/constants'),
-    '@service': path.join(__dirname, 'src/service'),
-    '@errors': path.join(__dirname, 'src/errors')
-});
-
+const app = require('./src/app');
 
 const logger = require('@logger').addSource({
     file: "server.js",
@@ -23,11 +8,8 @@ const logger = require('@logger').addSource({
 });
 
 
-const app = require('./src/app');
-const PORT = 3000
 
-
-app.listen(PORT, () => {
+app.listen(PORT = 3000, () => {
     logger.info(`app.started`, { PORT })
 });
 

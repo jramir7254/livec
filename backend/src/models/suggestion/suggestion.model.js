@@ -1,32 +1,58 @@
-const { generateSuggestionId } = require('@utils/generate-id'); 
-const { Status, Step } = require('@utils/constants'); 
+const { generateSuggestionId } = require('@utils/generate-id');
+const { Status, Step, Actions } = require('@utils/constants');
 const Documentation = require('../util/documentation.model')
+const PublicMessage = require('../util/public-message.model')
+
 
 class Suggestion {
+
     constructor(data) {
         this.id = data.id || generateSuggestionId(data.discipline);
         this.title = data.title;
         this.suggestion = data.suggestion || '';
-        this.submitterId = data.submitterId;
-        this.timeCreated = data.timeCreated || new Date().toISOString();
-        this.status = data.status || { 'public': '', 'private': '' };
+
+        this.submitter_id = data.submitter_id || data.submitterId;
+        this.section_id = data.section_id || data.sectionId;
+        this.time_created = data.time_created || data.timeCreated || new Date().toISOString();
+
+        this.status = data.status || {
+            public: Status.Public.SUBMITTED,
+            private: '',
+            system: Status.System.UNASSIGNED
+        };
+
         this.discipline = data.discipline;
-        this.assignedAssociateEditor = data.assignedAssociateEditor || '';
-        this.assignedEditorInChief = data.assignedEditorInChief || '';
-        this.assignedReviewers = data.assignedReviewers || [];
-        this.meta = data.meta || {}
+
+        this.assigned_associate_editor = data.assigned_associate_editor || data.assignedAssociateEditor;
+        this.assigned_editor_in_chief = data.assigned_editor_in_chief || data.assignedEditorInChief;
+        this.assigned_reviewers = data.assigned_reviewers || data.assignedReviewers || [];
+
+        this.meta = data.meta || {};
+
+        this.public_updates = data.public_updates || [new PublicMessage({
+            status: Status.Public.SUBMITTED,
+            author: 'System',
+            message: 'Your suggestion has been submitted and we are finding an associate editor to review'
+        })]
     }
+
+
+
+
 
     toCommunityMember() {
         return {
             id: this.id,
             title: this.title,
             suggestion: this.suggestion,
-            timeCreated: this.timeCreated,
+            sectionId: this.section_id,
+            timeCreated: this.time_created,
             status: this.status.public,
-            discipline: this.discipline
+            discipline: this.discipline,
+            publicUpdates: this.public_updates,
         }
     }
+
 
 
     toAssociateEditor() {
@@ -34,54 +60,87 @@ class Suggestion {
             id: this.id,
             title: this.title,
             suggestion: this.suggestion,
-            timeCreated: this.timeCreated,
+            timeCreated: this.time_created,
             status: this.status.private,
+            sectionId: this.section_id,
             discipline: this.discipline,
-            submitterId: this.submitterId,
-            assignedAssociateEditor: this.assignedAssociateEditor,
-            assignedEditorInChief: this.assignedEditorInChief || 'none',
-            assignedReviewers: this.assignedReviewers || []
+            submitterId: this.submitter_id,
+            meta: this.meta,
+            assignedAssociateEditor: this.assigned_associate_editor,
+            assignedEditorInChief: this.assigned_editor_in_chief || 'none',
+            assignedReviewers: this.assigned_reviewers || [],
+            system: {
+                status: this.status.system
+            }
         }
     }
+
+
+
 
     addMeta(meta) {
         Object.assign(this.meta, meta);
     }
 
 
-    updateStatus(status) {
-        switch (status) {
-            case Status.SUBMITTED:
-                this.status = { 'public': Status.SUBMITTED, 'private': '' };
+
+
+
+    _updateStatus(event) {
+
+        switch (event) {
+
+            case (Actions.ASSIGNED_ASSOCIATE_EDITOR): this.status = {
+                'public': Status.Public.ASSIGNED,
+                'private': Status.Private.AWAITING_INITIAL_RESPONSE,
+                'system': Status.System.NEW
+            };
                 break;
-            case Status.ASSIGNED:
-                this.status = { 'public': Status.ASSIGNED, 'private': Step.AWAITING_INITIAL_RESPONSE };
+
+            case (Actions.DESK_REJECT): this.status = {
+                'public': Status.Public.REJECTED,
+                'private': Status.Private.REJECTED,
+                'system': Status.System.CLOSED
+            };
                 break;
-            case Status.REJECTED:
-                this.status = { 'public': Status.REJECTED, 'private': Status.REJECTED };
-                break;
-            case Status.UNDER_REVIEW:
-                this.status = { 'public': Status.UNDER_REVIEW, 'private': Step.REVIEWING };
+
+            case Actions.START_REVIEW: this.status = {
+                'public': Status.Public.UNDER_REVIEW,
+                'private': Status.Private.REVIEWING,
+                'system': Status.System.ACTIVE
+            };
                 break;
         }
     }
 
 
-    reject(rejecterId, reason, message) {
-        if (this.status.public === Status.REJECTED) return
 
-        this.updateStatus(Status.REJECTED)
+
+
+    reject(rejecterId, reason, message) {
+        if (this.status.system === Status.System.CLOSED) return
+
+        this._updateStatus(Actions.DESK_REJECT)
         const rejectId = generateSuggestionId()
         this.addMeta({
-            rejectedBy: rejecterId,
-            rejectionReason: reason,
-            publicMessage: message,
-            timeRejected: new Date().toISOString(),
-            rejectId
+            rejected_by: rejecterId,
+            rejection_reason: reason,
+            public_message: message,
+            time_rejected: new Date().toISOString(),
+            reject_id: rejectId
         });
+
+        this.public_updates.push(new PublicMessage({
+            status: this.status.public,
+            message,
+            author: rejecterId
+        }).toObject())
 
         return rejectId
     }
+
+
+
 
 
     insertDocumentation() {
@@ -89,43 +148,65 @@ class Suggestion {
     }
 
 
-    startReview(startedBy, notes, message) {
-        if (this.status.public === Status.REJECTED) return
 
-        this.updateStatus(Status.UNDER_REVIEW)
-        const startId = generateSuggestionId()
+
+    startReview(startedBy, notes, message) {
+        if (this.status.system === Status.System.CLOSED) return;
+
+        this._updateStatus(Actions.START_REVIEW);
+        const start_id = generateSuggestionId();
 
         this.addMeta({
-            startedBy: startedBy,
+            started_by: startedBy,
             documentation: [new Documentation(startedBy, notes).toObject()],
-            publicMessages: [new Documentation(startedBy, message).toObject()],
-            timeStarted: new Date().toISOString(),
-            startId
+            time_started: new Date().toISOString(),
+ 
         });
 
-        return startId
+        this.public_updates.push(new PublicMessage({
+            status: this.status.public,
+            message,
+            author: startedBy
+        }).toObject())
+
+        return "###-####";
     }
+
+
 
 
     assignAssociateEditor(associateEditor) {
-        this.assignedAssociateEditor = associateEditor.id;
-        this.assignedEditorInChief = associateEditor.assignedEditorInChief;
-        this.updateStatus(Status.ASSIGNED)
+        this.assigned_associate_editor = associateEditor.id;
+        this.assigned_editor_in_chief = associateEditor.assignedEditorInChief;
+
+        this._updateStatus(Actions.ASSIGNED_ASSOCIATE_EDITOR);
+
+        this.public_updates.push(new PublicMessage({
+            status: this.status.public,
+            message: 'Your suggestion has been assigned to an associate editor for preliminary review.',
+            author: 'System'
+        }).toObject())
     }
 
-    
+
+
+
     assignReviewers(notes, message, newReviewers) {
         newReviewers.map(id => (
-            !this.assignedReviewers.includes(id) && this.assignedReviewers.push(id)
-        ))
+            !this.assigned_reviewers.includes(id) && this.assigned_reviewers.push(id)
+        ));
+
         this.addMeta({
-            initialNotes: notes,
-            publicMessage: message,
-            timeStarted: new Date().toISOString(),
+            initial_notes: notes,
+            public_message: message,
+            time_started: new Date().toISOString(),
         });
 
-        this.updateStatus(Status.UNDER_REVIEW)
+        this._updateStatus(Actions.ASSIGNED_REVIEWERS);
     }
 }
+
+
+
 
 module.exports = Suggestion

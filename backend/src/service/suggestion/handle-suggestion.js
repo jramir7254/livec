@@ -11,16 +11,17 @@ const logger = require('@logger').addSource({
 });
 
 
-const handleNewSuggestion = async (userId, title, suggestion, discipline) => {
+const handleNewSuggestion = async (userId, title, suggestion, discipline, sectionId) => {
 
     try {
 
-        logger.debug("suggestion.post.db.inserting")
+        logger.debug("suggestion.post.db.inserting", {sectionId})
         const insertedSuggestion = await Suggestions.insert({
             submitterId: userId,
             title,
             suggestion,
             discipline,
+            sectionId,
         })
 
         logger.info("suggestion.post.link_user.started")

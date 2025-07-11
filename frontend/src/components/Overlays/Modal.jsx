@@ -27,7 +27,7 @@ export const DefaultView = ({ message, children }) => {
 
     return (
         <div className={styles['overlay-content']}>
-            <p>{message}</p>
+             <p className={styles.text}>{message}</p>
             {children}
             <div className={styles['button-group']}>
                 <button
@@ -54,7 +54,7 @@ export const ConfirmationView = ({ message, children, onCancel }) => {
 
     return (
         <div className={styles['overlay-content']}>
-            <p>{message}</p>
+            <p className={styles.text}>{message}</p>
             {children}
             <div className={styles['button-group']}>
                 <button className={`${styles.button} ${styles['button--cancel']}`} onClick={close}>

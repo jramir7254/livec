@@ -3,6 +3,7 @@ import Equation from './Equation';
 
 export class EquationNode extends DecoratorNode {
 	__equation;
+	__inline;
 
 	static getType() {
 		return 'equation';
@@ -37,9 +38,9 @@ export class EquationNode extends DecoratorNode {
 
 	exportDOM() {
 		const span = document.createElement('span');
-		span.setAttribute('equation', this.__equation);
-		span.textContent = `${this.__equation}`;
-		return span
+		span.className = 'equation';
+		span.textContent = `$${this.__equation}$`;
+		return { element: span };
 	}
 
 	exportJSON() {
@@ -50,12 +51,10 @@ export class EquationNode extends DecoratorNode {
 		};
 	}
 
-
 	static importJSON(serializedNode) {
 		return new EquationNode(serializedNode.equation);
 	}
 }
-
 
 export function $isEquationNode(node) {
 	return node instanceof EquationNode;

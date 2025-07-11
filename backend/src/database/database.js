@@ -48,6 +48,7 @@ const db = {
         acmEdBoard: createDB('data/users/ed_board', [])
     },
     suggestions: createDB('data/suggestions/suggestions.json', []),
+    curriculums: createDB('data/curriculums/curriculums.json', [])
 };
 
 module.exports = db;

@@ -20,6 +20,11 @@ export default function useTabs(components, defaultView) {
         }
     }
 
-    return { setView, CurrentView, currentKey }
+    const isActive = (key) => {
+        return key === currentKey
+    }
+    
+
+    return { setView, CurrentView, currentKey, isActive }
 }
 

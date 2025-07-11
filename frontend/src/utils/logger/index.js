@@ -31,7 +31,7 @@ function getTime() {
 // Core formatting: timestamp, level, optional correlation ID
 function formatPrefix(level) {
 	const time = getTime();
-	const corr = correlationId ? `[corr:${correlationId}] ` : '';
+	const corr = correlationId ? `[ID:${correlationId}] ` : '';
 	return `%c${corr}[${time}] [${level.toUpperCase()}]%c`;
 }
 
@@ -89,7 +89,11 @@ const methods = {
 	// Grouping
 	group: label => { if (!isDev) return; console.group(label); },
 	groupCollapsed: label => { if (!isDev) return; console.groupCollapsed(label); },
-	groupEnd: () => { if (!isDev) return; console.groupEnd(); }
+	groupEnd: () => { if (!isDev) return; console.groupEnd(); },
+
+
+	startProcess: (id) => {if (!isDev) return; setCorrelationId(id); methods.info(`START ${correlationId}`); methods.group('begin')},
+	endProcess: () => {if (!isDev) return;    methods.groupEnd(); methods.info(`END ${correlationId}`); clearCorrelationId();}
 };
 
 // Namespace support

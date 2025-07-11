@@ -69,7 +69,7 @@ Sidebar.Item = function SidebarItem({ text = '', icon, route, collapse, action, 
     const activeClass = styles['sidebar-item--active'];
 
     if (!route && !action) {
-        s
+        
         console.warn("SideBar.Item requires either 'route' or 'action' prop.");
     }
 
@@ -111,8 +111,8 @@ Sidebar.Item = function SidebarItem({ text = '', icon, route, collapse, action, 
 
 export function MainPanel({ children }) {
     return (
-        <div className={styles.dashboard__main}>
+        <>
             {children}
-        </div>
+        </>
     );
 };

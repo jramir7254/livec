@@ -15,7 +15,7 @@
 .table thead th {
   position: sticky;
   top: 0;
-  background: #fff; /* set to your header background color */
+  
   z-index: 1;
 }
 

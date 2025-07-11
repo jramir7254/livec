@@ -1,4 +1,4 @@
-import './CurriculumPage.css'
+import './CurriculumPage.scss'
 
 import { useNavigate } from 'react-router-dom'
 import { IoIosArrowBack } from "react-icons/io";

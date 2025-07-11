@@ -1,19 +1,36 @@
-import React, { useMemo, useContext } from 'react'
+import React, { useContext } from 'react'
 import FormProvider, { FormContext } from './FormContext';
 import ModalProvider from '../Overlays/ModalContext';
 import { ModalContext } from '../Overlays/ModalContext';
 import styles from './Form.module.scss'
+import { Button } from '../Buttons';
 
 
-const buildDefaultValues = (children) => {
-    React.Children.toArray(children).reduce((acc, child) => {
-        const val = child.props.val;
 
-        if (val && typeof val === "object") {
-            const entries = Object.entries(val);
-            if (entries.length === 1) {
-                const [key, value] = entries[0];
-                acc[key] = value;
+
+/**
+ * 
+ * Builds default values from children with a `val` prop.
+ *
+ * @param {React.ReactNode} children - React children elements to process.
+ * @returns {Record<string, any>} An object mapping keys to default values.
+ * 
+**/
+function buildDefaultValues(children) {
+
+    return React.Children.toArray(children).reduce((acc, child) => {
+
+        if (React.isValidElement(child) && child.props && typeof child.props === 'object') {
+            /** @type {{ val?: any }} */
+            const props = child.props;
+            const val = props.val;
+
+            if (val && typeof val === "object") {
+                const entries = Object.entries(val);
+                if (entries.length === 1) {
+                    const [key, value] = entries[0];
+                    acc[key] = value;
+                }
             }
         }
 
@@ -22,14 +39,14 @@ const buildDefaultValues = (children) => {
 }
 
 
+export function Form({ className = styles.form, children, resetOn = [] }) {
+    const defaultValues = buildDefaultValues(children)
 
-export function Form({ className = styles.form, children }) {
-    const defaultValues = useMemo(() => buildDefaultValues(children), [children])
 
     if (!children || !children.length) return <p>No Children</p>
 
     return (
-        <FormProvider defaultValues={defaultValues}>
+        <FormProvider defaultValues={defaultValues} resetOn={resetOn}>
             <form className={className}>
                 {children}
             </form>
@@ -38,7 +55,8 @@ export function Form({ className = styles.form, children }) {
 }
 
 
-export const SubmitButton = ({ children, onSubmit = () => { }, text='Submit'}) => {
+
+export const SubmitButton = ({ children, onSubmit, text }) => {
     const { formData } = useContext(FormContext);
     const hasModal = React.Children.count(children) > 0;
 
@@ -51,9 +69,15 @@ export const SubmitButton = ({ children, onSubmit = () => { }, text='Submit'}) =
     }
 
     return (
-        <button type="button" onClick={() => onSubmit(formData)}>{text}</button>
+        <Button onClick={() => onSubmit(formData)} text={text} />
     );
 };
+
+SubmitButton.defaultProps = {
+    onSubmit: () => {},
+    text: "Submit",
+}
+
 
 
 
@@ -62,7 +86,7 @@ function SubmitButtonWithModal({ children, text }) {
 
     return (
         <>
-            <button type="button" onClick={open}>{text}</button>
+            <Button onClick={open} text={text} />
             {children}
         </>
     );

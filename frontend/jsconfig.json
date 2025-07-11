@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",  // Root directory for resolution
+    "paths": {
+      "@*": ["src/*"]  // Map @ to ./src
+    },
+    "jsx": "react-jsx",
+    "checkJs": true,
+    "module": "ESNext",
+    "moduleResolution": "Node"
+  },
+  "exclude": ["node_modules", "dist"]
+}

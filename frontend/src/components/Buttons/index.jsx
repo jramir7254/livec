@@ -15,29 +15,36 @@ export function BackButton({ to }) {
 }
 
 
-export function LogoutButton({className = ''}) {
+export function LogoutButton({ className = '' }) {
     const { logout } = useAuth()
 
     return (
-        <button className={`${styles['button--logout']} ${className}`} onClick={logout}><Icons.Logout/>Logout</button>
+        <button className={`${styles['button--logout']} ${className}`} onClick={logout}><Icons.Logout />Logout</button>
     )
 }
 
+import clsx from 'clsx';
 
 
 
 
 const variants = {
     danger: 'button--danger',
+    confirm: 'button--confirm',
+    info: 'button--info',
     blue: 'button--blue',
-    purple: 'button--purple'
+    round: 'button--round',
+    purple: 'button--purple',
+    normal: 'button--normal'
 }
 
 
-export const Button = ({variant, text, action, icon}) => {
-    const type = variants[variant]
+export const Button = ({ variant = 'normal', text = 'Submit', onClick, icon = <></>, isActive = false }) => {
+
+    const className = clsx(styles[variants[variant]], isActive && styles[`${variants[variant]}--active`]);
 
     return (
-        <button className={styles[type]} onClick={action}>{icon && <span>{icon}</span>}{text}</button>
+        <button className={className} type='button' onClick={onClick}>{icon && <span>{icon}</span>}{text}</button>
     )
 }
+

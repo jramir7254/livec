@@ -37,7 +37,7 @@ export default function MainView() {
         <section className={styles.main}>
 
             <div className={styles['suggestion-table']}>
-                <h2>My Suggestions</h2>
+                <h2 className='monts'>My Suggestions</h2>
 
                 <div className={styles['table-container']}>
                     <Table>

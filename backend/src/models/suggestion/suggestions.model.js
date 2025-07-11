@@ -1,5 +1,6 @@
 const db = require('@database/database');
 const Suggestion = require('./suggestion.model');
+const { Roles } = require('@utils/constants');
 
 class Suggestions {
     static dbRef = db.suggestions;
@@ -25,7 +26,7 @@ class Suggestions {
     static async findById(id) {
         await this.dbRef.read();
         const entry = this.dbRef.data.find(s => s.id === id);
-        return entry ? new Suggestion(entry) : null;
+        return  entry ? new Suggestion(entry) : null;
     }
 
 
@@ -38,7 +39,7 @@ class Suggestions {
     static async getByCommunityMemberId(id) {
         await this.dbRef.read();
         const entries = this.dbRef.data.
-        filter(s => s.submitterId === id)
+        filter(s => s.submitter_id === id)
         .map(s => new Suggestion(s).toCommunityMember())
         return entries || []
     }
@@ -54,7 +55,7 @@ class Suggestions {
     static async getByAssociateEditor(id) {
         await this.dbRef.read();
         const entries = this.dbRef.data.
-        filter(s => s.assignedAssociateEditor === id)
+        filter(s => s.assigned_associate_editor === id)
         .map(s => new Suggestion(s).toAssociateEditor())
         return entries || []
     }
@@ -70,7 +71,7 @@ class Suggestions {
     static async getByReviewer(id) {
         await this.dbRef.read();
         const entries = this.dbRef.data.
-        filter(s => s.assignedReviewers.includes(id))
+        filter(s => s.assigned_reviewers.includes(id))
         .map(s => new Suggestion(s).toAssociateEditor())
         return entries || []
     }

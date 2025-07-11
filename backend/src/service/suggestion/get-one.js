@@ -1,7 +1,8 @@
-const { AppError, NoAssociateEditorsFoundError } = require('@errors');
+const { AppError, NoAssociateEditorsFoundError, SuggestionNotFoundError } = require('@errors');
+const {Roles} = require('@utils/constants')
 const AssociateEditors = require('@models/users/associate-editor/editors.model.js')
 const Suggestions = require('@models/suggestion/suggestions.model.js')
-
+const Curriculums = require('@models/curriculum/curriculums.model.js')
 const logger = require('@logger').addSource({
     file: 'auth.service',
     method: "assignAssociateEditorToSuggestion",
@@ -10,20 +11,35 @@ const logger = require('@logger').addSource({
 
 
 
-const getSuggestionById = async (suggestionId) => {
+const getSuggestionById = async (suggestionId, role = null) => {
     try {
 
         logger.debug("suggestion.get.db.searching")
 
-        const requestedSuggestion = await Suggestions.findById(suggestionId)
+        let requestedSuggestion = await Suggestions.findById(suggestionId)
 
         if (!requestedSuggestion) {
             throw new SuggestionNotFoundError
         }
 
+
+
+        if (role) {
+            if (role === Roles.COMMUNITY_MEMBER) {
+                requestedSuggestion = requestedSuggestion.toCommunityMember()
+            } else if (role === Roles.ASSOCIATE_EDITOR) {
+                requestedSuggestion = requestedSuggestion.toAssociateEditor()
+            }
+        }
+
+
+
+        const section = await Curriculums.findById(requestedSuggestion.sectionId)
+
+
         logger.debug("suggestion.get.found")
 
-        return requestedSuggestion
+        return { ...requestedSuggestion, section }
 
     } catch (error) {
 

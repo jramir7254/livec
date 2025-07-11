@@ -1,3 +1,4 @@
+const { AppError } = require('@errors');
 const Suggestions = require('@models/suggestion/suggestions.model.js')
 
 const logger = require('@logger').addSource({

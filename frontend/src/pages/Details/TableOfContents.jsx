@@ -2,18 +2,7 @@ import { useState, useEffect } from 'react';
 import Accordion from '@components/Accordion';
 
 
-export default function TableOfContents({ jumpToPage }) {
-    const [headings, setHeadings] = useState([]);
-
-    useEffect(() => {
-        fetch('/cs_toc.json')
-            .then(res => res.json())
-            .then(data => {
-                const annotated = annotateWithPageRanges(data);
-                setHeadings(annotated);
-            })
-            .catch(console.error);
-    }, []);
+export default function TableOfContents({ jumpToPage, tableOfContents, setSectionId }) {
 
 
     const annotateWithPageRanges = (items) => {
@@ -31,7 +20,7 @@ export default function TableOfContents({ jumpToPage }) {
             const childPages = [];
             const collectPages = (units) => {
                 units.forEach(u => {
-                    if (u.page != null) childPages.push(u.page);
+                    if (u.page_number != null) childPages.push(u.page_number);
                     if (u.units && u.units.length > 0) collectPages(u.units);
                 });
             };
@@ -48,30 +37,41 @@ export default function TableOfContents({ jumpToPage }) {
         });
     };
 
+    const [headings, setHeadings] = useState(annotateWithPageRanges(tableOfContents));
+
+
+
+    const bg = {
+        '0': 'second',
+        '1': 'third'
+    }
+
     // render TOC recursively
-    const renderHeadings = (items, level = 1) => (
-        <ul>
+    const renderHeadings = (items, level = 0) => (
+        <ul className='table-of-contents'>
             {items.map((item, idx) => {
                 const hasChildren = item.units && item.units.length > 0;
                 return (
                     <li
                         key={idx}
-                        className="toc-item indented"
-                        style={{ '--indent-level': level - 1 }}
+                        // className={`${!hasChildren ? 'toc-item' : ''} indented ${bg[level] || ''}`}
+                        className={`${!hasChildren ? 'toc-item' : ''} indented `}
+                        style={{ '--indent-level': level}}
                     >
                         {hasChildren ? (
                             <Accordion
+                                css={bg[String(level)] || ''}
                                 item={item}
                                 content={renderHeadings(item.units, level + 1)}
                             />
                         ) : (
                             <div
                                 className="toc-leaf"
-                                onClick={() => item.page != null && jumpToPage(item.page - 1)}
+                                onClick={() => {console.log(item); setSectionId(item?.id ?? 'None'); jumpToPage(item?.markdown_heading + "\n" +  item?.markdown_body)}}
                             >
                                 {item.title}
-                                {item.page != null && (
-                                    <span className="page-number">Page {item.page}</span>
+                                {item.page_number != null && (
+                                    <span className="page-number">Page {item.page_number}</span>
                                 )}
                             </div>
                         )}

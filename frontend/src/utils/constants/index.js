@@ -1,3 +1,6 @@
+import { Status, statusMap } from './status'
+
+export {Status, statusMap}
 
 export const Roles = Object.freeze({
     COMMUNITY_MEMBER: 'community-member',
@@ -8,14 +11,30 @@ export const Roles = Object.freeze({
 });
 
 
-export const Status = Object.freeze({
-    SUBMITTED: 'submitted',
-    REJECTED: 'rejected',
-    ASSIGNED: 'assigned',
-    UNDER_REVIEW: 'under-review',
-    UNDER_CONSIDERATION: 'under-consideration',
-    ACCEPTED: 'accepted'
+
+
+
+export const Triage = Object.freeze({
+    DESK_REJECT: 'desk-reject',
+    START_REVIEW: 'start-review',
+    DEFER_TO_REVIEWER: 'defer-to-reviewer'
 })
+
+
+
+
+// export const Status = Object.freeze({
+//     SUBMITTED: 'submitted',
+//     REJECTED: 'rejected',
+//     ASSIGNED: 'assigned',
+//     PENDING_EXTERNAL_REVIEW: 'pending-external-review',
+//     UNDER_REVIEW: 'under-review',
+//     UNDER_CONSIDERATION: 'under-consideration',
+//     ACCEPTED: 'accepted'
+// })
+
+
+
 
 export const Disciplines = Object.freeze({
     COMPUTER_SCIENCE: 'computer-science',

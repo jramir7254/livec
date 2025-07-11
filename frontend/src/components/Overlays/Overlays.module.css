@@ -15,12 +15,13 @@
 
 /* Modal box */
 .overlay-content {
+    font-family: "Montserrat";
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: black;
-    gap: 1rem;
+    gap: 1.5rem;
     background: white;
     padding: 2rem 2rem;
     border-radius: 8px;
@@ -28,7 +29,13 @@
     width: fit-content;
 }
 
+
+.text {
+    font-weight: 500;
+}
+
 .button-group {
+    margin-top: 1rem;
     display: flex;
     gap: 1rem;
 }

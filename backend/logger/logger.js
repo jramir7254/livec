@@ -166,7 +166,6 @@ baseLogger.end = function (processName = 'Process') {
 };
 
 function colorSource({ file, method = "", params = [] } = {}) {
-
     params = params.map(item => RED(item)).join(', ');
     return `${YELLOW('@' + file)}:${BLUE(method)}${ORANGE('(' + RED(params) + ')')}`;
 };
@@ -174,18 +173,3 @@ function colorSource({ file, method = "", params = [] } = {}) {
 
 
 module.exports = baseLogger;
-
-
-
-// if (stack) {
-//     const lines = stack.split('\n').filter(Boolean);
-//     const firstTwo = lines.slice(0, 2);
-//     const lastTwo = lines.slice(-2);
-//     msg += '\n' + [
-//         ...firstTwo,
-//         '    …',
-//         ...lastTwo
-//     ]
-//         .map(line => `    ${RED(line)}`)
-//         .join('\n');
-// }

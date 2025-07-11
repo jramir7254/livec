@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Status } from '@utils/constants.js';
+import { Status } from '@utils/constants';
 import { useNavigate } from 'react-router';
 import { useContext } from 'react';
 import { UserContext } from '@context/UserProvider';
@@ -9,7 +9,7 @@ export default function ActionSelect({ status, suggestion }) {
     const [selectedAction, setSelectedAction] = useState('');
     const navigate = useNavigate();
     const actionItems = {
-        [Status.SUBMITTED]: [
+        [Status.Public.SUBMITTED]: [
             { value: 'view', label: 'View' },
             { value: 'edit', label: 'Edit' },
             { value: 'retract', label: 'Retract' },
@@ -24,7 +24,7 @@ export default function ActionSelect({ status, suggestion }) {
         ],
     };
 
-    const options = actionItems[Status.SUBMITTED] || [];
+    const options = actionItems[Status.Public.SUBMITTED] || [];
 
     const handleChange = (e) => {
         const action = e.target.value
