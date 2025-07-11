@@ -1,53 +1,38 @@
 .eic-decision-page {
   padding: 2rem;
-  font-family: 'Roboto', sans-serif;
-  background-color: #f9f9f9;
+  font-family: 'Funnel Sans', sans-serif;
 }
 
 .eic-title {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #333;
-}
-
-.proposal-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
 }
 
 .proposal-card {
-  background: white;
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  background-color: #f9f9f9;
 }
 
-.proposal-card h3 {
-  margin: 0;
-  font-size: 1.25rem;
+.proposal-card h2 {
+  margin-top: 0;
 }
 
-.proposal-card p {
-  margin: 0.25rem 0;
-}
-
-.decision-button {
+.decision-buttons {
   margin-top: 1rem;
-  background-color: #0057b8;
-  color: white;
-  border: none;
+}
+
+.decision-buttons button {
+  margin-right: 1rem;
   padding: 0.5rem 1rem;
-  border-radius: 4px;
   cursor: pointer;
 }
 
-.decision-button:hover {
-  background-color: #004799;
-}
-
-.error {
-  color: red;
-  margin-bottom: 1rem;
+.char-counter {
+  text-align: right;
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 4px;
 }

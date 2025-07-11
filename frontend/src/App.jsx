@@ -22,6 +22,7 @@ import AEDeskRejectPage from './pages/AEDeskRejectPage';
 import EICDecisionPage from './pages/EICDecisionPage';
 import EICDecisionDetailPage from './pages/EICDecisionDetailPage';
 import EICSingleDecisionPage from './pages/EICSingleDecisionPage';
+import EICCurriculumReviewPage from './pages/EICCurriculumReviewPage';
 
 function App() {
   const [selectedCurriculum, setSelectedCurriculum] = useState(null);
@@ -50,6 +51,7 @@ function App() {
         <Route path="/eic/decisions" element={<EICDecisionPage />} />
         <Route path="/eic/decision/:proposalId" element={<EICDecisionDetailPage />} />
         <Route path="/eic/decision/:id" element={<EICSingleDecisionPage />} />
+        <Route path="/eic/curriculum-review" element={<EICCurriculumReviewPage />} />
 
       </Routes>
     </Router>

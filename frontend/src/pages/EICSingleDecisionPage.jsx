@@ -19,13 +19,21 @@ const EICSingleDecisionPage = () => {
       .catch(() => setLoading(false));
   }, [id]);
 
-  const handleSubmit = () => {
-    axios.post(`http://localhost:3001/api/eic/decide/${id}`, {
-      decision,
-      justification
-    }).then(() => {
-      alert('Decision submitted!');
-    });
+  const handleSubmit = async () => {
+    if (justification.length > 500) {
+      alert("Justification must be under 500 characters");
+      return;
+    }
+
+    try {
+      await axios.post(`http://localhost:3001/api/eic/decide/${id}`, {
+        decision,
+        justification
+      });
+      alert('Decision submitted');
+    } catch (err) {
+      alert('Failed to submit decision');
+    }
   };
 
   if (loading) return <p>Loading</p>;
@@ -47,7 +55,14 @@ const EICSingleDecisionPage = () => {
         </select>
 
         <label><strong>Justification:</strong></label>
-        <textarea value={justification} onChange={(e) => setJustification(e.target.value)} />
+        <textarea
+          value={justification}
+          onChange={(e) => setJustification(e.target.value)}
+          maxLength={500}
+          placeholder="Enter your justification (max 500 characters)"
+        />
+
+        <p className="char-counter">{justification.length}/500</p>
 
         <button className="decision-button" onClick={handleSubmit}>Submit Decision</button>
       </div>
