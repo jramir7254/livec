@@ -47,4 +47,37 @@ router.post('/decision/:proposalId', async (req, res) => {
   res.json({ message: 'EIC decision recorded' });
 });
 
+router.get('/board/recommendations', async (req, res) => {
+  try {
+    const reviewedRecommendations = [
+      {
+        _id: '1',
+        title: 'Revise Algorithms Syllabus',
+        aeRecommendation: 'Recommend Approval',
+        eicDecision: 'Approve'
+      },
+      {
+        _id: '2',
+        title: 'Update Data Structures',
+        aeRecommendation: 'Needs Revisions',
+        eicDecision: 'Request Revision'
+      }
+    ];
+    res.json(reviewedRecommendations);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to fetch board recommendations' });
+  }
+});
+
+router.post('/board/decision/:proposalId', async (req, res) => {
+  const { boardDecision } = req.body;
+
+  if (!boardDecision) {
+    return res.status(400).json({ error: 'Board decision is required' });
+  }
+
+  console.log(`Board decision for ${req.params.proposalId}:`, boardDecision);
+  res.json({ message: 'Board decision saved successfully' });
+});
+
 export default router;

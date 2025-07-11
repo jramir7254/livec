@@ -23,6 +23,8 @@ import EICDecisionPage from './pages/EICDecisionPage';
 import EICDecisionDetailPage from './pages/EICDecisionDetailPage';
 import EICSingleDecisionPage from './pages/EICSingleDecisionPage';
 import EICCurriculumReviewPage from './pages/EICCurriculumReviewPage';
+import EICBoardReviewPage from './pages/EICBoardReviewPage';
+import EICFinalizePage from './pages/EICFinalizePage';
 
 function App() {
   const [selectedCurriculum, setSelectedCurriculum] = useState(null);
@@ -52,7 +54,8 @@ function App() {
         <Route path="/eic/decision/:proposalId" element={<EICDecisionDetailPage />} />
         <Route path="/eic/decision/:id" element={<EICSingleDecisionPage />} />
         <Route path="/eic/curriculum-review" element={<EICCurriculumReviewPage />} />
-
+        <Route path="/eic/board/review" element={<EICBoardReviewPage />} />
+        <Route path="/eic/finalize" element={<EICFinalizePage />} />
       </Routes>
     </Router>
   );
