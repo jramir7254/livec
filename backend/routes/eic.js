@@ -2,6 +2,8 @@ import express from 'express';
 
 const router = express.Router();
 
+// ***** Mock Data *****
+
 router.get('/proposals-for-eic', async (req, res) => {
   try {
     const mockProposals = [
@@ -34,6 +36,34 @@ router.get('/proposal/:proposalId', async (req, res) => {
     aeRecommendation: 'Recommend Approval'
   };
   res.json(mockProposal);
+});
+
+router.get('/history', async (req, res) => {
+  try {
+    const mockHistory = [
+      {
+        proposalId: '1',
+        title: 'Revise Algorithms Syllabus',
+        aeRecommendation: 'Recommend Approval',
+        eicDecision: 'Approved',
+        finalDecision: 'Adopted',
+        timestamp: '2024-05-01',
+      },
+      {
+        proposalId: '2',
+        title: 'Update Data Structures',
+        aeRecommendation: 'Needs Revision',
+        eicDecision: 'Rejected',
+        finalDecision: 'Not Adopted',
+        timestamp: '2024-06-10',
+      }
+    ];
+
+    res.json(mockHistory);
+  } catch (err) {
+    console.error('Error loading history:', err);
+    res.status(500).json({ error: 'Failed to load history' });
+  }
 });
 
 router.post('/decision/:proposalId', async (req, res) => {
